@@ -193,7 +193,7 @@
   }
   // Media src for <audio>: with an API key the files endpoint needs the header, so fetch to a blob.
   function mediaSrc(u) {
-    if (MOCK) return Promise.resolve(mockTone(u));
+    if (MOCK) return Promise.resolve(/^mock-audio\//.test(String(u)) ? String(u) : mockTone(u));  // real sample clips ship with the site
     var url = fileUrl(u);
     if (!apiKey()) return Promise.resolve(url);
     if (state.blobCache[url]) return Promise.resolve(state.blobCache[url]);
@@ -284,6 +284,7 @@
     toneCache[key] = url; return url;
   }
   function mockFile(u) {
+    if (/^mock-audio\//.test(String(u))) return fetch(String(u)).then(function (r) { return r.blob(); });
     var name = basename(u);
     if (/report\.json$/.test(name)) return new Blob([JSON.stringify(state.job, null, 2)], { type: 'application/json' });
     if (/report\.html$/.test(name)) return new Blob([buildReportHtml(state.job)], { type: 'text/html' });

@@ -1,805 +1,1510 @@
 {
-  "_about": "Retake UI mock fixtures for ?mock=1. 'job' is a complete GET /v1/jobs/{id} payload; 'fix' a GET /v1/jobs/{id}/fixes/{fix_id} payload; 'voices', 'health', 'jobs' are the list endpoints.",
-  "health": {
-    "ok": true,
-    "version": "1.0.0-mock",
-    "auth": "key",
-    "models": {
-      "whisper": "loaded",
-      "phonemes": "loaded"
-    },
-    "wellsaid": true,
-    "anthropic": true
+ "_about": "Sample job = the real Retake run on the original L&D Leaders persona film (10/12/26): real transcript, scores, clips and verified fix takes, served from mock-audio/ so the demo needs no API.",
+ "health": {
+  "ok": true,
+  "version": "1.0.0-mock",
+  "auth": "key",
+  "models": {
+   "whisper": "loaded",
+   "phonemes": "loaded"
   },
-  "voices": [
-    {
-      "speaker_id": 3,
-      "name": "Wade C.",
-      "style": "Narration",
-      "accent": "US",
-      "gender": "male"
-    },
-    {
-      "speaker_id": 4,
-      "name": "Ava M.",
-      "style": "Narration",
-      "accent": "US",
-      "gender": "female"
-    },
-    {
-      "speaker_id": 19,
-      "name": "Patrick K.",
-      "style": "Narration",
-      "accent": "US",
-      "gender": "male"
-    },
-    {
-      "speaker_id": 26,
-      "name": "Wade C.",
-      "style": "Promo",
-      "accent": "US",
-      "gender": "male"
-    }
-  ],
-  "jobs": [
-    {
-      "id": "j_7f3a2c",
-      "status": "done",
-      "stage": "done",
-      "progress": 1.0,
-      "created": "2026-10-11T21:48:12Z",
-      "mode": "upload",
-      "filename": "autopilot-updates-ld-leaders.mp4",
-      "flags": 3,
-      "occurrences": 6
-    },
-    {
-      "id": "j_1b8e04",
-      "status": "running",
-      "stage": "listening",
-      "progress": 0.72,
-      "created": "2026-10-11T21:55:40Z",
-      "mode": "script",
-      "filename": "script (Ava M., caruso)",
-      "flags": null,
-      "occurrences": null
-    },
-    {
-      "id": "j_9ac31d",
-      "status": "error",
-      "stage": "transcribing",
-      "progress": 0.2,
-      "created": "2026-10-11T20:12:03Z",
-      "mode": "upload",
-      "filename": "podium-walkthrough.mov",
-      "flags": null,
-      "occurrences": null,
-      "error": "ffmpeg: file has no audio stream"
-    }
-  ],
-  "job": {
-    "id": "j_7f3a2c",
-    "status": "done",
-    "stage": "done",
-    "progress": 1.0,
-    "created": "2026-10-11T21:48:12Z",
-    "mode": "upload",
-    "error": null,
-    "result": {
-      "media": "/v1/jobs/j_7f3a2c/files/autopilot-updates-ld-leaders.mp4",
-      "duration": 38.22,
-      "transcript": {
-        "text": "Your training library is a living record of how the company actually works. When a policy changes, Autopilot finds every lesson that mentions it and re-records the affected lines overnight. Nothing goes live until a reviewer reads the diff and approves it. Every update is logged, so compliance can present a clean audit trail whenever the auditors ask. The content stays current, and your learners never notice the seams.",
-        "words": [
-          {
-            "w": "Your",
-            "s": 0.62,
-            "e": 0.998,
-            "p": 0.99
-          },
-          {
-            "w": "training",
-            "s": 1.058,
-            "e": 1.644,
-            "p": 0.99
-          },
-          {
-            "w": "library",
-            "s": 1.704,
-            "e": 2.238,
-            "p": 0.99
-          },
-          {
-            "w": "is",
-            "s": 2.298,
-            "e": 2.572,
-            "p": 0.97
-          },
-          {
-            "w": "a",
-            "s": 2.632,
-            "e": 2.854,
-            "p": 0.97
-          },
-          {
-            "w": "living",
-            "s": 2.914,
-            "e": 3.396,
-            "p": 0.99
-          },
-          {
-            "w": "record",
-            "s": 3.456,
-            "e": 3.938,
-            "p": 0.99
-          },
-          {
-            "w": "of",
-            "s": 3.998,
-            "e": 4.272,
-            "p": 0.97
-          },
-          {
-            "w": "how",
-            "s": 4.332,
-            "e": 4.658,
-            "p": 0.99
-          },
-          {
-            "w": "the",
-            "s": 4.718,
-            "e": 5.044,
-            "p": 0.99
-          },
-          {
-            "w": "company",
-            "s": 5.104,
-            "e": 5.638,
-            "p": 0.99
-          },
-          {
-            "w": "actually",
-            "s": 5.698,
-            "e": 6.284,
-            "p": 0.99
-          },
-          {
-            "w": "works.",
-            "s": 6.344,
-            "e": 6.854,
-            "p": 0.99
-          },
-          {
-            "w": "When",
-            "s": 7.464,
-            "e": 7.842,
-            "p": 0.99
-          },
-          {
-            "w": "a",
-            "s": 7.902,
-            "e": 8.124,
-            "p": 0.97
-          },
-          {
-            "w": "policy",
-            "s": 8.184,
-            "e": 8.666,
-            "p": 0.99
-          },
-          {
-            "w": "changes,",
-            "s": 8.726,
-            "e": 9.34,
-            "p": 0.99
-          },
-          {
-            "w": "Autopilot",
-            "s": 9.4,
-            "e": 10.038,
-            "p": 0.99
-          },
-          {
-            "w": "finds",
-            "s": 10.098,
-            "e": 10.528,
-            "p": 0.99
-          },
-          {
-            "w": "every",
-            "s": 10.588,
-            "e": 11.018,
-            "p": 0.99
-          },
-          {
-            "w": "lesson",
-            "s": 11.078,
-            "e": 11.56,
-            "p": 0.99
-          },
-          {
-            "w": "that",
-            "s": 11.62,
-            "e": 11.998,
-            "p": 0.99
-          },
-          {
-            "w": "mentions",
-            "s": 12.058,
-            "e": 12.644,
-            "p": 0.99
-          },
-          {
-            "w": "it",
-            "s": 12.704,
-            "e": 12.978,
-            "p": 0.97
-          },
-          {
-            "w": "and",
-            "s": 13.038,
-            "e": 13.364,
-            "p": 0.99
-          },
-          {
-            "w": "re-records",
-            "s": 13.424,
-            "e": 14.062,
-            "p": 0.99
-          },
-          {
-            "w": "the",
-            "s": 14.122,
-            "e": 14.448,
-            "p": 0.99
-          },
-          {
-            "w": "affected",
-            "s": 14.508,
-            "e": 15.094,
-            "p": 0.99
-          },
-          {
-            "w": "lines",
-            "s": 15.154,
-            "e": 15.584,
-            "p": 0.99
-          },
-          {
-            "w": "overnight.",
-            "s": 15.644,
-            "e": 16.362,
-            "p": 0.99
-          },
-          {
-            "w": "Nothing",
-            "s": 16.972,
-            "e": 17.506,
-            "p": 0.99
-          },
-          {
-            "w": "goes",
-            "s": 17.566,
-            "e": 17.944,
-            "p": 0.99
-          },
-          {
-            "w": "live",
-            "s": 18.004,
-            "e": 18.382,
-            "p": 0.99
-          },
-          {
-            "w": "until",
-            "s": 18.442,
-            "e": 18.872,
-            "p": 0.99
-          },
-          {
-            "w": "a",
-            "s": 18.932,
-            "e": 19.154,
-            "p": 0.97
-          },
-          {
-            "w": "reviewer",
-            "s": 19.214,
-            "e": 19.8,
-            "p": 0.99
-          },
-          {
-            "w": "reads",
-            "s": 19.86,
-            "e": 20.29,
-            "p": 0.99
-          },
-          {
-            "w": "the",
-            "s": 20.35,
-            "e": 20.676,
-            "p": 0.99
-          },
-          {
-            "w": "diff",
-            "s": 20.736,
-            "e": 21.114,
-            "p": 0.99
-          },
-          {
-            "w": "and",
-            "s": 21.174,
-            "e": 21.5,
-            "p": 0.99
-          },
-          {
-            "w": "approves",
-            "s": 21.56,
-            "e": 22.146,
-            "p": 0.99
-          },
-          {
-            "w": "it.",
-            "s": 22.206,
-            "e": 22.56,
-            "p": 0.99
-          },
-          {
-            "w": "Every",
-            "s": 23.17,
-            "e": 23.6,
-            "p": 0.99
-          },
-          {
-            "w": "update",
-            "s": 23.66,
-            "e": 24.142,
-            "p": 0.99
-          },
-          {
-            "w": "is",
-            "s": 24.202,
-            "e": 24.476,
-            "p": 0.97
-          },
-          {
-            "w": "logged,",
-            "s": 24.536,
-            "e": 25.098,
-            "p": 0.99
-          },
-          {
-            "w": "so",
-            "s": 25.158,
-            "e": 25.432,
-            "p": 0.97
-          },
-          {
-            "w": "compliance",
-            "s": 25.492,
-            "e": 26.182,
-            "p": 0.99
-          },
-          {
-            "w": "can",
-            "s": 26.242,
-            "e": 26.568,
-            "p": 0.99
-          },
-          {
-            "w": "present",
-            "s": 26.628,
-            "e": 27.162,
-            "p": 0.99
-          },
-          {
-            "w": "a",
-            "s": 27.222,
-            "e": 27.444,
-            "p": 0.97
-          },
-          {
-            "w": "clean",
-            "s": 27.504,
-            "e": 27.934,
-            "p": 0.99
-          },
-          {
-            "w": "audit",
-            "s": 27.994,
-            "e": 28.424,
-            "p": 0.99
-          },
-          {
-            "w": "trail",
-            "s": 28.484,
-            "e": 28.914,
-            "p": 0.99
-          },
-          {
-            "w": "whenever",
-            "s": 28.974,
-            "e": 29.56,
-            "p": 0.99
-          },
-          {
-            "w": "the",
-            "s": 29.62,
-            "e": 29.946,
-            "p": 0.99
-          },
-          {
-            "w": "auditors",
-            "s": 30.006,
-            "e": 30.592,
-            "p": 0.99
-          },
-          {
-            "w": "ask.",
-            "s": 30.652,
-            "e": 31.058,
-            "p": 0.99
-          },
-          {
-            "w": "The",
-            "s": 31.668,
-            "e": 31.994,
-            "p": 0.99
-          },
-          {
-            "w": "content",
-            "s": 32.054,
-            "e": 32.588,
-            "p": 0.99
-          },
-          {
-            "w": "stays",
-            "s": 32.648,
-            "e": 33.078,
-            "p": 0.99
-          },
-          {
-            "w": "current,",
-            "s": 33.138,
-            "e": 33.752,
-            "p": 0.99
-          },
-          {
-            "w": "and",
-            "s": 33.812,
-            "e": 34.138,
-            "p": 0.99
-          },
-          {
-            "w": "your",
-            "s": 34.198,
-            "e": 34.576,
-            "p": 0.99
-          },
-          {
-            "w": "learners",
-            "s": 34.636,
-            "e": 35.222,
-            "p": 0.99
-          },
-          {
-            "w": "never",
-            "s": 35.282,
-            "e": 35.712,
-            "p": 0.99
-          },
-          {
-            "w": "notice",
-            "s": 35.772,
-            "e": 36.254,
-            "p": 0.99
-          },
-          {
-            "w": "the",
-            "s": 36.314,
-            "e": 36.64,
-            "p": 0.99
-          },
-          {
-            "w": "seams.",
-            "s": 36.7,
-            "e": 37.21,
-            "p": 0.99
-          }
-        ]
-      },
-      "occurrences": [
-        {
-          "id": "o1",
-          "t_start": 3.456,
-          "t_end": 3.938,
-          "word": "record",
-          "sentence": "Your training library is a living record of how the company actually works.",
-          "base": "record",
-          "intended": "record_n",
-          "intended_desc": "stored information or a best achievement (REH-kurd)",
-          "intended_ipa": "ɹɛkɚd",
-          "intended_respell": "REH-kurd",
-          "detected": "record_n",
-          "detected_desc": "stored information or a best achievement (REH-kurd)",
-          "scores": {
-            "record_n": -0.41,
-            "record_v": -1.37
-          },
-          "margin": 0.96,
-          "free_decode": "ɹɛkɚd",
-          "flag": false,
-          "reason": "ok",
-          "confidence": "high",
-          "clip_wav": "/v1/jobs/j_7f3a2c/files/clip_o1.wav",
-          "sentence_wav": "/v1/jobs/j_7f3a2c/files/sentence_o1.wav",
-          "sentence_t_start": 0.62,
-          "sentence_t_end": 6.854,
-          "candidates": {
-            "record_n": "ɹɛkɚd",
-            "record_v": "ɹᵻkɔːɹd"
-          },
-          "intent_engine": "claude"
-        },
-        {
-          "id": "o2",
-          "t_start": 13.424,
-          "t_end": 14.062,
-          "word": "re-records",
-          "sentence": "When a policy changes, Autopilot finds every lesson that mentions it and re-records the affected lines overnight.",
-          "base": "record",
-          "intended": "record_v",
-          "intended_desc": "to capture audio/video or write down (rih-KORD)",
-          "intended_ipa": "ɹiːɹᵻkɔːɹdz",
-          "intended_respell": "ree-rih-KORDZ",
-          "detected": "record_n",
-          "detected_desc": "stored information or a best achievement (REH-kurd)",
-          "scores": {
-            "record_n": -0.52,
-            "record_v": -1.48
-          },
-          "margin": 0.96,
-          "free_decode": "ɹiːɹɛkɚdz",
-          "flag": true,
-          "reason": "best candidate is record_n (ree-REH-kurdZ), not intended record_v (ree-rih-KORDZ); free decode /ɹiːɹɛkɚdz/ is 3 edit(s) from intended /ɹiːɹᵻkɔːɹdz/ (allowed 1)",
-          "confidence": "high",
-          "clip_wav": "/v1/jobs/j_7f3a2c/files/clip_o2.wav",
-          "sentence_wav": "/v1/jobs/j_7f3a2c/files/sentence_o2.wav",
-          "sentence_t_start": 7.464,
-          "sentence_t_end": 16.362,
-          "candidates": {
-            "record_n": "ɹiːɹɛkɚdz",
-            "record_v": "ɹiːɹᵻkɔːɹdz"
-          },
-          "intent_engine": "claude"
-        },
-        {
-          "id": "o3",
-          "t_start": 18.004,
-          "t_end": 18.382,
-          "word": "live",
-          "sentence": "Nothing goes live until a reviewer reads the diff and approves it.",
-          "base": "live",
-          "intended": "live_adj",
-          "intended_desc": "happening in real time; not recorded (LYVE)",
-          "intended_ipa": "laɪv",
-          "intended_respell": "LYV",
-          "detected": "live_v",
-          "detected_desc": "to reside, to be alive (LIV)",
-          "scores": {
-            "live_v": -0.33,
-            "live_adj": -1.62
-          },
-          "margin": 1.29,
-          "free_decode": "lɪv",
-          "flag": true,
-          "reason": "best candidate is live_v (LIV), not intended live_adj (LYVE); free decode /lɪv/ is 1 edit(s) from intended /laɪv/ (allowed 0)",
-          "confidence": "high",
-          "clip_wav": "/v1/jobs/j_7f3a2c/files/clip_o3.wav",
-          "sentence_wav": "/v1/jobs/j_7f3a2c/files/sentence_o3.wav",
-          "sentence_t_start": 16.972,
-          "sentence_t_end": 22.56,
-          "candidates": {
-            "live_v": "lɪv",
-            "live_adj": "laɪv"
-          },
-          "intent_engine": "claude"
-        },
-        {
-          "id": "o4",
-          "t_start": 19.86,
-          "t_end": 20.29,
-          "word": "reads",
-          "sentence": "Nothing goes live until a reviewer reads the diff and approves it.",
-          "base": "read",
-          "intended": "read_present",
-          "intended_desc": "present tense: to read (REED)",
-          "intended_ipa": "ɹiːdz",
-          "intended_respell": "REEDZ",
-          "detected": "read_present",
-          "detected_desc": "present tense: to read (REED)",
-          "scores": {
-            "read_present": -0.47,
-            "read_past": -1.21
-          },
-          "margin": 0.74,
-          "free_decode": "ɹiːdz",
-          "flag": false,
-          "reason": "ok",
-          "confidence": "high",
-          "clip_wav": "/v1/jobs/j_7f3a2c/files/clip_o4.wav",
-          "sentence_wav": "/v1/jobs/j_7f3a2c/files/sentence_o4.wav",
-          "sentence_t_start": 16.972,
-          "sentence_t_end": 22.56,
-          "candidates": {
-            "read_present": "ɹiːdz",
-            "read_past": "ɹɛdz"
-          },
-          "intent_engine": "claude"
-        },
-        {
-          "id": "o5",
-          "t_start": 26.628,
-          "t_end": 27.162,
-          "word": "present",
-          "sentence": "Every update is logged, so compliance can present a clean audit trail whenever the auditors ask.",
-          "base": "present",
-          "intended": "present_v",
-          "intended_desc": "to show or deliver material to an audience (prih-ZENT)",
-          "intended_ipa": "pɹɪzɛnt",
-          "intended_respell": "pree-ZEHNT",
-          "detected": "present_n",
-          "detected_desc": "a gift, or the current moment in time (PREH-zunt)",
-          "scores": {
-            "present_n": -0.44,
-            "present_v": -0.98
-          },
-          "margin": 0.54,
-          "free_decode": "pɹɛzənt",
-          "flag": true,
-          "reason": "best candidate is present_n (PREH-zunt), not intended present_v (prih-ZENT); free decode /pɹɛzənt/ is 2 edit(s) from intended /pɹɪzɛnt/ (allowed 1)",
-          "confidence": "med",
-          "clip_wav": "/v1/jobs/j_7f3a2c/files/clip_o5.wav",
-          "sentence_wav": "/v1/jobs/j_7f3a2c/files/sentence_o5.wav",
-          "sentence_t_start": 23.17,
-          "sentence_t_end": 31.058,
-          "candidates": {
-            "present_n": "pɹɛzənt",
-            "present_v": "pɹɪzɛnt"
-          },
-          "intent_engine": "claude"
-        },
-        {
-          "id": "o6",
-          "t_start": 32.054,
-          "t_end": 32.588,
-          "word": "content",
-          "sentence": "The content stays current, and your learners never notice the seams.",
-          "base": "content",
-          "intended": "content_n",
-          "intended_desc": "material inside a course, document, or site (KAHN-tent)",
-          "intended_ipa": "kɑːntɛnt",
-          "intended_respell": "KAHN-tehnt",
-          "detected": "content_n",
-          "detected_desc": "material inside a course, document, or site (KAHN-tent)",
-          "scores": {
-            "content_n": -0.39,
-            "content_adj": -1.05
-          },
-          "margin": 0.66,
-          "free_decode": "kɑːntɛnt",
-          "flag": false,
-          "reason": "ok",
-          "confidence": "high",
-          "clip_wav": "/v1/jobs/j_7f3a2c/files/clip_o6.wav",
-          "sentence_wav": "/v1/jobs/j_7f3a2c/files/sentence_o6.wav",
-          "sentence_t_start": 31.668,
-          "sentence_t_end": 37.21,
-          "candidates": {
-            "content_n": "kɑːntɛnt",
-            "content_adj": "kəntɛnt"
-          },
-          "intent_engine": "claude"
-        }
-      ],
-      "flags": 3,
-      "summary": [
-        "[13.4s] re-records — intended ree-rih-KORDZ (verb), heard /ɹiːɹɛkɚdz/ (free decode), margin 1.0",
-        "[18.0s] live — intended LYV (adjective), heard /lɪv/ (free decode), margin 1.3",
-        "[26.6s] present — intended pree-ZEHNT (verb), heard /pɹɛzənt/ (free decode), margin 0.5"
-      ]
-    }
+  "wellsaid": true,
+  "anthropic": true
+ },
+ "voices": [
+  {
+   "speaker_id": 3,
+   "name": "Wade C.",
+   "style": "Narration",
+   "accent": "US",
+   "gender": "male"
   },
-  "fix": {
-    "fix_id": "f_c1d9",
-    "status": "done",
-    "job_id": "j_7f3a2c",
-    "speaker_id": 3,
-    "model": "preview",
-    "results": [
-      {
-        "occurrence_id": "o2",
-        "tries": [
-          {
-            "text": "When a policy changes, Autopilot finds every lesson that mentions it and ree-rih-kordz the affected lines overnight.",
-            "take_mp3": "/v1/jobs/j_7f3a2c/files/fix_o2_try1.mp3",
-            "heard_as": "ɹiːɹɛkɚdz",
-            "detected": "record_n",
-            "margin": 0.61,
-            "verified": false
-          },
-          {
-            "text": "When a policy changes, Autopilot finds every lesson that mentions it and ree-ri-kordz the affected lines overnight.",
-            "take_mp3": "/v1/jobs/j_7f3a2c/files/fix_o2_try2.mp3",
-            "heard_as": "ɹiːɹᵻkɔːɹdz",
-            "detected": "record_v",
-            "margin": 0.88,
-            "verified": true
-          }
-        ],
-        "best": {
-          "text": "When a policy changes, Autopilot finds every lesson that mentions it and ree-ri-kordz the affected lines overnight.",
-          "take_mp3": "/v1/jobs/j_7f3a2c/files/fix_o2_try2.mp3",
-          "heard_as": "ɹiːɹᵻkɔːɹdz",
-          "detected": "record_v",
-          "margin": 0.88,
-          "verified": true
-        },
-        "verified": true
-      },
-      {
-        "occurrence_id": "o3",
-        "tries": [
-          {
-            "text": "Nothing goes lyve until a reviewer reads the diff and approves it.",
-            "take_mp3": "/v1/jobs/j_7f3a2c/files/fix_o3_try1.mp3",
-            "heard_as": "laɪv",
-            "detected": "live_adj",
-            "margin": 1.12,
-            "verified": true
-          }
-        ],
-        "best": {
-          "text": "Nothing goes lyve until a reviewer reads the diff and approves it.",
-          "take_mp3": "/v1/jobs/j_7f3a2c/files/fix_o3_try1.mp3",
-          "heard_as": "laɪv",
-          "detected": "live_adj",
-          "margin": 1.12,
-          "verified": true
-        },
-        "verified": true
-      },
-      {
-        "occurrence_id": "o5",
-        "tries": [
-          {
-            "text": "Every update is logged, so compliance can pree-zehnt a clean audit trail whenever the auditors ask.",
-            "take_mp3": "/v1/jobs/j_7f3a2c/files/fix_o5_try1.mp3",
-            "heard_as": "pɹɛzɛnt",
-            "detected": "present_n",
-            "margin": 0.21,
-            "verified": false
-          },
-          {
-            "text": "Every update is logged, so compliance can pri-zehnt a clean audit trail whenever the auditors ask.",
-            "take_mp3": "/v1/jobs/j_7f3a2c/files/fix_o5_try2.mp3",
-            "heard_as": "pɹɛzənt",
-            "detected": "present_n",
-            "margin": 0.47,
-            "verified": false
-          },
-          {
-            "text": "Every update is logged, so compliance can pree-ZEHNT a clean audit trail whenever the auditors ask.",
-            "take_mp3": "/v1/jobs/j_7f3a2c/files/fix_o5_try3.mp3",
-            "heard_as": "pɹɛzɛnt",
-            "detected": "present_n",
-            "margin": 0.19,
-            "verified": false
-          }
-        ],
-        "best": null,
-        "verified": false
-      }
-    ],
-    "summary": "2 of 3 flagged lines verified after re-render (preview, Wade C.); 'present' still reads as the noun after 3 tries — try caruso with an inline respell."
+  {
+   "speaker_id": 4,
+   "name": "Ava M.",
+   "style": "Narration",
+   "accent": "US",
+   "gender": "female"
+  },
+  {
+   "speaker_id": 19,
+   "name": "Patrick K.",
+   "style": "Narration",
+   "accent": "US",
+   "gender": "male"
+  },
+  {
+   "speaker_id": 26,
+   "name": "Wade C.",
+   "style": "Promo",
+   "accent": "US",
+   "gender": "male"
   }
+ ],
+ "jobs": [
+  {
+   "id": "j_7f3a2c",
+   "status": "done",
+   "stage": "done",
+   "progress": 1.0,
+   "created": "2026-10-11T21:48:12Z",
+   "mode": "upload",
+   "filename": "autopilot-updates-ld-leaders.mp4",
+   "flags": 2,
+   "occurrences": 5,
+   "duration": 65.92
+  },
+  {
+   "id": "j_1b8e04",
+   "status": "running",
+   "stage": "listening",
+   "progress": 0.72,
+   "created": "2026-10-11T21:55:40Z",
+   "mode": "script",
+   "filename": "script (Ava M., caruso)",
+   "flags": null,
+   "occurrences": null
+  },
+  {
+   "id": "j_9ac31d",
+   "status": "error",
+   "stage": "transcribing",
+   "progress": 0.2,
+   "created": "2026-10-11T20:12:03Z",
+   "mode": "upload",
+   "filename": "podium-walkthrough.mov",
+   "flags": null,
+   "occurrences": null,
+   "error": "ffmpeg: file has no audio stream"
+  }
+ ],
+ "job": {
+  "id": "j_7f3a2c",
+  "status": "done",
+  "stage": "done",
+  "progress": 1.0,
+  "created": "2026-10-12T06:21:31Z",
+  "updated": "2026-10-12T06:22:00Z",
+  "mode": "upload",
+  "filename": "autopilot-updates-ld-leaders.mp4",
+  "duration": 65.92,
+  "occurrences": 5,
+  "flags": 2,
+  "error": null,
+  "params": {
+   "engine": "both",
+   "speaker_id": null,
+   "model": null,
+   "has_script": false
+  },
+  "files": null,
+  "result": {
+   "media": "mock-audio/autopilot-updates-ld-leaders.mp3",
+   "duration": 65.92,
+   "transcript": {
+    "text": "Your company runs on training, hundreds of narrated courses, each frozen on the day it was recorded. Then something changes. Here, the Help Center now says to use the bookmark icon, not the heart. Drift Monitor flags every course that still teaches the old way. Rebuilding by hand means new captures, new edits, rebooking narration, and months behind every rollout. Now an agent reads the change and pins the exact line in each course that's out of date. It re-records just that line in the voice your learners already know. Then click the bookmark icon on the voice card to add it to Team Voices. Your team approves, and it's live in LMS, transcript, and all. Your team builds new programs instead of rebuilding old ones. Well said. Autopilot updates for legacy content.",
+    "words": [
+     {
+      "w": " Your",
+      "s": 0.0,
+      "e": 0.68,
+      "p": 0.9464904069900513
+     },
+     {
+      "w": " company",
+      "s": 0.68,
+      "e": 1.1,
+      "p": 0.9960772395133972
+     },
+     {
+      "w": " runs",
+      "s": 1.1,
+      "e": 1.42,
+      "p": 0.999541163444519
+     },
+     {
+      "w": " on",
+      "s": 1.42,
+      "e": 1.64,
+      "p": 0.9983787536621094
+     },
+     {
+      "w": " training,",
+      "s": 1.64,
+      "e": 2.12,
+      "p": 0.9931871891021729
+     },
+     {
+      "w": " hundreds",
+      "s": 2.5,
+      "e": 3.08,
+      "p": 0.9944806098937988
+     },
+     {
+      "w": " of",
+      "s": 3.08,
+      "e": 3.4,
+      "p": 0.9995800852775574
+     },
+     {
+      "w": " narrated",
+      "s": 3.4,
+      "e": 3.86,
+      "p": 0.999180406332016
+     },
+     {
+      "w": " courses,",
+      "s": 3.86,
+      "e": 4.3,
+      "p": 0.9986287355422974
+     },
+     {
+      "w": " each",
+      "s": 4.84,
+      "e": 5.12,
+      "p": 0.9995751976966858
+     },
+     {
+      "w": " frozen",
+      "s": 5.12,
+      "e": 5.56,
+      "p": 0.9992828965187073
+     },
+     {
+      "w": " on",
+      "s": 5.56,
+      "e": 5.82,
+      "p": 0.9991980195045471
+     },
+     {
+      "w": " the",
+      "s": 5.82,
+      "e": 5.98,
+      "p": 0.9995469450950623
+     },
+     {
+      "w": " day",
+      "s": 5.98,
+      "e": 6.18,
+      "p": 0.9996751546859741
+     },
+     {
+      "w": " it",
+      "s": 6.18,
+      "e": 6.38,
+      "p": 0.9984973669052124
+     },
+     {
+      "w": " was",
+      "s": 6.38,
+      "e": 6.54,
+      "p": 0.9994527697563171
+     },
+     {
+      "w": " recorded.",
+      "s": 6.54,
+      "e": 7.04,
+      "p": 0.9996771812438965
+     },
+     {
+      "w": " Then",
+      "s": 8.020000000000001,
+      "e": 8.78,
+      "p": 0.9987688660621643
+     },
+     {
+      "w": " something",
+      "s": 8.78,
+      "e": 9.28,
+      "p": 0.9323576092720032
+     },
+     {
+      "w": " changes.",
+      "s": 9.28,
+      "e": 9.8,
+      "p": 0.9998482465744019
+     },
+     {
+      "w": " Here,",
+      "s": 10.52,
+      "e": 11.2,
+      "p": 0.9997523427009583
+     },
+     {
+      "w": " the",
+      "s": 11.48,
+      "e": 11.76,
+      "p": 0.9975831508636475
+     },
+     {
+      "w": " Help",
+      "s": 11.76,
+      "e": 11.96,
+      "p": 0.6748980283737183
+     },
+     {
+      "w": " Center",
+      "s": 11.96,
+      "e": 12.3,
+      "p": 0.980465829372406
+     },
+     {
+      "w": " now",
+      "s": 12.3,
+      "e": 12.6,
+      "p": 0.9993288516998291
+     },
+     {
+      "w": " says",
+      "s": 12.6,
+      "e": 12.94,
+      "p": 0.9997336268424988
+     },
+     {
+      "w": " to",
+      "s": 12.94,
+      "e": 13.12,
+      "p": 0.9988831877708435
+     },
+     {
+      "w": " use",
+      "s": 13.12,
+      "e": 13.38,
+      "p": 0.9990523457527161
+     },
+     {
+      "w": " the",
+      "s": 13.38,
+      "e": 13.54,
+      "p": 0.9994322657585144
+     },
+     {
+      "w": " bookmark",
+      "s": 13.54,
+      "e": 13.98,
+      "p": 0.9510729610919952
+     },
+     {
+      "w": " icon,",
+      "s": 13.98,
+      "e": 14.56,
+      "p": 0.9991949200630188
+     },
+     {
+      "w": " not",
+      "s": 14.86,
+      "e": 15.38,
+      "p": 0.9991538524627686
+     },
+     {
+      "w": " the",
+      "s": 15.38,
+      "e": 15.56,
+      "p": 0.9996448755264282
+     },
+     {
+      "w": " heart.",
+      "s": 15.56,
+      "e": 15.86,
+      "p": 0.9952581524848938
+     },
+     {
+      "w": " Drift",
+      "s": 17.3,
+      "e": 17.68,
+      "p": 0.9969974160194397
+     },
+     {
+      "w": " Monitor",
+      "s": 17.68,
+      "e": 18.08,
+      "p": 0.8966184258460999
+     },
+     {
+      "w": " flags",
+      "s": 18.08,
+      "e": 18.68,
+      "p": 0.9996906518936157
+     },
+     {
+      "w": " every",
+      "s": 18.68,
+      "e": 19.1,
+      "p": 0.9995306730270386
+     },
+     {
+      "w": " course",
+      "s": 19.1,
+      "e": 19.52,
+      "p": 0.999786913394928
+     },
+     {
+      "w": " that",
+      "s": 19.52,
+      "e": 19.74,
+      "p": 0.999875545501709
+     },
+     {
+      "w": " still",
+      "s": 19.74,
+      "e": 20.04,
+      "p": 0.9996004700660706
+     },
+     {
+      "w": " teaches",
+      "s": 20.04,
+      "e": 20.44,
+      "p": 0.9997493624687195
+     },
+     {
+      "w": " the",
+      "s": 20.44,
+      "e": 20.7,
+      "p": 0.9997009038925171
+     },
+     {
+      "w": " old",
+      "s": 20.7,
+      "e": 20.96,
+      "p": 0.9991674423217773
+     },
+     {
+      "w": " way.",
+      "s": 20.96,
+      "e": 21.28,
+      "p": 0.9998688697814941
+     },
+     {
+      "w": " Rebuilding",
+      "s": 22.419999999999998,
+      "e": 23.16,
+      "p": 0.974348247051239
+     },
+     {
+      "w": " by",
+      "s": 23.16,
+      "e": 23.48,
+      "p": 0.9449915885925293
+     },
+     {
+      "w": " hand",
+      "s": 23.48,
+      "e": 23.92,
+      "p": 0.8852442502975464
+     },
+     {
+      "w": " means",
+      "s": 23.92,
+      "e": 24.32,
+      "p": 0.8902989029884338
+     },
+     {
+      "w": " new",
+      "s": 24.32,
+      "e": 24.6,
+      "p": 0.9940423369407654
+     },
+     {
+      "w": " captures,",
+      "s": 24.6,
+      "e": 25.06,
+      "p": 0.9828893542289734
+     },
+     {
+      "w": " new",
+      "s": 25.54,
+      "e": 25.68,
+      "p": 0.9991445541381836
+     },
+     {
+      "w": " edits,",
+      "s": 25.68,
+      "e": 26.08,
+      "p": 0.9994698166847229
+     },
+     {
+      "w": " rebooking",
+      "s": 26.54,
+      "e": 27.02,
+      "p": 0.9903226494789124
+     },
+     {
+      "w": " narration,",
+      "s": 27.02,
+      "e": 27.52,
+      "p": 0.9951417446136475
+     },
+     {
+      "w": " and",
+      "s": 27.82,
+      "e": 28.28,
+      "p": 0.9923904538154602
+     },
+     {
+      "w": " months",
+      "s": 28.28,
+      "e": 28.58,
+      "p": 0.9980231523513794
+     },
+     {
+      "w": " behind",
+      "s": 28.58,
+      "e": 29.04,
+      "p": 0.9980425834655762
+     },
+     {
+      "w": " every",
+      "s": 29.04,
+      "e": 29.52,
+      "p": 0.9989627599716187
+     },
+     {
+      "w": " rollout.",
+      "s": 29.52,
+      "e": 29.98,
+      "p": 0.9441265761852264
+     },
+     {
+      "w": " Now",
+      "s": 31.13,
+      "e": 31.5,
+      "p": 0.9981133937835693
+     },
+     {
+      "w": " an",
+      "s": 31.5,
+      "e": 31.74,
+      "p": 0.9732093214988708
+     },
+     {
+      "w": " agent",
+      "s": 31.74,
+      "e": 32.1,
+      "p": 0.9933171272277832
+     },
+     {
+      "w": " reads",
+      "s": 32.1,
+      "e": 32.46,
+      "p": 0.9997598528862
+     },
+     {
+      "w": " the",
+      "s": 32.46,
+      "e": 32.66,
+      "p": 0.9994081258773804
+     },
+     {
+      "w": " change",
+      "s": 32.66,
+      "e": 33.14,
+      "p": 0.9993082284927368
+     },
+     {
+      "w": " and",
+      "s": 33.14,
+      "e": 33.4,
+      "p": 0.9959267973899841
+     },
+     {
+      "w": " pins",
+      "s": 33.4,
+      "e": 33.8,
+      "p": 0.9844416975975037
+     },
+     {
+      "w": " the",
+      "s": 33.8,
+      "e": 34.0,
+      "p": 0.9996106028556824
+     },
+     {
+      "w": " exact",
+      "s": 34.0,
+      "e": 34.44,
+      "p": 0.9997031092643738
+     },
+     {
+      "w": " line",
+      "s": 34.44,
+      "e": 34.88,
+      "p": 0.9994862079620361
+     },
+     {
+      "w": " in",
+      "s": 34.88,
+      "e": 35.18,
+      "p": 0.9992541670799255
+     },
+     {
+      "w": " each",
+      "s": 35.18,
+      "e": 35.44,
+      "p": 0.9997749924659729
+     },
+     {
+      "w": " course",
+      "s": 35.44,
+      "e": 35.92,
+      "p": 0.9991722106933594
+     },
+     {
+      "w": " that's",
+      "s": 35.92,
+      "e": 36.3,
+      "p": 0.9983437657356262
+     },
+     {
+      "w": " out",
+      "s": 36.3,
+      "e": 36.46,
+      "p": 0.9993171691894531
+     },
+     {
+      "w": " of",
+      "s": 36.46,
+      "e": 36.56,
+      "p": 0.9668282270431519
+     },
+     {
+      "w": " date.",
+      "s": 36.56,
+      "e": 36.84,
+      "p": 0.9997732043266296
+     },
+     {
+      "w": " It",
+      "s": 37.72,
+      "e": 38.46,
+      "p": 0.9987050294876099
+     },
+     {
+      "w": " re",
+      "s": 38.46,
+      "e": 38.7,
+      "p": 0.9082043766975403
+     },
+     {
+      "w": "-records",
+      "s": 38.7,
+      "e": 39.14,
+      "p": 0.992562452952067
+     },
+     {
+      "w": " just",
+      "s": 39.14,
+      "e": 39.52,
+      "p": 0.9989771842956543
+     },
+     {
+      "w": " that",
+      "s": 39.52,
+      "e": 39.84,
+      "p": 0.9956562519073486
+     },
+     {
+      "w": " line",
+      "s": 39.84,
+      "e": 40.28,
+      "p": 0.9998688697814941
+     },
+     {
+      "w": " in",
+      "s": 40.28,
+      "e": 40.82,
+      "p": 0.9318292140960693
+     },
+     {
+      "w": " the",
+      "s": 40.82,
+      "e": 40.92,
+      "p": 0.9979020357131958
+     },
+     {
+      "w": " voice",
+      "s": 40.92,
+      "e": 41.2,
+      "p": 0.9958667755126953
+     },
+     {
+      "w": " your",
+      "s": 41.2,
+      "e": 41.46,
+      "p": 0.9951625466346741
+     },
+     {
+      "w": " learners",
+      "s": 41.46,
+      "e": 41.84,
+      "p": 0.982840895652771
+     },
+     {
+      "w": " already",
+      "s": 41.84,
+      "e": 42.34,
+      "p": 0.9994872808456421
+     },
+     {
+      "w": " know.",
+      "s": 42.34,
+      "e": 42.7,
+      "p": 0.9987061023712158
+     },
+     {
+      "w": " Then",
+      "s": 43.47,
+      "e": 43.84,
+      "p": 0.9471099972724915
+     },
+     {
+      "w": " click",
+      "s": 43.84,
+      "e": 44.06,
+      "p": 0.9959241151809692
+     },
+     {
+      "w": " the",
+      "s": 44.06,
+      "e": 44.22,
+      "p": 0.9989963173866272
+     },
+     {
+      "w": " bookmark",
+      "s": 44.22,
+      "e": 44.64,
+      "p": 0.9291702806949615
+     },
+     {
+      "w": " icon",
+      "s": 44.64,
+      "e": 45.04,
+      "p": 0.9996159076690674
+     },
+     {
+      "w": " on",
+      "s": 45.04,
+      "e": 45.26,
+      "p": 0.9993361830711365
+     },
+     {
+      "w": " the",
+      "s": 45.26,
+      "e": 45.34,
+      "p": 0.999663233757019
+     },
+     {
+      "w": " voice",
+      "s": 45.34,
+      "e": 45.58,
+      "p": 0.9940813183784485
+     },
+     {
+      "w": " card",
+      "s": 45.58,
+      "e": 45.84,
+      "p": 0.9988017082214355
+     },
+     {
+      "w": " to",
+      "s": 45.84,
+      "e": 46.02,
+      "p": 0.999599039554596
+     },
+     {
+      "w": " add",
+      "s": 46.02,
+      "e": 46.26,
+      "p": 0.9994999170303345
+     },
+     {
+      "w": " it",
+      "s": 46.26,
+      "e": 46.36,
+      "p": 0.9997463822364807
+     },
+     {
+      "w": " to",
+      "s": 46.36,
+      "e": 46.5,
+      "p": 0.9999070167541504
+     },
+     {
+      "w": " Team",
+      "s": 46.5,
+      "e": 46.7,
+      "p": 0.8101761341094971
+     },
+     {
+      "w": " Voices.",
+      "s": 46.7,
+      "e": 47.08,
+      "p": 0.9790487885475159
+     },
+     {
+      "w": " Your",
+      "s": 48.099999999999994,
+      "e": 48.9,
+      "p": 0.848205029964447
+     },
+     {
+      "w": " team",
+      "s": 48.9,
+      "e": 49.2,
+      "p": 0.9867703914642334
+     },
+     {
+      "w": " approves,",
+      "s": 49.2,
+      "e": 49.88,
+      "p": 0.9987167119979858
+     },
+     {
+      "w": " and",
+      "s": 49.98,
+      "e": 50.2,
+      "p": 0.9994916915893555
+     },
+     {
+      "w": " it's",
+      "s": 50.2,
+      "e": 50.42,
+      "p": 0.9954867660999298
+     },
+     {
+      "w": " live",
+      "s": 50.42,
+      "e": 50.72,
+      "p": 0.884504497051239
+     },
+     {
+      "w": " in",
+      "s": 50.72,
+      "e": 50.86,
+      "p": 0.9289270639419556
+     },
+     {
+      "w": " LMS,",
+      "s": 50.86,
+      "e": 51.58,
+      "p": 0.8410801589488983
+     },
+     {
+      "w": " transcript,",
+      "s": 51.88,
+      "e": 52.48,
+      "p": 0.9936838150024414
+     },
+     {
+      "w": " and",
+      "s": 52.82,
+      "e": 52.94,
+      "p": 0.9999198913574219
+     },
+     {
+      "w": " all.",
+      "s": 52.94,
+      "e": 53.22,
+      "p": 0.9524108171463013
+     },
+     {
+      "w": " Your",
+      "s": 54.6,
+      "e": 55.4,
+      "p": 0.9994410872459412
+     },
+     {
+      "w": " team",
+      "s": 55.4,
+      "e": 55.74,
+      "p": 0.9999009370803833
+     },
+     {
+      "w": " builds",
+      "s": 55.74,
+      "e": 56.12,
+      "p": 0.9996179342269897
+     },
+     {
+      "w": " new",
+      "s": 56.12,
+      "e": 56.32,
+      "p": 0.9999053478240967
+     },
+     {
+      "w": " programs",
+      "s": 56.32,
+      "e": 57.0,
+      "p": 0.9996548891067505
+     },
+     {
+      "w": " instead",
+      "s": 57.0,
+      "e": 57.76,
+      "p": 0.8048266172409058
+     },
+     {
+      "w": " of",
+      "s": 57.76,
+      "e": 58.0,
+      "p": 0.9999024868011475
+     },
+     {
+      "w": " rebuilding",
+      "s": 58.0,
+      "e": 58.44,
+      "p": 0.9993389248847961
+     },
+     {
+      "w": " old",
+      "s": 58.44,
+      "e": 58.84,
+      "p": 0.9996988773345947
+     },
+     {
+      "w": " ones.",
+      "s": 58.84,
+      "e": 59.34,
+      "p": 0.999711811542511
+     },
+     {
+      "w": " Well",
+      "s": 60.6,
+      "e": 61.0,
+      "p": 0.9981039762496948
+     },
+     {
+      "w": " said.",
+      "s": 61.0,
+      "e": 61.36,
+      "p": 0.9985404014587402
+     },
+     {
+      "w": " Autopilot",
+      "s": 62.44,
+      "e": 63.24,
+      "p": 0.9932751059532166
+     },
+     {
+      "w": " updates",
+      "s": 63.24,
+      "e": 63.68,
+      "p": 0.9860543608665466
+     },
+     {
+      "w": " for",
+      "s": 63.68,
+      "e": 64.0,
+      "p": 0.9998835325241089
+     },
+     {
+      "w": " legacy",
+      "s": 64.0,
+      "e": 64.4,
+      "p": 0.9896466135978699
+     },
+     {
+      "w": " content.",
+      "s": 64.4,
+      "e": 64.94,
+      "p": 0.9998805522918701
+     }
+    ],
+    "backend": "faster"
+   },
+   "occurrences": [
+    {
+     "id": "o1",
+     "t_start": 13.12,
+     "t_end": 13.38,
+     "word": "use",
+     "sentence": "Here, the Help Center now says to use the bookmark icon, not the heart.",
+     "char_start": 34,
+     "char_end": 37,
+     "base": "use",
+     "prefix": null,
+     "tail": null,
+     "intended": "use_v",
+     "intended_desc": "to employ, make use of (YOOZ)",
+     "intended_pos": "verb",
+     "intended_ipa": "juːz",
+     "intended_respell": "YOOZ",
+     "detected": "use_v",
+     "detected_desc": "to employ, make use of (YOOZ)",
+     "detected_pos": "verb",
+     "detected_ipa": "juːz",
+     "detected_respell": "YOOZ",
+     "scores": {
+      "use_n": -6.3695,
+      "use_v": -5.9912
+     },
+     "margin": 0.3783,
+     "free_decode": "sæztijuːzðəpʌ",
+     "free_decode_distance": 0,
+     "free_decode_slack": 1,
+     "undecidable": false,
+     "flag": false,
+     "reason": "ok",
+     "confidence": "med",
+     "confidence_reason": "CTC and free decode agree, margin 0.38",
+     "clip_wav": "mock-audio/o1_use_wide.mp3",
+     "score_clip_wav": "mock-audio/o1_use.mp3",
+     "sentence_wav": "mock-audio/o1_sentence.mp3",
+     "sentence_t_start": 10.37,
+     "sentence_t_end": 16.01,
+     "candidates": {
+      "use_n": "juːs",
+      "use_v": "juːz"
+     },
+     "candidate_tokens": {
+      "use_n": [
+       "j",
+       "uː",
+       "s"
+      ],
+      "use_v": [
+       "j",
+       "uː",
+       "z"
+      ]
+     },
+     "candidate_respells": {
+      "use_n": "YOOS",
+      "use_v": "YOOZ"
+     },
+     "candidate_descs": {
+      "use_n": "the act or purpose of using (YOOS)",
+      "use_v": "to employ, make use of (YOOZ)"
+     },
+     "intent_engine": "claude",
+     "intent_confidence": 0.97,
+     "pad_used": 0.1
+    },
+    {
+     "id": "o2",
+     "t_start": 32.1,
+     "t_end": 32.46,
+     "word": "reads",
+     "sentence": "Now an agent reads the change and pins the exact line in each course that's out of date.",
+     "char_start": 13,
+     "char_end": 18,
+     "base": "read",
+     "prefix": null,
+     "tail": "s",
+     "intended": "read_present",
+     "intended_desc": "present tense: to read (REED)",
+     "intended_pos": "verb",
+     "intended_ipa": "ɹiːdz",
+     "intended_respell": "REEDZ",
+     "detected": "read_present",
+     "detected_desc": "present tense: to read (REED)",
+     "detected_pos": "verb",
+     "detected_ipa": "ɹiːdz",
+     "detected_respell": "REEDZ",
+     "scores": {
+      "read_present": -4.7997,
+      "read_past": -6.3664
+     },
+     "margin": 1.5668,
+     "free_decode": "neɪdʒəntɹiːdzðətʃ",
+     "free_decode_distance": 0,
+     "free_decode_slack": 1,
+     "undecidable": false,
+     "flag": false,
+     "reason": "ok",
+     "confidence": "high",
+     "confidence_reason": "CTC and free decode agree, margin 1.57",
+     "clip_wav": "mock-audio/o2_reads_wide.mp3",
+     "score_clip_wav": "mock-audio/o2_reads.mp3",
+     "sentence_wav": "mock-audio/o2_sentence.mp3",
+     "sentence_t_start": 30.98,
+     "sentence_t_end": 36.99,
+     "candidates": {
+      "read_present": "ɹiːdz",
+      "read_past": "ɹɛdz"
+     },
+     "candidate_tokens": {
+      "read_present": [
+       "ɹ",
+       "iː",
+       "d",
+       "z"
+      ],
+      "read_past": [
+       "ɹ",
+       "ɛ",
+       "d",
+       "z"
+      ]
+     },
+     "candidate_respells": {
+      "read_present": "REEDZ",
+      "read_past": "REHDZ"
+     },
+     "candidate_descs": {
+      "read_present": "present tense: to read (REED)",
+      "read_past": "past tense/participle: already read (RED)"
+     },
+     "intent_engine": "claude",
+     "intent_confidence": 0.95,
+     "pad_used": 0.1
+    },
+    {
+     "id": "o3",
+     "t_start": 38.46,
+     "t_end": 39.14,
+     "word": "re-records",
+     "sentence": "It re-records just that line in the voice your learners already know.",
+     "char_start": 3,
+     "char_end": 13,
+     "base": "record",
+     "prefix": "re",
+     "tail": "s",
+     "intended": "record_v",
+     "intended_desc": "to capture audio/video or write down (rih-KORD)",
+     "intended_pos": "verb",
+     "intended_ipa": "ɹiːɹᵻkɔːɹdz",
+     "intended_respell": "ree-ruh-KORDZ",
+     "detected": "record_n",
+     "detected_desc": "stored information or a best achievement (REH-kurd)",
+     "detected_pos": "noun",
+     "detected_ipa": "ɹiːɹɛkɚdz",
+     "detected_respell": "ree-REH-kurdz",
+     "scores": {
+      "record_n": -0.1442,
+      "record_v": -1.5567
+     },
+     "margin": 1.4126,
+     "free_decode": "ɪtɹiːɹɛkɚdzdʒʌs",
+     "free_decode_distance": 2,
+     "free_decode_slack": 2,
+     "undecidable": false,
+     "flag": true,
+     "reason": "best candidate is record_n (ree-REH-kurdz), not intended record_v (ree-ruh-KORDZ)",
+     "confidence": "med",
+     "confidence_reason": "rules disagree but CTC margin is large (1.41)",
+     "clip_wav": "mock-audio/o3_re_records_wide.mp3",
+     "score_clip_wav": "mock-audio/o3_re_records.mp3",
+     "sentence_wav": "mock-audio/o3_sentence.mp3",
+     "sentence_t_start": 37.57,
+     "sentence_t_end": 42.85,
+     "candidates": {
+      "record_n": "ɹiːɹɛkɚdz",
+      "record_v": "ɹiːɹᵻkɔːɹdz"
+     },
+     "candidate_tokens": {
+      "record_n": [
+       "ɹ",
+       "iː",
+       "ɹ",
+       "ɛ",
+       "k",
+       "ɚ",
+       "d",
+       "z"
+      ],
+      "record_v": [
+       "ɹ",
+       "iː",
+       "ɹ",
+       "ᵻ",
+       "k",
+       "ɔːɹ",
+       "d",
+       "z"
+      ]
+     },
+     "candidate_respells": {
+      "record_n": "ree-REH-kurdz",
+      "record_v": "ree-ruh-KORDZ"
+     },
+     "candidate_descs": {
+      "record_n": "stored information or a best achievement (REH-kurd)",
+      "record_v": "to capture audio/video or write down (rih-KORD)"
+     },
+     "intent_engine": "claude",
+     "intent_confidence": 0.95,
+     "pad_used": 0.1
+    },
+    {
+     "id": "o4",
+     "t_start": 50.42,
+     "t_end": 50.72,
+     "word": "live",
+     "sentence": "Your team approves, and it's live in LMS, transcript, and all.",
+     "char_start": 29,
+     "char_end": 33,
+     "base": "live",
+     "prefix": null,
+     "tail": null,
+     "intended": "live_adj",
+     "intended_desc": "happening in real time; not recorded (LYVE)",
+     "intended_pos": "adjective",
+     "intended_ipa": "laɪv",
+     "intended_respell": "LYV",
+     "detected": "live_v",
+     "detected_desc": "to reside, to be alive (LIV)",
+     "detected_pos": "verb",
+     "detected_ipa": "lɪv",
+     "detected_respell": "LIHV",
+     "scores": {
+      "live_v": -2.7474,
+      "live_adj": -2.9645
+     },
+     "margin": 0.2171,
+     "free_decode": "ændɪtslɪvənəaʊ",
+     "free_decode_distance": 1,
+     "free_decode_slack": 1,
+     "undecidable": false,
+     "flag": true,
+     "reason": "best candidate is live_v (LIHV), not intended live_adj (LYV)",
+     "confidence": "low",
+     "confidence_reason": "CTC and free decode disagree (margin 0.22)",
+     "clip_wav": "mock-audio/o4_live_wide.mp3",
+     "score_clip_wav": "mock-audio/o4_live.mp3",
+     "sentence_wav": "mock-audio/o4_sentence.mp3",
+     "sentence_t_start": 47.95,
+     "sentence_t_end": 53.37,
+     "candidates": {
+      "live_v": "lɪv",
+      "live_adj": "laɪv"
+     },
+     "candidate_tokens": {
+      "live_v": [
+       "l",
+       "ɪ",
+       "v"
+      ],
+      "live_adj": [
+       "l",
+       "aɪ",
+       "v"
+      ]
+     },
+     "candidate_respells": {
+      "live_v": "LIHV",
+      "live_adj": "LYV"
+     },
+     "candidate_descs": {
+      "live_v": "to reside, to be alive (LIV)",
+      "live_adj": "happening in real time; not recorded (LYVE)"
+     },
+     "intent_engine": "claude",
+     "intent_confidence": 0.93,
+     "pad_used": 0.1
+    },
+    {
+     "id": "o5",
+     "t_start": 64.4,
+     "t_end": 64.94,
+     "word": "content",
+     "sentence": "Autopilot updates for legacy content.",
+     "char_start": 29,
+     "char_end": 36,
+     "base": "content",
+     "prefix": null,
+     "tail": null,
+     "intended": "content_n",
+     "intended_desc": "material inside a course, document, or site (KAHN-tent)",
+     "intended_pos": "noun",
+     "intended_ipa": "kɑːntɛnt",
+     "intended_respell": "KAHN-tehnt",
+     "detected": "content_n",
+     "detected_desc": "material inside a course, document, or site (KAHN-tent)",
+     "detected_pos": "noun",
+     "detected_ipa": "kɑːntɛnt",
+     "detected_respell": "KAHN-tehnt",
+     "scores": {
+      "content_n": -4.7352,
+      "content_adj": -5.1124
+     },
+     "margin": 0.3772,
+     "free_decode": "lɛɡəsikɑːntɛnt",
+     "free_decode_distance": 0,
+     "free_decode_slack": 1,
+     "undecidable": false,
+     "flag": false,
+     "reason": "ok",
+     "confidence": "med",
+     "confidence_reason": "CTC and free decode agree, margin 0.38",
+     "clip_wav": "mock-audio/o5_content_wide.mp3",
+     "score_clip_wav": "mock-audio/o5_content.mp3",
+     "sentence_wav": "mock-audio/o5_sentence.mp3",
+     "sentence_t_start": 62.29,
+     "sentence_t_end": 65.09,
+     "candidates": {
+      "content_n": "kɑːntɛnt",
+      "content_adj": "kəntɛnt"
+     },
+     "candidate_tokens": {
+      "content_n": [
+       "k",
+       "ɑː",
+       "n",
+       "t",
+       "ɛ",
+       "n",
+       "t"
+      ],
+      "content_adj": [
+       "k",
+       "ə",
+       "n",
+       "t",
+       "ɛ",
+       "n",
+       "t"
+      ]
+     },
+     "candidate_respells": {
+      "content_n": "KAHN-tehnt",
+      "content_adj": "kuhn-TEHNT"
+     },
+     "candidate_descs": {
+      "content_n": "material inside a course, document, or site (KAHN-tent)",
+      "content_adj": "satisfied, pleased (kun-TENT)"
+     },
+     "intent_engine": "claude",
+     "intent_confidence": 0.97,
+     "pad_used": 0.1
+    }
+   ],
+   "flags": 2,
+   "summary": [
+    "5 heteronym occurrences, 2 flagged in 66 s of audio",
+    "[38.5s] re-records — intended ree-ruh-KORDZ (verb), heard ree-REH-kurdz (noun), margin 1.4, confidence med",
+    "[50.4s] live — intended LYV (adjective), heard LIHV (verb), margin 0.2, confidence low"
+   ],
+   "verdict": "issues",
+   "wav16k": "/v1/jobs/abea18b58a740a04/files/work/audio16k.wav?t=xl_EL6jNNZ8bwg4rOa2yNFTO",
+   "engine": "both",
+   "script_used": false,
+   "unaligned": 0,
+   "intent": {
+    "engine_used": "claude+spacy",
+    "claude_ok": true,
+    "note": null
+   }
+  },
+  "fixes": [
+   "95d40a4d",
+   "61c33c45",
+   "07f9aa27",
+   "ac0aca44",
+   "b9c158f2",
+   "25b2e30d"
+  ]
+ },
+ "fix": {
+  "fix_id": "b9c158f2",
+  "job_id": "j_7f3a2c",
+  "status": "done",
+  "stage": "done",
+  "progress": 1.0,
+  "created": "2026-10-12T06:28:01Z",
+  "updated": "2026-10-12T06:28:18Z",
+  "speaker_id": 169,
+  "model": "preview",
+  "occurrence_ids": [
+   "o3",
+   "o4"
+  ],
+  "results": [
+   {
+    "occurrence_id": "o3",
+    "word": "re-records",
+    "intended": "record_v",
+    "intended_respell": "ree-ruh-KORDZ",
+    "model": "preview",
+    "speaker_id": 169,
+    "strategy": "spelling",
+    "tries": [
+     {
+      "n": 1,
+      "text": "It ree-recordz just that line in the voice your learners already know.",
+      "respell": "ree-recordz",
+      "strategy": "spelling",
+      "take_mp3": "mock-audio/fix_o3_try1_try1.mp3",
+      "take_wav": "mock-audio/fix_o3_try1_try1_16k.mp3",
+      "word_wav": "mock-audio/fix_o3_try1_try1_word_wide.mp3",
+      "heard_as": "ɪtɹiːɹɪkɔːɹdzdʒʌst",
+      "detected": "record_v",
+      "margin": 0.1274,
+      "scores": {
+       "record_n": -0.7316,
+       "record_v": -0.6041
+      },
+      "verified": true,
+      "span": [
+       0.32,
+       1.2
+      ],
+      "located": "timing",
+      "reason": "ok",
+      "error": null
+     },
+     {
+      "n": 2,
+      "text": "It ree-ruh-kordz just that line in the voice your learners already know.",
+      "respell": "ree-ruh-kordz",
+      "strategy": "spelling",
+      "take_mp3": "mock-audio/fix_o3_try2_try2.mp3",
+      "take_wav": "mock-audio/fix_o3_try2_try2_16k.mp3",
+      "word_wav": "mock-audio/fix_o3_try2_try2_word_wide.mp3",
+      "heard_as": "ɪtɹiːɹᵻkɔːɹdzdʒʌstð",
+      "detected": "record_v",
+      "margin": 0.7559,
+      "scores": {
+       "record_n": -1.7454,
+       "record_v": -0.9895
+      },
+      "verified": true,
+      "span": [
+       0.36,
+       1.32
+      ],
+      "located": "timing",
+      "reason": "ok",
+      "error": null
+     },
+     {
+      "n": 3,
+      "text": "It ri-ru-kordz just that line in the voice your learners already know.",
+      "respell": "ri-ru-kordz",
+      "strategy": "spelling",
+      "take_mp3": "mock-audio/fix_o3_try3_try3.mp3",
+      "take_wav": "mock-audio/fix_o3_try3_try3_16k.mp3",
+      "word_wav": "mock-audio/fix_o3_try3_try3_word_wide.mp3",
+      "heard_as": "ɪtɹɪɹᵻkɔːɹdzdʒʌs",
+      "detected": "record_v",
+      "margin": 0.8415,
+      "scores": {
+       "record_n": -2.6298,
+       "record_v": -1.7883
+      },
+      "verified": false,
+      "span": [
+       0.28,
+       1.28
+      ],
+      "located": "timing",
+      "reason": "intended phonemes not heard contiguously in /ɪtɹɪɹᵻkɔːɹdzdʒʌs/",
+      "error": null
+     }
+    ],
+    "best": {
+     "n": 2,
+     "text": "It ree-ruh-kordz just that line in the voice your learners already know.",
+     "respell": "ree-ruh-kordz",
+     "strategy": "spelling",
+     "take_mp3": "mock-audio/fix_o3_best_try2.mp3",
+     "take_wav": "mock-audio/fix_o3_best_try2_16k.mp3",
+     "word_wav": "mock-audio/fix_o3_best_try2_word_wide.mp3",
+     "heard_as": "ɪtɹiːɹᵻkɔːɹdzdʒʌstð",
+     "detected": "record_v",
+     "margin": 0.7559,
+     "scores": {
+      "record_n": -1.7454,
+      "record_v": -0.9895
+     },
+     "verified": true,
+     "span": [
+      0.36,
+      1.32
+     ],
+     "located": "timing",
+     "reason": "ok",
+     "error": null
+    },
+    "verified": true,
+    "summary": "re-records fixed on try 2/3 (spelling 'ree-ruh-kordz'): heard /ɪtɹiːɹᵻkɔːɹdzdʒʌstð/, margin 0.76 (weak — below 0.8)",
+    "strong": false,
+    "before": {
+     "clip_wav": "mock-audio/o3_re_records_wide.mp3",
+     "sentence_wav": "mock-audio/o3_sentence.mp3",
+     "detected": "record_n",
+     "detected_desc": "stored information or a best achievement (REH-kurd)",
+     "free_decode": "ɪtɹiːɹɛkɚdzdʒʌs"
+    },
+    "intended_desc": "to capture audio/video or write down (rih-KORD)"
+   },
+   {
+    "occurrence_id": "o4",
+    "word": "live",
+    "intended": "live_adj",
+    "intended_respell": "LYV",
+    "model": "preview",
+    "speaker_id": 169,
+    "strategy": "spelling",
+    "tries": [
+     {
+      "n": 1,
+      "text": "Your team approves, and it's lyve in LMS, transcript, and all.",
+      "respell": "lyve",
+      "strategy": "spelling",
+      "take_mp3": "mock-audio/fix_o4_try1_try1.mp3",
+      "take_wav": "mock-audio/fix_o4_try1_try1_16k.mp3",
+      "word_wav": "mock-audio/fix_o4_try1_try1_word_wide.mp3",
+      "heard_as": "ændɪtslaɪvɪnɛl",
+      "detected": "live_adj",
+      "margin": 2.9966,
+      "scores": {
+       "live_v": -5.236,
+       "live_adj": -2.2394
+      },
+      "verified": true,
+      "span": [
+       1.76,
+       2.2
+      ],
+      "located": "timing",
+      "reason": "ok",
+      "error": null
+     }
+    ],
+    "best": {
+     "n": 1,
+     "text": "Your team approves, and it's lyve in LMS, transcript, and all.",
+     "respell": "lyve",
+     "strategy": "spelling",
+     "take_mp3": "mock-audio/fix_o4_best_try1.mp3",
+     "take_wav": "mock-audio/fix_o4_best_try1_16k.mp3",
+     "word_wav": "mock-audio/fix_o4_best_try1_word_wide.mp3",
+     "heard_as": "ændɪtslaɪvɪnɛl",
+     "detected": "live_adj",
+     "margin": 2.9966,
+     "scores": {
+      "live_v": -5.236,
+      "live_adj": -2.2394
+     },
+     "verified": true,
+     "span": [
+      1.76,
+      2.2
+     ],
+     "located": "timing",
+     "reason": "ok",
+     "error": null
+    },
+    "verified": true,
+    "summary": "live fixed on try 1/1 (spelling 'lyve'): heard /ændɪtslaɪvɪnɛl/, margin 3.00",
+    "strong": true,
+    "before": {
+     "clip_wav": "mock-audio/o4_live_wide.mp3",
+     "sentence_wav": "mock-audio/o4_sentence.mp3",
+     "detected": "live_v",
+     "detected_desc": "to reside, to be alive (LIV)",
+     "free_decode": "ændɪtslɪvənəaʊ"
+    },
+    "intended_desc": "happening in real time; not recorded (LYVE)"
+   }
+  ],
+  "summary": {
+   "requested": 2,
+   "done": 2,
+   "verified": 2,
+   "unverified": 0,
+   "errors": 0
+  },
+  "error": null
+ }
 }

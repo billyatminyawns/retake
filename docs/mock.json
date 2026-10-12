@@ -13,32 +13,54 @@
  },
  "voices": [
   {
-   "speaker_id": 3,
+   "speaker_id": 26,
    "name": "Wade C.",
-   "style": "Narration",
-   "accent": "US",
-   "gender": "male"
+   "style": "Promo",
+   "accent": "English (United States)",
+   "gender": "male",
+   "source": "wellsaid",
+   "language": "English",
+   "eligible": true
   },
   {
-   "speaker_id": 4,
-   "name": "Ava M.",
+   "speaker_id": 169,
+   "name": "Jennie V.",
    "style": "Narration",
-   "accent": "US",
-   "gender": "female"
+   "accent": "English (United States)",
+   "gender": "female",
+   "source": "wellsaid",
+   "language": "English",
+   "eligible": true
+  },
+  {
+   "speaker_id": 105,
+   "name": "Se'von M.",
+   "style": "Narration",
+   "accent": "English (United States)",
+   "gender": "male",
+   "source": "wellsaid",
+   "language": "English",
+   "eligible": true
+  },
+  {
+   "speaker_id": 3,
+   "name": "Alana B.",
+   "style": "Narration",
+   "accent": "English (United States)",
+   "gender": "female",
+   "source": "wellsaid",
+   "language": "English",
+   "eligible": true
   },
   {
    "speaker_id": 19,
    "name": "Patrick K.",
    "style": "Narration",
-   "accent": "US",
-   "gender": "male"
-  },
-  {
-   "speaker_id": 26,
-   "name": "Wade C.",
-   "style": "Promo",
-   "accent": "US",
-   "gender": "male"
+   "accent": "English (United States)",
+   "gender": "male",
+   "source": "wellsaid",
+   "language": "English",
+   "eligible": true
   }
  ],
  "jobs": [

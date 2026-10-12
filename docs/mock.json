@@ -1,5 +1,5 @@
 {
- "_about": "Sample job = the real Retake run on the original L&D Leaders persona film (10/12/26): real transcript, scores, clips and verified fix takes, served from mock-audio/ so the demo needs no API.",
+ "_about": "Sample job = the real Retake run on the original L&D Leaders persona film (10/12/26): real transcript, scores, clips and verified fix takes, served from mock-audio/ so the demo needs no API. FIX v2 (10/12/26): the fix carries takes[] (one render per sentence) and final{} (every fix in one take, re-checked); the final player reuses the o3 take as a stand-in.",
  "health": {
   "ok": true,
   "version": "1.0.0-mock",
@@ -1520,12 +1520,157 @@
     "intended_desc": "happening in real time; not recorded (LYVE)"
    }
   ],
+  "takes": [
+   {
+    "sentence": "It re-records just that line in the voice your learners already know.",
+    "sentence_t_start": 37.57,
+    "sentence_t_end": 42.85,
+    "words": [
+     "o3"
+    ],
+    "text": "It ree-ruh-kordz just that line in the voice your learners already know.",
+    "take_mp3": "mock-audio/fix_o3_best_try2.mp3",
+    "take_wav": "mock-audio/fix_o3_best_try2_16k.mp3",
+    "duration": 4.37,
+    "verified": true,
+    "per_word": {
+     "o3": {
+      "word": "re-records",
+      "respell": "ree-ruh-kordz",
+      "detected": "record_v",
+      "margin": 0.7559,
+      "heard_as": "ɪtɹiːɹᵻkɔːɹdzdʒʌstð",
+      "verified": true,
+      "reason": "ok"
+     }
+    },
+    "tries": 2
+   },
+   {
+    "sentence": "Your team approves, and it's live in LMS, transcript, and all.",
+    "sentence_t_start": 47.95,
+    "sentence_t_end": 53.37,
+    "words": [
+     "o4"
+    ],
+    "text": "Your team approves, and it's lyve in LMS, transcript, and all.",
+    "take_mp3": "mock-audio/fix_o4_best_try1.mp3",
+    "take_wav": "mock-audio/fix_o4_best_try1_16k.mp3",
+    "duration": 5.02,
+    "verified": true,
+    "per_word": {
+     "o4": {
+      "word": "live",
+      "respell": "lyve",
+      "detected": "live_adj",
+      "margin": 2.9966,
+      "heard_as": "ændɪtslaɪvɪnɛl",
+      "verified": true,
+      "reason": "ok"
+     }
+    },
+    "tries": 1
+   }
+  ],
+  "final": {
+   "url": "mock-audio/fix_o3_best_try2.mp3",
+   "text": "Your company runs on training, hundreds of narrated courses, each frozen on the day it was recorded. Then something changes. Here, the Help Center now says to use the bookmark icon, not the heart. Drift Monitor flags every course that still teaches the old way. Rebuilding by hand means new captures, new edits, rebooking narration, and months behind every rollout. Now an agent reads the change and pins the exact line in each course that's out of date. It ree-ruh-kordz just that line in the voice your learners already know. Then click the bookmark icon on the voice card to add it to Team Voices. Your team approves, and it's lyve in LMS, transcript, and all. Your team builds new programs instead of rebuilding old ones. Well said. Autopilot updates for legacy content.",
+   "duration": 4.37,
+   "verified": true,
+   "flags_after": 0,
+   "occurrences_after": [
+    {
+     "id": "o1",
+     "word": "use",
+     "t_start": 13.12,
+     "t_end": 13.38,
+     "sentence": "Here, the Help Center now says to use the bookmark icon, not the heart.",
+     "intended": "use_v",
+     "intended_desc": "to employ, make use of (YOOZ)",
+     "intended_respell": "YOOZ",
+     "detected": "use_v",
+     "detected_desc": "to employ, make use of (YOOZ)",
+     "margin": 0.3783,
+     "confidence": "med",
+     "flag": false,
+     "reason": "ok"
+    },
+    {
+     "id": "o2",
+     "word": "reads",
+     "t_start": 32.1,
+     "t_end": 32.46,
+     "sentence": "Now an agent reads the change and pins the exact line in each course that's out of date.",
+     "intended": "read_present",
+     "intended_desc": "present tense: to read (REED)",
+     "intended_respell": "REEDZ",
+     "detected": "read_present",
+     "detected_desc": "present tense: to read (REED)",
+     "margin": 1.5668,
+     "confidence": "high",
+     "flag": false,
+     "reason": "ok"
+    },
+    {
+     "id": "o3",
+     "word": "re-records",
+     "t_start": 38.46,
+     "t_end": 39.14,
+     "sentence": "It ree-ruh-kordz just that line in the voice your learners already know.",
+     "intended": "record_v",
+     "intended_desc": "to capture audio/video or write down (rih-KORD)",
+     "intended_respell": "ree-ruh-KORDZ",
+     "detected": "record_v",
+     "detected_desc": "to capture audio/video or write down (rih-KORD)",
+     "margin": 0.7559,
+     "confidence": "med",
+     "flag": false,
+     "reason": "ok"
+    },
+    {
+     "id": "o4",
+     "word": "live",
+     "t_start": 50.42,
+     "t_end": 50.72,
+     "sentence": "Your team approves, and it's lyve in LMS, transcript, and all.",
+     "intended": "live_adj",
+     "intended_desc": "happening in real time; not recorded (LYVE)",
+     "intended_respell": "LYV",
+     "detected": "live_adj",
+     "detected_desc": "happening in real time; not recorded (LYVE)",
+     "margin": 2.9966,
+     "confidence": "high",
+     "flag": false,
+     "reason": "ok"
+    },
+    {
+     "id": "o5",
+     "word": "content",
+     "t_start": 64.4,
+     "t_end": 64.94,
+     "sentence": "Autopilot updates for legacy content.",
+     "intended": "content_n",
+     "intended_desc": "material inside a course, document, or site (KAHN-tent)",
+     "intended_respell": "KAHN-tehnt",
+     "detected": "content_n",
+     "detected_desc": "material inside a course, document, or site (KAHN-tent)",
+     "margin": 0.3772,
+     "confidence": "med",
+     "flag": false,
+     "reason": "ok"
+    }
+   ],
+   "mode": "upload",
+   "how": "splice"
+  },
   "summary": {
    "requested": 2,
    "done": 2,
    "verified": 2,
    "unverified": 0,
-   "errors": 0
+   "errors": 0,
+   "takes": 2,
+   "final_verified": true
   },
   "error": null
  }

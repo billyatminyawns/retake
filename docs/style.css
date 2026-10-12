@@ -694,3 +694,78 @@ pre.code .k { color: var(--code-key); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.001s !important; transition-duration: 0.001s !important; }
 }
+
+/* ---------------- fix panel v2: final take → sentence takes → per-word tries ---------------- */
+
+.fix-summary.ok { background: var(--clean-soft); border-color: var(--clean-line); border-left-color: var(--clean-fill); }
+.fix-summary.warn { background: var(--warn-soft); border-color: var(--warn-line); border-left-color: var(--warn-fill); }
+.fix-summary.bad { background: var(--flag-soft); border-color: var(--flag-line); border-left-color: var(--flag-fill); }
+.fix-note { font-size: 12px; color: var(--faint); padding: 2px 2px; }
+.fix-tier { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
+.fix-tier h3 { font: 700 15px/20px var(--font-ui); }
+.fix-tier-sub { font-size: 12px; color: var(--faint); }
+
+/* tier 1 · the final take */
+.fix-final {
+  position: relative; border: 1px solid var(--clean-line); border-radius: var(--radius); padding: 16px 18px 16px 20px;
+  background: var(--card-2); overflow: hidden;
+}
+.fix-final::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--accent); }
+.fix-final.bad { border-color: var(--flag-line); }
+.fix-final.bad::before { background: var(--flag-fill); }
+.final-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; }
+.final-title { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.final-title h3 { font: 700 17px/22px var(--font-ui); }
+.final-sub { font: 400 12px/16px var(--font-ui); color: var(--muted); }
+.final-head .spacer, .take-head .spacer, .final-actions .spacer { flex: 1; }
+.fix-final .player { background: var(--card); }
+.final-actions { margin-top: 12px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.final-recheck { font-family: var(--mono); font-size: 11.5px; color: var(--muted); }
+.final-recheck.ok { color: var(--clean); }
+.final-recheck.bad { color: var(--flag); }
+.final-off { margin-top: 10px; font-size: 13px; color: var(--flag); }
+.final-off b { font-weight: 700; }
+.final-note { margin-top: 10px; font-size: 12.5px; line-height: 1.55; color: var(--faint); }
+.fixed-script { margin-top: 10px; }
+.fixed-script summary, .word-tries summary { cursor: pointer; font: 500 12px/16px var(--font-ui); color: var(--muted); list-style: none; display: flex; align-items: center; gap: 8px; }
+.fixed-script summary::-webkit-details-marker, .word-tries summary::-webkit-details-marker { display: none; }
+.fixed-script summary::before, .word-tries summary::before { content: "▸"; font-size: 11px; color: var(--faint); transition: transform 0.15s; }
+.fixed-script[open] summary::before, .word-tries[open] summary::before { transform: rotate(90deg); }
+.fixed-script-text { margin-top: 10px; font-size: 14px; line-height: 1.75; color: var(--text); background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; white-space: pre-wrap; word-break: break-word; }
+
+/* fixed-word marks (shared by the final script and the take sentences) */
+.fixed-script-text mark, .take-sentence mark { background: var(--lav-soft); color: var(--lav); border-radius: 3px; padding: 0 3px; font-family: var(--mono); font-size: 0.92em; font-weight: 600; }
+.fixed-script-text mark.fx-ok, .take-sentence mark.fx-ok { background: var(--clean-soft); color: var(--clean); box-shadow: inset 0 -2px 0 var(--clean-line); }
+.fixed-script-text mark.fx-bad, .take-sentence mark.fx-bad { background: var(--flag-soft); color: var(--flag); box-shadow: inset 0 -2px 0 var(--flag-line); }
+
+/* tier 2 · sentence takes */
+.take-card { border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; background: var(--card-2); }
+.take-card.ok { border-color: var(--clean-line); }
+.take-card.part { border-color: var(--warn-line); }
+.take-card.bad { border-color: var(--flag-line); }
+.take-card.pending { border-style: dashed; }
+.take-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+.take-n { font: 700 14px/20px var(--font-ui); }
+.take-words-list { font: 700 13px/18px var(--font-ui); color: var(--muted); }
+.take-sentence { font-size: 15px; line-height: 1.7; color: var(--text); margin-bottom: 12px; }
+.vmark.warn { color: var(--warn); background: var(--warn-soft); }
+.take-words { margin-top: 10px; display: flex; flex-direction: column; gap: 4px; }
+.take-word { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-family: var(--mono); font-size: 11.5px; color: var(--faint); padding: 4px 0; border-top: 1px dashed var(--border); }
+.take-word .vmark { padding: 0 6px; }
+.tw-word { font: 700 13px/18px var(--font-ui); color: var(--text); }
+.tw-meta { white-space: nowrap; }
+.tw-meta .ipa { font-size: 12px; }
+.tw-meta.reason { white-space: normal; }
+.take-actions { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* tier 3 · per-word tries, collapsed */
+.word-tries { margin-top: 4px; }
+.word-tries > .fix-row { margin-top: 10px; }
+
+@media (max-width: 704px) {
+  .fix-final { padding: 14px 14px 14px 16px; }
+  .final-actions .btn { flex: 1; }
+  .final-actions .spacer { flex: 0 0 100%; }
+  .final-recheck { width: 100%; }
+  .take-word { gap: 8px; }
+}

@@ -245,8 +245,20 @@
       if ((mm = /^\/v1\/jobs\/([^/]+)\/fix$/.exec(path)) && method === 'POST') { mockFixPolls = 0; return delay({ fix_id: m.fix.fix_id }, 300); }
       if ((mm = /^\/v1\/jobs\/([^/]+)\/fixes\/([^/]+)$/.exec(path)) && method === 'GET') {
         mockFixPolls++;
-        var f = clone(m.fix);
-        if (mockFixPolls < 4) { f.status = 'running'; f.progress = mockFixPolls / 4; f.results = f.results.slice(0, mockFixPolls - 1); f.summary = null; }
+        // Simulated v2 fix worker: one poll per sentence take, then the final render, then its re-check, then done.
+        var f = clone(m.fix), takesAll = Array.isArray(f.takes) ? f.takes : null, nTakes = takesAll ? takesAll.length : (f.results || []).length;
+        var steps = nTakes + 2, k = mockFixPolls - 1;
+        if (k < steps) {
+          f.status = 'running'; f.summary = null; f.final = null; f.progress = k / steps;
+          if (k < nTakes) {
+            f.stage = 'rendering take ' + (k + 1) + '/' + nTakes;
+            if (takesAll) {
+              f.takes = takesAll.slice(0, k);
+              var doneIds = []; f.takes.forEach(function (t) { doneIds = doneIds.concat(t.words || []); });
+              f.results = (f.results || []).filter(function (r) { return doneIds.indexOf(r.occurrence_id) >= 0; });
+            } else f.results = (f.results || []).slice(0, k);
+          } else f.stage = k === nTakes ? 'rendering final take' : 're-checking final take';
+        }
         return delay(f);
       }
       if (method === 'POST' && path === '/v1/check-text') {
@@ -675,7 +687,8 @@
       stat(String(occs.length), 'heteronyms'),
       stat(String(flagged.length), 'flagged', flagged.length ? 'flagged' : 'clean'),
       stat(String((res.transcript && res.transcript.words && res.transcript.words.length) || wordCount(res.transcript && res.transcript.text)), 'words'),
-      state.fix && state.fix.results ? stat(fixedN + '/' + flagged.length, 'verified fixes', fixedN === flagged.length ? 'clean' : 'flagged') : null
+      state.fix && state.fix.results ? stat(fixedN + '/' + flagged.length, 'verified fixes', fixedN === flagged.length ? 'clean' : 'flagged') : null,
+      (function () { var fin = fixFinalOf(state.fix); if (!fin) return null; var left = finalLeft(fin); return stat(left != null ? String(left) : '?', 'still off in final take', fin.verified ? 'clean' : 'flagged'); })()
     ]));
     var actions = h('div', { class: 'head-actions' }, [
       flagged.length ? h('button', { class: 'btn btn-primary', type: 'button', text: 'Fix ' + flagged.length + ' flagged', onclick: function () { $('#fix-panel').scrollIntoView({ behavior: 'smooth', block: 'start' }); } }) : null,
@@ -879,9 +892,9 @@
       state.fix = f;
       paintFix(f);
       if (f.status === 'done' || f.status === 'error') {
-        var ok = (f.results || []).filter(function (r) { return r.verified; }).length;
-        if (f.status === 'error') toast('Fix failed: ' + (f.error && (f.error.message || f.error) || 'unknown error'), 'error');
-        else toast(ok + ' of ' + (f.results || []).length + ' verified fixed', ok === (f.results || []).length ? 'ok' : 'info');
+        var ok = fixWordsVerified(f);
+        if (f.status === 'error') toast('Fix failed: ' + errText(f.error), 'error');
+        else toast(fixSummaryLine(f), ok === (f.results || []).length && (!fixFinalOf(f) || fixFinalOf(f).verified) ? 'ok' : 'info');
         renderHead(state.job); renderTranscript(state.job);
         // refresh the occurrence cards' fixed state without losing scroll position
         (f.results || []).forEach(function (r) { var c = $('#occ-' + r.occurrence_id); if (c) { var fresh = occCard(occsOf(state.job).filter(function (o) { return o.id === r.occurrence_id; })[0]); c.parentNode.replaceChild(fresh, c); } });
@@ -909,16 +922,206 @@
       btn.disabled = false; btn.textContent = 'Re-render again';
     }
     box.innerHTML = '';
-    if (done && f.summary) {
-      var summary = Array.isArray(f.summary) ? f.summary.join(' · ') : (typeof f.summary === 'object' ? JSON.stringify(f.summary) : f.summary);
-      box.appendChild(h('div', { class: 'fix-summary', text: summary }));
+    var takes = fixTakesOf(f), fin = fixFinalOf(f), finalStage = /final/i.test(String(f.stage || ''));
+    if (f.status === 'error') box.appendChild(h('div', { class: 'fix-summary bad', text: 'Fix failed: ' + errText(f.error) }));
+    else if (done) {
+      var okN = fixWordsVerified(f);
+      var cls = results.length && okN === results.length && (!fin || fin.verified) ? 'ok' : (okN ? 'warn' : 'bad');
+      box.appendChild(h('div', { class: 'fix-summary ' + cls, text: fixSummaryLine(f) }));
     }
+    // (1) the final take: every verified fix in one file, re-checked
+    if (fin) box.appendChild(finalCard(fin, f));
+    else if (!done && finalStage) box.appendChild(pendingCard('Final take', 'All fixes in one take', (f.stage || 'rendering') + '…'));
+    else if (done && f.status !== 'error' && takes && takes.length) box.appendChild(h('div', { class: 'fix-note', text: 'No final take was rendered for this fix.' }));
+    // (2) one take per sentence, every flagged word in it fixed together
+    if (takes) {
+      if (takes.length) {
+        box.appendChild(tierTitle('Sentence takes', takes.length + ' take' + (takes.length === 1 ? '' : 's') + ' · one render per sentence, every flagged word in it fixed together'));
+        takes.forEach(function (t, i) { box.appendChild(takeCard(t, i, f)); });
+      }
+      if (!done && !finalStage) box.appendChild(pendingCard('Take ' + (takes.length + 1), null, (f.stage || 'rendering') + '…'));
+    }
+    // (3) the per-word tries (the pre-v2 rows), collapsed once sentence takes exist
+    var rows = [];
     results.forEach(function (r) {
       var o = occsOf(state.job).filter(function (x) { return x.id === r.occurrence_id; })[0];
-      if (!o) return;
-      box.appendChild(fixRow(o, r, f));
+      if (o) rows.push(fixRow(o, r, f));
     });
-    if (done && !results.length) box.appendChild(h('div', { class: 'empty', text: 'No takes came back.' }));
+    if (rows.length) {
+      if (takes) {
+        var det = h('details', { class: 'word-tries' }, [h('summary', { text: 'Per-word tries · ' + rows.length + ' word' + (rows.length === 1 ? '' : 's') + ' · ' + fixWordsVerified(f) + ' verified' })]);
+        rows.forEach(function (r) { det.appendChild(r); });
+        box.appendChild(det);
+      } else rows.forEach(function (r) { box.appendChild(r); });
+    }
+    if (done && !results.length && !(takes && takes.length)) box.appendChild(h('div', { class: 'empty', text: 'No takes came back.' }));
+  }
+  function fixTakesOf(f) { return f && Array.isArray(f.takes) ? f.takes : null; }
+  function fixFinalOf(f) { return f && f.final && typeof f.final === 'object' ? f.final : null; }
+  function fixWordsVerified(f) { return ((f && f.results) || []).filter(function (r) { return r.verified; }).length; }
+  function errText(e) { return e ? (typeof e === 'object' ? (e.message || JSON.stringify(e)) : String(e)) : 'unknown error'; }
+  // "2 of 2 words verified in 1 take · final take verified" — the human summary line (never raw JSON).
+  function fixSummaryLine(f) {
+    var results = (f && f.results) || [], ok = fixWordsVerified(f), takes = fixTakesOf(f), fin = fixFinalOf(f);
+    var nTakes = takes ? takes.length : (f && f.summary && typeof f.summary === 'object' && f.summary.takes != null ? f.summary.takes : null);
+    var s = ok + ' of ' + results.length + ' word' + (results.length === 1 ? '' : 's') + ' verified';
+    if (nTakes != null) s += ' in ' + nTakes + ' take' + (nTakes === 1 ? '' : 's');
+    if (fin) {
+      var left = finalLeft(fin);
+      s += ' · final take ' + (fin.verified ? 'verified' : (left != null ? left + ' word' + (left === 1 ? '' : 's') + ' still off' : 'not verified'));
+    }
+    return s;
+  }
+  function finalLeft(fin) { return fin.flags_after != null ? Number(fin.flags_after) : (fin.verified ? 0 : null); }
+  function finalSrc(fin) { return fin.url || fin.path || fin.take_mp3 || fin.take_wav || ''; }
+  function tierTitle(title, sub) {
+    return h('div', { class: 'fix-tier' }, [h('h3', { text: title }), sub ? h('span', { class: 'fix-tier-sub', text: sub }) : null]);
+  }
+  function pendingCard(title, sub, status) {
+    return h('div', { class: 'take-card pending' }, [
+      h('div', { class: 'take-head' }, [h('span', { class: 'take-n', text: title }), sub ? h('span', { class: 'final-sub', text: sub }) : null, h('span', { class: 'spacer' }), h('span', { class: 'spin' }), h('span', { class: 'occ-id', text: status || 'rendering…' })])
+    ]);
+  }
+  function failedPlayer(label, note) {
+    return h('div', { class: 'player failed' }, [h('div', { class: 'player-body' }, [h('div', { class: 'player-label', text: label }), h('div', { class: 'muted small', text: note })])]);
+  }
+  // Tier 1 — the final take card.
+  function finalCard(fin, f) {
+    var job = state.job, res = (job && job.result) || {};
+    var src = finalSrc(fin), left = finalLeft(fin);
+    var after = Array.isArray(fin.occurrences_after) ? fin.occurrences_after : null;
+    var stillOff = after ? after.filter(function (o) { return o.flag; }) : [];
+    var verdict = fin.verified ? 'verified · 0 remaining' : (left != null ? left + ' word' + (left === 1 ? '' : 's') + ' still off' : 'not verified');
+    var recheck = after ? ('re-checked · ' + after.length + ' heteronym' + (after.length === 1 ? '' : 's') + ' · ' + (left != null ? left : stillOff.length) + ' flagged')
+      : (left != null ? 're-checked · ' + left + ' flagged' : 'not re-checked');
+    var how = job && job.mode === 'script'
+      ? 'The whole script was re-rendered in one pass with every verified fix substituted, then checked again end to end.'
+      : 'Each verified take was spliced into the original recording at its sentence, loudness-matched to the surrounding audio, then the whole file was checked again.';
+    var card = h('section', { class: 'fix-final ' + (fin.verified ? 'ok' : 'bad'), 'aria-label': 'Final take' });
+    card.appendChild(h('div', { class: 'final-head' }, [
+      h('div', { class: 'final-title' }, [h('h3', { text: 'Final take' }), h('span', { class: 'final-sub', text: 'All fixes in one take' })]),
+      h('span', { class: 'spacer' }),
+      h('span', { class: 'chip ' + (fin.verified ? 'fixed' : 'flag'), text: verdict }),
+      (f.model || f.speaker_id != null) ? h('span', { class: 'occ-id', text: [f.model, f.speaker_id != null ? voiceName(f.speaker_id) : null].filter(Boolean).join(' · ') }) : null
+    ]));
+    card.appendChild(src
+      ? player(src, { label: 'Final · ' + (basename(res.media) || (job && job.id) || 'take'), duration: fin.duration, bars: 64, kind: 'after' })
+      : failedPlayer('Final', 'no final file'));
+    card.appendChild(h('div', { class: 'final-actions' }, [
+      src ? h('button', { class: 'btn btn-primary', type: 'button', text: 'Download', title: 'Download the final take', onclick: function () { downloadFinal(fin); } }) : null,
+      fin.text ? h('button', { class: 'btn btn-ghost', type: 'button', text: 'Copy fixed script', title: 'The script with every fix spelled in — paste it into WellSaid Studio', onclick: function () { copyText(fin.text, 'Fixed script'); } }) : null,
+      h('span', { class: 'spacer' }),
+      h('span', { class: 'final-recheck ' + (fin.verified ? 'ok' : 'bad'), text: recheck + (fin.duration != null ? ' · ' + fmtTime(fin.duration) : '') })
+    ]));
+    if (stillOff.length) {
+      card.appendChild(h('div', { class: 'final-off' }, [h('b', { text: 'Still off: ' }),
+        document.createTextNode(stillOff.map(function (o) { return o.word + (o.detected_desc ? ' (heard ' + (senseRespell(o.detected_desc) || o.detected || '?') + ')' : ''); }).join(', '))]));
+    }
+    card.appendChild(h('p', { class: 'final-note', text: how }));
+    if (fin.text) {
+      var orig = (res.script_used && typeof res.script_used === 'string') ? res.script_used : ((res.transcript && res.transcript.text) || '');
+      card.appendChild(h('details', { class: 'fixed-script' }, [
+        h('summary', { text: 'Fixed script' }),
+        h('div', { class: 'fixed-script-text', html: diffWordsHtml(orig, fin.text, null, 'fx-ok') })
+      ]));
+    }
+    return card;
+  }
+  // Tier 2 — one card per sentence take: the sentence with every fixed word marked, before/after, per-word heard-as.
+  function takeCard(t, i, f) {
+    var occs = occsOf(state.job), pw = t.per_word || {};
+    var ids = Array.isArray(t.words) ? t.words : Object.keys(pw);
+    var wordOccs = ids.map(function (id) { return occs.filter(function (o) { return o.id === id; })[0] || { id: id, word: (pw[id] && pw[id].word) || id }; });
+    wordOccs.sort(function (a, b) { return (a.t_start || 0) - (b.t_start || 0); });   // text order = time order
+    var okN = wordOccs.filter(function (o) { return pw[o.id] && pw[o.id].verified; }).length;
+    var allOk = t.verified != null ? !!t.verified : (ids.length > 0 && okN === ids.length);
+    var classes = wordOccs.map(function (o) { return pw[o.id] && pw[o.id].verified ? 'fx-ok' : 'fx-bad'; });
+    var first = wordOccs[0] || {};
+    var sentence = t.sentence || first.sentence || '';
+    var tStart = t.sentence_t_start != null ? t.sentence_t_start : first.sentence_t_start;
+    var tEnd = t.sentence_t_end != null ? t.sentence_t_end : first.sentence_t_end;
+    var card = h('article', { class: 'take-card ' + (allOk ? 'ok' : okN ? 'part' : 'bad') });
+    card.appendChild(h('div', { class: 'take-head' }, [
+      h('span', { class: 'take-n', text: 'Take ' + (i + 1) }),
+      tStart != null ? h('span', { class: 'occ-time', text: fmtTime(tStart) }) : null,
+      h('span', { class: 'take-words-list', text: wordOccs.map(function (o) { return o.word; }).join(' · ') }),
+      h('span', { class: 'spacer' }),
+      h('span', { class: 'vmark ' + (allOk ? 'ok' : okN ? 'warn' : 'bad'), text: (allOk ? '✓ ' : okN ? '◐ ' : '✗ ') + okN + ' of ' + ids.length + ' word' + (ids.length === 1 ? '' : 's') + ' verified' }),
+      h('span', { class: 'occ-id', text: [t.tries != null ? t.tries + ' tr' + (Number(t.tries) === 1 ? 'y' : 'ies') : null, f.model || null].filter(Boolean).join(' · ') })
+    ]));
+    card.appendChild(h('p', { class: 'take-sentence', html: diffWordsHtml(sentence, t.text || sentence, classes, 'fx-ok') }));
+    var beforeSrc = first.sentence_wav || first.clip_wav;
+    card.appendChild(h('div', { class: 'fix-ab' }, [
+      beforeSrc ? player(beforeSrc, { label: 'Before · original', kind: 'before', bars: 36, duration: (tEnd != null && tStart != null) ? (tEnd - tStart) : null }) : failedPlayer('Before', 'no original clip'),
+      t.take_mp3 ? player(t.take_mp3, { label: 'After · take ' + (i + 1) + (allOk ? ' · verified' : okN ? ' · partly verified' : ' · not verified'), kind: 'after', bars: 36, duration: t.duration }) : failedPlayer('After', 'no take rendered')
+    ]));
+    var list = h('div', { class: 'take-words' });
+    wordOccs.forEach(function (o) {
+      var w = pw[o.id] || {};
+      list.appendChild(h('div', { class: 'take-word ' + (w.verified ? 'ok' : 'bad') }, [
+        h('span', { class: 'vmark ' + (w.verified ? 'ok' : 'bad'), text: w.verified ? '✓' : '✗' }),
+        h('span', { class: 'tw-word', text: o.word }),
+        h('span', { class: 'fix-arrow', text: '→' }),
+        h('span', { class: 'respell', text: w.respell || o.intended_respell || o.intended || '' }),
+        h('span', { class: 'tw-meta' }, ['heard ', h('span', { class: 'ipa ' + (w.verified ? '' : 'heard'), text: '/' + (w.heard_as || '?') + '/' })]),
+        w.detected ? h('span', { class: 'tw-meta', text: 'detected ' + w.detected }) : null,
+        w.margin != null ? h('span', { class: 'tw-meta', text: 'margin ' + Number(w.margin).toFixed(2) }) : null,
+        w.reason && w.reason !== 'ok' ? h('span', { class: 'tw-meta reason', text: w.reason }) : null
+      ]));
+    });
+    card.appendChild(list);
+    card.appendChild(h('div', { class: 'take-actions' }, [
+      t.take_mp3 ? h('button', { class: 'btn btn-mini', type: 'button', text: 'Download take', onclick: function () { downloadTakeFile(t.take_mp3, 'take' + (i + 1) + '_' + wordOccs.map(function (o) { return o.word; }).join('_')); } }) : null,
+      t.text ? h('button', { class: 'btn btn-mini', type: 'button', text: 'Copy text', title: 'The exact text sent to WellSaid', onclick: function () { copyText(t.text, 'Rendered text'); } }) : null
+    ]));
+    return card;
+  }
+  // Word-level diff (LCS) of the rendered text against the original; each changed run is wrapped in <mark>.
+  // classes[i] names the class of the i-th changed run (text order) when the counts line up; else defaultClass.
+  function diffWordsHtml(orig, text, classes, defaultClass) {
+    if (!text) return '';
+    var parts = String(text).split(/(\s+)/);          // word, sep, word, sep, … (even indexes are words, may be '')
+    var b = []; for (var i = 0; i < parts.length; i += 2) if (parts[i] !== '') b.push(parts[i]);
+    var a = String(orig || '').split(/\s+/).filter(Boolean);
+    var n = a.length, m = b.length, changed = [];
+    for (var q = 0; q < m; q++) changed.push(false);
+    if (n && m && n * m <= 2500000) {
+      var W = m + 1, L = new Uint16Array((n + 1) * W);
+      for (var x = n - 1; x >= 0; x--) for (var y = m - 1; y >= 0; y--) {
+        L[x * W + y] = a[x] === b[y] ? L[(x + 1) * W + y + 1] + 1 : Math.max(L[(x + 1) * W + y], L[x * W + y + 1]);
+      }
+      var xi = 0, yi = 0;
+      while (xi < n && yi < m) {
+        if (a[xi] === b[yi]) { xi++; yi++; }
+        else if (L[(xi + 1) * W + yi] >= L[xi * W + yi + 1]) xi++;
+        else { changed[yi] = true; yi++; }
+      }
+      while (yi < m) changed[yi++] = true;
+    }
+    var runs = 0; for (var r = 0; r < m; r++) if (changed[r] && !(r && changed[r - 1])) runs++;
+    var useClasses = classes && classes.length === runs;
+    var out = '', inRun = false, runIdx = -1, wi = 0;
+    for (var p = 0; p < parts.length; p++) {
+      var s = parts[p];
+      if (p % 2 === 1) {                               // separator: stays inside the run only if the next word continues it
+        if (inRun && !changed[wi]) { out += '</mark>'; inRun = false; }
+        out += esc(s); continue;
+      }
+      if (s === '') continue;
+      if (changed[wi] && !inRun) { runIdx++; var cls = useClasses ? classes[runIdx] : defaultClass; out += '<mark' + (cls ? ' class="' + cls + '"' : '') + '>'; inRun = true; }
+      out += esc(s); wi++;
+    }
+    if (inRun) out += '</mark>';
+    return out;
+  }
+  function downloadTakeFile(src, stem) {
+    var ext = (/\.(wav|mp3|m4a|mp4|ogg|flac)$/i.exec(String(src).split('?')[0]) || [0, 'mp3'])[1].toLowerCase();
+    fetchFile(src).then(function (b) { downloadBlob(b, (state.job.id + '_' + stem).replace(/[^A-Za-z0-9_\-]+/g, '_') + '.' + ext); }, function (e) { reportError(e, 'Download'); });
+  }
+  function downloadFinal(fin) {
+    var src = finalSrc(fin);
+    var ext = (/\.(wav|mp3|m4a|mp4|ogg|flac)$/i.exec(String(src).split('?')[0]) || [0, 'mp3'])[1].toLowerCase();
+    fetchFile(src).then(function (b) { downloadBlob(b, ('retake_' + state.job.id + '_final').replace(/[^A-Za-z0-9_\-]+/g, '_') + '.' + ext); toast('Downloaded the final take', 'ok'); }, function (e) { reportError(e, 'Download'); });
   }
   function fixRow(o, r, f) {
     var tries = r.tries || [], best = r.best || (tries.length ? tries[tries.length - 1] : null);
@@ -996,7 +1199,18 @@
       var r = fixResultFor(o.id);
       return '<tr class="' + (o.flag ? 'flag' : 'ok') + '"><td>' + esc(fmtTime(o.t_start)) + '</td><td><b>' + esc(o.word) + '</b></td><td>' + esc(o.intended_desc) + '<br><code>' + esc(o.intended_respell || '') + '</code> /' + esc(o.intended_ipa || '') + '/</td><td>' + esc(o.detected_desc || 'undecidable') + '<br>heard /' + esc(o.free_decode || '') + '/</td><td>' + (o.flag ? 'FLAG' : 'ok') + (r ? (r.verified ? ' → fixed ✓' : ' → fix unverified ✗') : '') + '</td><td>' + esc(o.reason || '') + '</td></tr>';
     }).join('');
-    return '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Retake report · ' + esc(job.id) + '</title><style>body{font-family:Assistant,"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;background:#111111;color:#fcfcfc;padding:32px;max-width:1100px;margin:auto}h1{font-family:"DM Sans",system-ui,sans-serif;letter-spacing:normal}h1 span{color:#7fed9b}table{border-collapse:collapse;width:100%;font-size:13px}td,th{border-bottom:1px solid #2c2c2c;padding:8px;vertical-align:top;text-align:left}tr.flag td:first-child{border-left:3px solid #f46c95}tr.ok td:first-child{border-left:3px solid #7fed9b}code{color:#c99fff}p.t{line-height:1.7;background:#1e1e1e;padding:16px;border-radius:4px}.m{color:#c7c7c7}</style></head><body><h1>WellSaid – <span>Retake</span></h1><p class="m">' + esc(basename(res.media) || job.id) + ' · ' + esc(fmtTime(res.duration)) + ' · ' + occs.length + ' heteronyms · ' + flagged.length + ' flagged · ' + esc(job.created || '') + '</p><p class="t">' + esc((res.transcript && res.transcript.text) || '') + '</p><table><thead><tr><th>t</th><th>word</th><th>you meant</th><th>it said</th><th>verdict</th><th>why</th></tr></thead><tbody>' + rows + '</tbody></table>' + (res.summary && res.summary.length ? '<h3>Summary</h3><ul>' + res.summary.map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ul>' : '') + '</body></html>';
+    var fixHtml = '';
+    var fx = state.job === job ? state.fix : null;
+    if (fx && fx.status === 'done' && (fx.results || []).length) {
+      var fin = fixFinalOf(fx), takes = fixTakesOf(fx) || [];
+      fixHtml = '<h3>Fix</h3><p class="m">' + esc(fixSummaryLine(fx)) + (fx.model ? ' · ' + esc(fx.model) : '') + (fx.speaker_id != null ? ' · ' + esc(voiceName(fx.speaker_id)) : '') + '</p>';
+      if (takes.length) fixHtml += '<ol>' + takes.map(function (t) {
+        var pw = t.per_word || {}, ids = Array.isArray(t.words) ? t.words : Object.keys(pw), okN = ids.filter(function (id) { return pw[id] && pw[id].verified; }).length;
+        return '<li>' + esc(t.text || t.sentence || '') + ' <span class="m">— ' + okN + ' of ' + ids.length + ' word' + (ids.length === 1 ? '' : 's') + ' verified' + (t.tries != null ? ', ' + t.tries + ' tr' + (Number(t.tries) === 1 ? 'y' : 'ies') : '') + '</span></li>';
+      }).join('') + '</ol>';
+      if (fin) fixHtml += '<h4>Final take</h4><p class="m">' + esc(fin.verified ? 'verified · 0 remaining' : ((finalLeft(fin) != null ? finalLeft(fin) : '?') + ' still off')) + (fin.duration != null ? ' · ' + esc(fmtTime(fin.duration)) : '') + '</p>' + (fin.text ? '<p class="t">' + esc(fin.text) + '</p>' : '');
+    }
+    return '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Retake report · ' + esc(job.id) + '</title><style>body{font-family:Assistant,"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;background:#111111;color:#fcfcfc;padding:32px;max-width:1100px;margin:auto}h1{font-family:"DM Sans",system-ui,sans-serif;letter-spacing:normal}h1 span{color:#7fed9b}table{border-collapse:collapse;width:100%;font-size:13px}td,th{border-bottom:1px solid #2c2c2c;padding:8px;vertical-align:top;text-align:left}tr.flag td:first-child{border-left:3px solid #f46c95}tr.ok td:first-child{border-left:3px solid #7fed9b}code{color:#c99fff}p.t{line-height:1.7;background:#1e1e1e;padding:16px;border-radius:4px}.m{color:#c7c7c7}</style></head><body><h1>WellSaid – <span>Retake</span></h1><p class="m">' + esc(basename(res.media) || job.id) + ' · ' + esc(fmtTime(res.duration)) + ' · ' + occs.length + ' heteronyms · ' + flagged.length + ' flagged · ' + esc(job.created || '') + '</p><p class="t">' + esc((res.transcript && res.transcript.text) || '') + '</p><table><thead><tr><th>t</th><th>word</th><th>you meant</th><th>it said</th><th>verdict</th><th>why</th></tr></thead><tbody>' + rows + '</tbody></table>' + (res.summary && res.summary.length ? '<h3>Summary</h3><ul>' + res.summary.map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ul>' : '') + fixHtml + '</body></html>';
   }
 
   /* ------------------------------ API page ------------------------------ */
@@ -1058,8 +1272,8 @@
         curl: 'curl -s -H "X-Api-Key: $RETAKE_API_KEY" ' + base + '/v1/jobs/' + jid + '\n# status: queued | running | done | error · stage · progress · result.occurrences[]',
         py: 'import time\n\nwhile True:\n    job = requests.get(f"{BASE}/v1/jobs/{job_id}", headers=H, timeout=30).json()\n    print(job["status"], job.get("stage"), round(job.get("progress") or 0, 2))\n    if job["status"] in ("done", "error"):\n        break\n    time.sleep(1.5)\n\nif job["status"] == "error":\n    raise SystemExit(job["error"])\n\nres = job["result"]\nflagged = [o for o in res["occurrences"] if o["flag"]]\nfor o in flagged:\n    print(f\'{o["t_start"]:6.2f}s {o["word"]:14} meant {o["intended_respell"]:14} heard /{o["free_decode"]}/\')' },
       { method: 'POST', path: '/v1/jobs/{id}/fix', title: 'Fix the flagged lines',
-        curl: 'curl -s -X POST ' + base + '/v1/jobs/' + jid + '/fix \\\n  -H "X-Api-Key: $RETAKE_API_KEY" -H "Content-Type: application/json" \\\n  -d \'{"speaker_id": 3, "model": "preview"}\'\n# → 202 {"fix_id": "f_…"}  · omit occurrence_ids to fix every flagged occurrence\n\ncurl -s -H "X-Api-Key: $RETAKE_API_KEY" ' + base + '/v1/jobs/' + jid + '/fixes/FIX_ID\n# → {status, results: [{occurrence_id, tries: [{text, take_mp3, heard_as, detected, margin, verified}], best, verified}], summary}',
-        py: 'fix_id = requests.post(f"{BASE}/v1/jobs/{job_id}/fix", headers=H, json={\n    "occurrence_ids": [o["id"] for o in flagged],   # optional, defaults to all flagged\n    "speaker_id": 3,\n    "model": "preview",\n}, timeout=30).json()["fix_id"]\n\nwhile True:\n    fix = requests.get(f"{BASE}/v1/jobs/{job_id}/fixes/{fix_id}", headers=H, timeout=30).json()\n    if fix["status"] in ("done", "error"):\n        break\n    time.sleep(1.5)\n\nfor r in fix["results"]:\n    take = r["best"]\n    print(r["occurrence_id"], "verified" if r["verified"] else "NOT verified",\n          take and f"{BASE}{take[\'take_mp3\']}")' },
+        curl: 'curl -s -X POST ' + base + '/v1/jobs/' + jid + '/fix \\\n  -H "X-Api-Key: $RETAKE_API_KEY" -H "Content-Type: application/json" \\\n  -d \'{"speaker_id": 3, "model": "preview", "final": true}\'\n# → 202 {"fix_id": "f_…"}  · omit occurrence_ids to fix every flagged occurrence · final defaults to true\n\ncurl -s -H "X-Api-Key: $RETAKE_API_KEY" ' + base + '/v1/jobs/' + jid + '/fixes/FIX_ID\n# → {status, results: [{occurrence_id, tries: [{text, take_mp3, heard_as, detected, margin, verified}], best, verified}],\n#    takes: [{sentence, words, text, take_mp3, verified, per_word: {occ_id: {detected, margin, heard_as, verified}}, tries}],   one take per sentence\n#    final: {url, text, duration, verified, flags_after},   every fix in one file, re-checked\n#    summary: {requested, done, verified, unverified, errors, takes, final_verified}}',
+        py: 'fix_id = requests.post(f"{BASE}/v1/jobs/{job_id}/fix", headers=H, json={\n    "occurrence_ids": [o["id"] for o in flagged],   # optional, defaults to all flagged\n    "speaker_id": 3,\n    "model": "preview",\n}, timeout=30).json()["fix_id"]\n\nwhile True:\n    fix = requests.get(f"{BASE}/v1/jobs/{job_id}/fixes/{fix_id}", headers=H, timeout=30).json()\n    if fix["status"] in ("done", "error"):\n        break\n    time.sleep(1.5)\n\nfor t in fix.get("takes", []):                       # one take per sentence, every flagged word in it fixed together\n    print(t["text"], "verified" if t["verified"] else "NOT verified", f"{BASE}{t[\'take_mp3\']}")\n\nfinal = fix.get("final")                             # every verified fix in one file, re-checked\nif final:\n    print("final:", "verified" if final["verified"] else f"{final[\'flags_after\']} still off", f"{BASE}{final[\'url\']}")\n    print(final["text"])                             # the fixed script, ready to paste into Studio' },
       { method: 'GET', path: '/v1/jobs/{id}/files/{name}', title: 'Download clips, takes and reports',
         curl: 'curl -s -H "X-Api-Key: $RETAKE_API_KEY" -o report.json ' + base + '/v1/jobs/' + jid + '/files/report.json\ncurl -s -H "X-Api-Key: $RETAKE_API_KEY" -o report.html ' + base + '/v1/jobs/' + jid + '/files/report.html',
         py: 'for name in ("report.json", "report.html"):\n    b = requests.get(f"{BASE}/v1/jobs/{job_id}/files/{name}", headers=H, timeout=60).content\n    open(name, "wb").write(b)' },

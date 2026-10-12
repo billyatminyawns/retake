@@ -1,0 +1,25 @@
+/* Primitives — EXACT values from the Breve Web Figma "Primitive colors [web]" +
+   Grayscale variable collections. Do not interpolate new steps: if a step is not
+   listed here it does not exist in the library. */
+:root{
+/* Mint — primary brand / CTA */
+--mint-25:#edfff2;--mint-50:#e2ffea;--mint-75:#d7fee2;--mint-100:#ceffdc;--mint-200:#a0f2b6;--mint-300:#7fed9b;--mint-400:#61cf7c;--mint-500:#3c8455;--mint-600:#2e4d39;
+/* Lavender — secondary brand, nav + footer fills */
+--lavender-25:#fcfaff;--lavender-40:#f4edfe;--lavender-50:#f0e5ff;--lavender-100:#e6d3ff;--lavender-200:#d6b5ff;--lavender-300:#c99fff;--lavender-400:#a173cd;--lavender-450:#815fa2;--lavender-500:#63477e;--lavender-550:#413359;--lavender-600:#3b3049;--lavender-800:#262428;
+/* Sand — default neutral surface family (replaces pure desaturated grey) */
+--sand-25:#fffefe;--sand-50:#fbfaf9;--sand-100:#f4f3f1;--sand-200:#f2f0ec;--sand-300:#ede9e2;--sand-400:#e9e4dc;--sand-500:#dad6cf;--sand-600:#bab4aa;--sand-700:#958f84;--sand-800:#6e695f;--sand-900:#4a463f;--sand-1000:#2a2722;
+/* Grayscale — text + stroke ramp. Note the non-linear stops (0/20/25/50/75, 350/450). */
+--gray-0:#fcfcfc;--gray-20:#f8f8f8;--gray-25:#f0f0f0;--gray-50:#dbdbdb;--gray-75:#c7c7c7;--gray-100:#bdbdbd;--gray-200:#afafaf;--gray-300:#999999;--gray-350:#757575;--gray-400:#646464;--gray-450:#565656;--gray-500:#444444;--gray-600:#3a3a3a;--gray-700:#333333;--gray-800:#2c2c2c;--gray-900:#232323;--gray-1000:#1e1e1e;--gray-1100:#111111;--gray-1200:#0a0a0a;--gray-white:#ffffff;--gray-black:#000000;
+/* Red — error / destructive */
+--red-50:#ffedf3;--red-100:#fed2e0;--red-200:#fca5bf;--red-300:#f46c95;--red-400:#e13465;--red-500:#cb1240;--red-600:#990a2d;
+/* Muted secondary accents */
+--sage-50:#eff9f2;--sage-100:#d9f8e2;--sage-125:#e1f1e6;--sage-150:#c7edd1;--sage-200:#b9dbc2;--sage-300:#99c5a5;--sage-400:#7ea488;--sage-500:#5b7e65;--sage-600:#294932;--sage-700:#273a2c;
+--sunflower-25:#fcfaf6;--sunflower-50:#fff2de;--sunflower-75:#ffefd6;--sunflower-100:#fbe0b7;--sunflower-150:#fddaa5;--sunflower-200:#fbd191;--sunflower-300:#ffbf5f;--sunflower-400:#f3a735;--sunflower-450:#cd871d;--sunflower-500:#7d561b;--sunflower-600:#463520;
+--azure-25:#f2f8ff;--azure-50:#ecf5ff;--azure-100:#cee4ff;--azure-150:#b0d3ff;--azure-200:#9bc8ff;--azure-300:#7ab6ff;--azure-400:#407fcc;--azure-450:#1a5092;--azure-500:#264974;--azure-600:#1d3048;
+/* Lime — used only in the .Green [wip] theme exploration, not in shipped light mode */
+--lime-100:#9cf7be;--lime-200:#7af4a8;--lime-400:#38ef7d;--lime-900:#166032;
+/* Brand gradient (hero) — lavender-25 → mint-75 */
+--gradient-hero:linear-gradient(135deg,var(--lavender-25) 0%,var(--mint-75) 100%);
+/* DEPRECATED — never use in new work: papaya, chartreuse, hibiscus.
+   Present in the Figma library but intentionally NOT declared here. */
+}

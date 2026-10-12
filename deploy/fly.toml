@@ -1,0 +1,61 @@
+# Retake API on Fly.io — used by deploy/fly.sh (documented, not run by the builder).
+#
+#   brew install flyctl && fly auth login
+#   WELLSAID_API_KEY=… ANTHROPIC_API_KEY=… RETAKE_API_KEYS=… deploy/fly.sh
+#
+# ONE machine on purpose (fly.sh deploys with --ha=false): the job store is SQLite on the
+# volume and the ML models are not re-entrant. The models are baked into the image
+# (PREFETCH_MODELS=1), so a machine that auto-stops wakes up ready in ~20 s.
+
+app = "retake-api"
+primary_region = "sea"
+kill_signal = "SIGTERM"
+kill_timeout = "30s"
+
+[build]
+  # Resolved by fly.sh, which runs from the project root and also passes --dockerfile explicitly.
+  dockerfile = "deploy/Dockerfile"
+
+[build.args]
+  PREFETCH_MODELS = "1"
+
+[env]
+  PORT = "8080"
+  RETAKE_DATA = "/data"
+  RETAKE_MODELS = "/models"
+  HF_HOME = "/models"
+  RETAKE_WHISPER = "faster"
+  RETAKE_LOG_LEVEL = "INFO"
+  # The hosted UI's origin. Use "*" while developing against localhost.
+  RETAKE_CORS_ORIGINS = "https://billyatminyawns.github.io"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
+
+  [http_service.concurrency]
+    type = "requests"
+    soft_limit = 20
+    hard_limit = 50
+
+  [[http_service.checks]]
+    interval = "30s"
+    timeout = "10s"
+    grace_period = "60s"
+    method = "GET"
+    path = "/v1/health"
+
+[[mounts]]
+  source = "retake_data"
+  destination = "/data"
+  initial_size = "10gb"
+
+[[vm]]
+  # wav2vec2 + whisper-turbo (int8) peak around 4 GB; 8 GB keeps a 500 MB upload comfortable.
+  memory = "8gb"
+  cpu_kind = "performance"
+  cpus = 2

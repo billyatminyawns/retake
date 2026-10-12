@@ -1,0 +1,13 @@
+{
+  "//": "Merge the mcpServers entry into Claude Desktop's config (Settings → Developer → Edit Config → ~/Library/Application Support/Claude/claude_desktop_config.json), or into Claude Code's MCP settings. Point RETAKE_API_BASE at your Retake API (local, tunnel, Hugging Face Space, Fly…) and RETAKE_API_KEY at one of its RETAKE_API_KEYS (omit when the API runs in open mode). Fully restart Claude Desktop afterwards.",
+  "mcpServers": {
+    "retake": {
+      "command": "node",
+      "args": ["/Users/william/Downloads/retake-cloud/mcp/src/index.js"],
+      "env": {
+        "RETAKE_API_BASE": "http://localhost:8080",
+        "RETAKE_API_KEY": "REPLACE_WITH_ONE_OF_THE_API_SERVER_KEYS"
+      }
+    }
+  }
+}

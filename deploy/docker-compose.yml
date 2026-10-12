@@ -1,0 +1,48 @@
+# Retake API — Docker Compose (local box, VPS, anything with Docker).
+#
+#   cp deploy/.env.example deploy/.env            # fill in WELLSAID_API_KEY / ANTHROPIC_API_KEY / RETAKE_API_KEYS
+#   docker compose -f deploy/docker-compose.yml up --build -d
+#   open http://localhost:8080   (UI)   ·   http://localhost:8080/docs   (Swagger)
+#   docker compose -f deploy/docker-compose.yml logs -f api
+#
+# Volumes
+#   retake_data    jobs.db + jobs/<id>/ (uploads, clips, takes, report.json/html)
+#   retake_models  the ML models. Seeded from the image on first start (Docker copies the
+#                  image's /models into a new empty named volume), so later rebuilds with
+#                  PREFETCH_MODELS=0 are fast and the models survive image upgrades.
+# Memory: wav2vec2 + whisper turbo (int8) need ~4 GB at peak; the 8 GB limit leaves headroom.
+name: retake
+
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+      args:
+        PREFETCH_MODELS: "${PREFETCH_MODELS:-1}"
+    image: retake-api:local
+    container_name: retake-api
+    env_file:
+      - .env
+    environment:
+      # Fixed inside the container; change the HOST port with RETAKE_PORT=9000.
+      PORT: "8080"
+      RETAKE_DATA: /data
+      RETAKE_MODELS: /models
+      HF_HOME: /models
+    ports:
+      - "${RETAKE_PORT:-8080}:8080"
+    volumes:
+      - retake_data:/data
+      - retake_models:/models
+    restart: unless-stopped
+    stop_grace_period: 30s
+    deploy:
+      resources:
+        limits:
+          memory: ${RETAKE_MEMORY_LIMIT:-8g}
+    # HEALTHCHECK (GET /v1/health) is inherited from the image.
+
+volumes:
+  retake_data:
+  retake_models:

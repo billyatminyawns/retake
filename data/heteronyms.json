@@ -1,0 +1,3755 @@
+{
+  "present": {
+    "senses": [
+      {
+        "id": "present_n",
+        "pos": "NOUN",
+        "desc": "a gift, or the current moment in time (PREH-zunt)",
+        "ipa": [
+          "p",
+          "ɹ",
+          "ɛ",
+          "z",
+          "ə",
+          "n",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "present_v",
+        "pos": "VERB",
+        "desc": "to show or deliver material to an audience (prih-ZENT)",
+        "ipa": [
+          "p",
+          "ɹ",
+          "ɪ",
+          "z",
+          "ɛ",
+          "n",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "PREH-znt",
+      "pree-ZEHNT",
+      "pruh-ZEHNT"
+    ]
+  },
+  "project": {
+    "senses": [
+      {
+        "id": "project_n",
+        "pos": "NOUN",
+        "desc": "a planned piece of work (PRAH-jekt)",
+        "ipa": [
+          "p",
+          "ɹ",
+          "ɑː",
+          "dʒ",
+          "ɛ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "project_v",
+        "pos": "VERB",
+        "desc": "to forecast, or to cast outward (voice, image) (pruh-JEKT)",
+        "ipa": [
+          "p",
+          "ɹ",
+          "ə",
+          "dʒ",
+          "ɛ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "pruh-JEHK",
+      "proh-JEHK",
+      "proh-JEHKT",
+      "pruh-JEHKT",
+      "PRAH-jehk",
+      "PRAH-jehkt"
+    ]
+  },
+  "record": {
+    "senses": [
+      {
+        "id": "record_n",
+        "pos": "NOUN",
+        "desc": "stored information or a best achievement (REH-kurd)",
+        "ipa": [
+          "ɹ",
+          "ɛ",
+          "k",
+          "ɚ",
+          "d"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "record_v",
+        "pos": "VERB",
+        "desc": "to capture audio/video or write down (rih-KORD)",
+        "ipa": [
+          "ɹ",
+          "ᵻ",
+          "k",
+          "ɔːɹ",
+          "d"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "ruh-KORD",
+      "REH-kurd",
+      "ree-KORD"
+    ]
+  },
+  "content": {
+    "senses": [
+      {
+        "id": "content_n",
+        "pos": "NOUN",
+        "desc": "material inside a course, document, or site (KAHN-tent)",
+        "ipa": [
+          "k",
+          "ɑː",
+          "n",
+          "t",
+          "ɛ",
+          "n",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "content_adj",
+        "pos": "ADJ",
+        "desc": "satisfied, pleased (kun-TENT)",
+        "ipa": [
+          "k",
+          "ə",
+          "n",
+          "t",
+          "ɛ",
+          "n",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "kuhn-TEHNT",
+      "KAHN-tehnt"
+    ]
+  },
+  "conduct": {
+    "senses": [
+      {
+        "id": "conduct_n",
+        "pos": "NOUN",
+        "desc": "behavior, way of acting (KAHN-dukt)",
+        "ipa": [
+          "k",
+          "ɑː",
+          "n",
+          "d",
+          "ʌ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "conduct_v",
+        "pos": "VERB",
+        "desc": "to carry out or lead an activity (kun-DUKT)",
+        "ipa": [
+          "k",
+          "ə",
+          "n",
+          "d",
+          "ʌ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "KAHN-duhkt",
+      "KAHN-duhk",
+      "kuhn-DUHKT",
+      "kuhn-DUHK"
+    ]
+  },
+  "contract": {
+    "senses": [
+      {
+        "id": "contract_n",
+        "pos": "NOUN",
+        "desc": "a binding agreement (KAHN-trakt)",
+        "ipa": [
+          "k",
+          "ɑː",
+          "n",
+          "t",
+          "ɹ",
+          "æ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "contract_v",
+        "pos": "VERB",
+        "desc": "to shrink, or to enter an agreement (kun-TRAKT)",
+        "ipa": [
+          "k",
+          "ə",
+          "n",
+          "t",
+          "ɹ",
+          "æ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "kuhn-TRAKT",
+      "KAHN-trakt",
+      "KAHN-trak",
+      "kuhn-TRAK"
+    ]
+  },
+  "estimate": {
+    "senses": [
+      {
+        "id": "estimate_n",
+        "pos": "NOUN",
+        "desc": "an approximate calculation (ES-tih-mut)",
+        "ipa": [
+          "ɛ",
+          "s",
+          "t",
+          "ᵻ",
+          "m",
+          "ə",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "estimate_v",
+        "pos": "VERB",
+        "desc": "to roughly calculate (ES-tih-mayt)",
+        "ipa": [
+          "ɛ",
+          "s",
+          "t",
+          "ᵻ",
+          "m",
+          "eɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "EH-stuh-muht",
+      "EH-stuh-mayt"
+    ]
+  },
+  "minute": {
+    "senses": [
+      {
+        "id": "minute_n",
+        "pos": "NOUN",
+        "desc": "sixty seconds; a moment (MIN-it)",
+        "ipa": [
+          "m",
+          "ɪ",
+          "n",
+          "ɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "minute_adj",
+        "pos": "ADJ",
+        "desc": "extremely small (my-NOOT)",
+        "ipa": [
+          "m",
+          "aɪ",
+          "n",
+          "uː",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "MIH-nuht",
+      "my-NOOT"
+    ]
+  },
+  "resume": {
+    "senses": [
+      {
+        "id": "resume_v",
+        "pos": "VERB",
+        "desc": "to continue after a pause (rih-ZOOM)",
+        "ipa": [
+          "ɹ",
+          "ᵻ",
+          "z",
+          "uː",
+          "m"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "resume_n",
+        "pos": "NOUN",
+        "desc": "a CV, summary of work history (REH-zuh-may)",
+        "ipa": [
+          "ɹ",
+          "ɛ",
+          "z",
+          "ə",
+          "m",
+          "eɪ"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "ruh-ZOOM",
+      "ree-ZOOM"
+    ]
+  },
+  "lead": {
+    "senses": [
+      {
+        "id": "lead_v",
+        "pos": "VERB",
+        "desc": "to guide or be in charge (LEED)",
+        "ipa": [
+          "l",
+          "iː",
+          "d"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "lead_n",
+        "pos": "NOUN",
+        "desc": "the heavy metal, Pb (LED)",
+        "ipa": [
+          "l",
+          "ɛ",
+          "d"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "LEED",
+      "LEHD"
+    ]
+  },
+  "read": {
+    "senses": [
+      {
+        "id": "read_present",
+        "pos": "VERB",
+        "desc": "present tense: to read (REED)",
+        "ipa": [
+          "ɹ",
+          "iː",
+          "d"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "read_past",
+        "pos": "VERB",
+        "desc": "past tense/participle: already read (RED)",
+        "ipa": [
+          "ɹ",
+          "ɛ",
+          "d"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "REHD",
+      "REED"
+    ]
+  },
+  "live": {
+    "senses": [
+      {
+        "id": "live_v",
+        "pos": "VERB",
+        "desc": "to reside, to be alive (LIV)",
+        "ipa": [
+          "l",
+          "ɪ",
+          "v"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "live_adj",
+        "pos": "ADJ",
+        "desc": "happening in real time; not recorded (LYVE)",
+        "ipa": [
+          "l",
+          "aɪ",
+          "v"
+        ],
+        "respell": "TODO",
+        "spellings": [
+          "lyve"
+        ]
+      }
+    ],
+    "respell_candidates": [
+      "LYV",
+      "LIHV"
+    ]
+  },
+  "close": {
+    "senses": [
+      {
+        "id": "close_v",
+        "pos": "VERB",
+        "desc": "to shut or finalize (KLOHZ)",
+        "ipa": [
+          "k",
+          "l",
+          "oʊ",
+          "z"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "close_adj",
+        "pos": "ADJ",
+        "desc": "near; careful (KLOHS)",
+        "ipa": [
+          "k",
+          "l",
+          "oʊ",
+          "s"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "KLOHS",
+      "KLOHZ"
+    ]
+  },
+  "use": {
+    "senses": [
+      {
+        "id": "use_n",
+        "pos": "NOUN",
+        "desc": "the act or purpose of using (YOOS)",
+        "ipa": [
+          "j",
+          "uː",
+          "s"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "use_v",
+        "pos": "VERB",
+        "desc": "to employ, make use of (YOOZ)",
+        "ipa": [
+          "j",
+          "uː",
+          "z"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "YOOS",
+      "YOOZ"
+    ]
+  },
+  "object": {
+    "senses": [
+      {
+        "id": "object_n",
+        "pos": "NOUN",
+        "desc": "a thing; an item (AHB-jekt)",
+        "ipa": [
+          "ɑː",
+          "b",
+          "dʒ",
+          "ɛ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "object_v",
+        "pos": "VERB",
+        "desc": "to protest, raise an objection (ub-JEKT)",
+        "ipa": [
+          "ə",
+          "b",
+          "dʒ",
+          "ɛ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "ahb-JEHKT",
+      "AHB-juhk",
+      "AHB-jehkt",
+      "uhb-JEHKT",
+      "uhb-JEHK",
+      "AHB-juhkt",
+      "ahb-JEHK"
+    ]
+  },
+  "permit": {
+    "senses": [
+      {
+        "id": "permit_n",
+        "pos": "NOUN",
+        "desc": "an official license (PUR-mit)",
+        "ipa": [
+          "p",
+          "ɜː",
+          "m",
+          "ɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "permit_v",
+        "pos": "VERB",
+        "desc": "to allow (pur-MIT)",
+        "ipa": [
+          "p",
+          "ɚ",
+          "m",
+          "ɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "pur-MIHT",
+      "PUR-miht"
+    ]
+  },
+  "produce": {
+    "senses": [
+      {
+        "id": "produce_n",
+        "pos": "NOUN",
+        "desc": "fresh fruits and vegetables (PROH-doos)",
+        "ipa": [
+          "p",
+          "ɹ",
+          "oʊ",
+          "d",
+          "uː",
+          "s"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "produce_v",
+        "pos": "VERB",
+        "desc": "to make or create (pruh-DOOS)",
+        "ipa": [
+          "p",
+          "ɹ",
+          "ə",
+          "d",
+          "uː",
+          "s"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "pruh-DOOS",
+      "PROH-doos",
+      "proh-DOOS",
+      "PRAH-doos"
+    ]
+  },
+  "wind": {
+    "senses": [
+      {
+        "id": "wind_n",
+        "pos": "NOUN",
+        "desc": "moving air (WIND)",
+        "ipa": [
+          "w",
+          "ɪ",
+          "n",
+          "d"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "wind_v",
+        "pos": "VERB",
+        "desc": "to coil or turn (WYND)",
+        "ipa": [
+          "w",
+          "aɪ",
+          "n",
+          "d"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "WYND",
+      "WIHND"
+    ]
+  },
+  "tear": {
+    "senses": [
+      {
+        "id": "tear_n",
+        "pos": "NOUN",
+        "desc": "a drop from the eye when crying (TEER)",
+        "ipa": [
+          "t",
+          "ɪɹ"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "tear_v",
+        "pos": "VERB",
+        "desc": "to rip (TAIR)",
+        "ipa": [
+          "t",
+          "ɛɹ"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "TEER",
+      "TERR"
+    ]
+  },
+  "address": {
+    "senses": [
+      {
+        "id": "address_n",
+        "pos": "NOUN",
+        "desc": "a location or email/mailing destination (AD-res)",
+        "ipa": [
+          "æ",
+          "d",
+          "ɹ",
+          "ɛ",
+          "s"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "address_v",
+        "pos": "VERB",
+        "desc": "to deal with, or speak to (uh-DRES)",
+        "ipa": [
+          "ɐ",
+          "d",
+          "ɹ",
+          "ɛ",
+          "s"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "A-drehs",
+      "uh-DREHS"
+    ]
+  },
+  "alternate": {
+    "senses": [
+      {
+        "id": "alternate_adj",
+        "pos": "ADJ",
+        "desc": "substitute; every other (AWL-tur-nut)",
+        "ipa": [
+          "ɔː",
+          "l",
+          "t",
+          "ɚ",
+          "n",
+          "ə",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "alternate_v",
+        "pos": "VERB",
+        "desc": "to switch back and forth (AWL-tur-nayt)",
+        "ipa": [
+          "ɔː",
+          "l",
+          "t",
+          "ɚ",
+          "n",
+          "eɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "AWL-tur-nayt",
+      "AHL-tur-nuht",
+      "AHL-tur-nayt",
+      "AWL-tur-nuht"
+    ]
+  },
+  "appropriate": {
+    "senses": [
+      {
+        "id": "appropriate_adj",
+        "pos": "ADJ",
+        "desc": "suitable, proper (uh-PROH-pree-ut)",
+        "ipa": [
+          "ɐ",
+          "p",
+          "ɹ",
+          "oʊ",
+          "p",
+          "ɹ",
+          "ɪ",
+          "ə",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "appropriate_v",
+        "pos": "VERB",
+        "desc": "to take or allocate for a purpose (uh-PROH-pree-ayt)",
+        "ipa": [
+          "ɐ",
+          "p",
+          "ɹ",
+          "oʊ",
+          "p",
+          "ɹ",
+          "ɪ",
+          "eɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "uh-PROH-pree-uht",
+      "uh-PROH-pree-ayt"
+    ]
+  },
+  "articulate": {
+    "senses": [
+      {
+        "id": "articulate_adj",
+        "pos": "ADJ",
+        "desc": "well-spoken, clear (ar-TIK-yuh-lut)",
+        "ipa": [
+          "ɑːɹ",
+          "t",
+          "ɪ",
+          "k",
+          "j",
+          "ʊ",
+          "l",
+          "ə",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "articulate_v",
+        "pos": "VERB",
+        "desc": "to express clearly (ar-TIK-yuh-layt)",
+        "ipa": [
+          "ɑːɹ",
+          "t",
+          "ɪ",
+          "k",
+          "j",
+          "ʊ",
+          "l",
+          "eɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "ar-TIH-kyuh-luht",
+      "ar-TIH-kyuh-layt"
+    ]
+  },
+  "associate": {
+    "senses": [
+      {
+        "id": "associate_n",
+        "pos": "NOUN",
+        "desc": "a colleague or junior partner (uh-SOH-see-ut)",
+        "ipa": [
+          "ɐ",
+          "s",
+          "oʊ",
+          "s",
+          "ɪ",
+          "ə",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "associate_v",
+        "pos": "VERB",
+        "desc": "to mentally connect things (uh-SOH-see-ayt)",
+        "ipa": [
+          "ɐ",
+          "s",
+          "oʊ",
+          "s",
+          "ɪ",
+          "eɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "uh-SOH-see-uht",
+      "uh-SOH-shee-uht",
+      "uh-SOH-see-ayt",
+      "uh-SOH-shee-ayt"
+    ]
+  },
+  "attribute": {
+    "senses": [
+      {
+        "id": "attribute_n",
+        "pos": "NOUN",
+        "desc": "a quality or characteristic (AT-rih-byoot)",
+        "ipa": [
+          "æ",
+          "t",
+          "ɹ",
+          "ɪ",
+          "b",
+          "j",
+          "uː",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "attribute_v",
+        "pos": "VERB",
+        "desc": "to credit something to a cause or source (uh-TRIB-yoot)",
+        "ipa": [
+          "ɐ",
+          "t",
+          "ɹ",
+          "ɪ",
+          "b",
+          "j",
+          "uː",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "uh-TRIH-byuht",
+      "A-truh-byoot",
+      "uh-TRIH-byoot"
+    ]
+  },
+  "advocate": {
+    "senses": [
+      {
+        "id": "advocate_n",
+        "pos": "NOUN",
+        "desc": "a supporter or champion (AD-vuh-kut)",
+        "ipa": [
+          "æ",
+          "d",
+          "v",
+          "ə",
+          "k",
+          "ə",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "advocate_v",
+        "pos": "VERB",
+        "desc": "to argue in favor of (AD-vuh-kayt)",
+        "ipa": [
+          "æ",
+          "d",
+          "v",
+          "ə",
+          "k",
+          "eɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "AD-vuh-kayt",
+      "AD-vuh-kuht"
+    ]
+  },
+  "compound": {
+    "senses": [
+      {
+        "id": "compound_n",
+        "pos": "NOUN",
+        "desc": "a mixture, or an enclosed site (KAHM-pownd)",
+        "ipa": [
+          "k",
+          "ɑː",
+          "m",
+          "p",
+          "aʊ",
+          "n",
+          "d"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "compound_v",
+        "pos": "VERB",
+        "desc": "to worsen or accumulate (kum-POWND)",
+        "ipa": [
+          "k",
+          "ə",
+          "m",
+          "p",
+          "aʊ",
+          "n",
+          "d"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "KAHM-pownd",
+      "kuhm-POWND"
+    ]
+  },
+  "console": {
+    "senses": [
+      {
+        "id": "console_n",
+        "pos": "NOUN",
+        "desc": "a control panel or gaming device (KAHN-sohl)",
+        "ipa": [
+          "k",
+          "ɑː",
+          "n",
+          "s",
+          "oʊ",
+          "l"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "console_v",
+        "pos": "VERB",
+        "desc": "to comfort someone (kun-SOHL)",
+        "ipa": [
+          "k",
+          "ə",
+          "n",
+          "s",
+          "oʊ",
+          "l"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "kuhn-SOHL",
+      "KAHN-sohl"
+    ]
+  },
+  "contest": {
+    "senses": [
+      {
+        "id": "contest_n",
+        "pos": "NOUN",
+        "desc": "a competition (KAHN-test)",
+        "ipa": [
+          "k",
+          "ɑː",
+          "n",
+          "t",
+          "ɛ",
+          "s",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "contest_v",
+        "pos": "VERB",
+        "desc": "to dispute or challenge (kun-TEST)",
+        "ipa": [
+          "k",
+          "ə",
+          "n",
+          "t",
+          "ɛ",
+          "s",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "kuhn-TEHST",
+      "KAHN-tehst"
+    ]
+  },
+  "convert": {
+    "senses": [
+      {
+        "id": "convert_n",
+        "pos": "NOUN",
+        "desc": "a person won over to something (KAHN-vurt)",
+        "ipa": [
+          "k",
+          "ɑː",
+          "n",
+          "v",
+          "ɜː",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "convert_v",
+        "pos": "VERB",
+        "desc": "to change form or belief (kun-VURT)",
+        "ipa": [
+          "k",
+          "ə",
+          "n",
+          "v",
+          "ɜː",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "KAHN-vurt",
+      "kuhn-VURT"
+    ]
+  },
+  "convict": {
+    "senses": [
+      {
+        "id": "convict_n",
+        "pos": "NOUN",
+        "desc": "a person found guilty (KAHN-vikt)",
+        "ipa": [
+          "k",
+          "ɑː",
+          "n",
+          "v",
+          "ɪ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "convict_v",
+        "pos": "VERB",
+        "desc": "to find guilty (kun-VIKT)",
+        "ipa": [
+          "k",
+          "ə",
+          "n",
+          "v",
+          "ɪ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "KAHN-vihkt",
+      "KAHN-vihk",
+      "kuhn-VIHKT"
+    ]
+  },
+  "coordinate": {
+    "senses": [
+      {
+        "id": "coordinate_n",
+        "pos": "NOUN",
+        "desc": "a position value, e.g. on a map or grid (koh-OR-dih-nut)",
+        "ipa": [
+          "k",
+          "oʊ",
+          "ɔːɹ",
+          "d",
+          "ᵻ",
+          "n",
+          "ə",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "coordinate_v",
+        "pos": "VERB",
+        "desc": "to organize people or schedules (koh-OR-dih-nayt)",
+        "ipa": [
+          "k",
+          "oʊ",
+          "ɔːɹ",
+          "d",
+          "ᵻ",
+          "n",
+          "eɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "koh-OR-duh-nuht",
+      "koh-OR-duh-nayt"
+    ]
+  },
+  "decrease": {
+    "senses": [
+      {
+        "id": "decrease_n",
+        "pos": "NOUN",
+        "desc": "a reduction (DEE-krees)",
+        "ipa": [
+          "d",
+          "iː",
+          "k",
+          "ɹ",
+          "iː",
+          "s"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "decrease_v",
+        "pos": "VERB",
+        "desc": "to become or make smaller (dih-KREES)",
+        "ipa": [
+          "d",
+          "ᵻ",
+          "k",
+          "ɹ",
+          "iː",
+          "s"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "duh-KREES",
+      "DEE-krees",
+      "dee-KREES"
+    ]
+  },
+  "defect": {
+    "senses": [
+      {
+        "id": "defect_n",
+        "pos": "NOUN",
+        "desc": "a flaw (DEE-fekt)",
+        "ipa": [
+          "d",
+          "iː",
+          "f",
+          "ɛ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "defect_v",
+        "pos": "VERB",
+        "desc": "to abandon one side for another (dih-FEKT)",
+        "ipa": [
+          "d",
+          "ᵻ",
+          "f",
+          "ɛ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "duh-FEHKT",
+      "DEE-fehk",
+      "DEE-fehkt",
+      "duh-FEHK",
+      "dee-FEHK",
+      "dee-FEHKT"
+    ]
+  },
+  "delegate": {
+    "senses": [
+      {
+        "id": "delegate_n",
+        "pos": "NOUN",
+        "desc": "a representative (DEL-ih-gut)",
+        "ipa": [
+          "d",
+          "ɛ",
+          "l",
+          "ɪ",
+          "ɡ",
+          "ə",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "delegate_v",
+        "pos": "VERB",
+        "desc": "to hand off responsibility (DEL-ih-gayt)",
+        "ipa": [
+          "d",
+          "ɛ",
+          "l",
+          "ɪ",
+          "ɡ",
+          "eɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "DEH-luh-gayt",
+      "DEH-luh-guht"
+    ]
+  },
+  "deliberate": {
+    "senses": [
+      {
+        "id": "deliberate_adj",
+        "pos": "ADJ",
+        "desc": "intentional; unhurried (dih-LIB-ur-ut)",
+        "ipa": [
+          "d",
+          "ᵻ",
+          "l",
+          "ɪ",
+          "b",
+          "ɚ",
+          "ɹ",
+          "ə",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "deliberate_v",
+        "pos": "VERB",
+        "desc": "to weigh options carefully (dih-LIB-ur-ayt)",
+        "ipa": [
+          "d",
+          "ᵻ",
+          "l",
+          "ɪ",
+          "b",
+          "ɚ",
+          "ɹ",
+          "eɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "duh-LIH-buh-rayt",
+      "dee-LIH-buh-ruht",
+      "dee-LIH-bruht",
+      "duh-LIH-bruht",
+      "dee-LIH-buh-rayt",
+      "duh-LIH-buh-ruht"
+    ]
+  },
+  "desert": {
+    "senses": [
+      {
+        "id": "desert_n",
+        "pos": "NOUN",
+        "desc": "arid sandy region (DEZ-urt)",
+        "ipa": [
+          "d",
+          "ɛ",
+          "z",
+          "ɚ",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "desert_v",
+        "pos": "VERB",
+        "desc": "to abandon (dih-ZURT)",
+        "ipa": [
+          "d",
+          "ᵻ",
+          "z",
+          "ɜː",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "duh-ZURT",
+      "dee-ZURT",
+      "DEH-zurt"
+    ]
+  },
+  "digest": {
+    "senses": [
+      {
+        "id": "digest_n",
+        "pos": "NOUN",
+        "desc": "a summary compilation (DY-jest)",
+        "ipa": [
+          "d",
+          "aɪ",
+          "dʒ",
+          "ɛ",
+          "s",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "digest_v",
+        "pos": "VERB",
+        "desc": "to break down food or absorb information (dih-JEST)",
+        "ipa": [
+          "d",
+          "ᵻ",
+          "dʒ",
+          "ɛ",
+          "s",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "duh-JEHST",
+      "DY-jehst",
+      "dy-JEHST"
+    ]
+  },
+  "duplicate": {
+    "senses": [
+      {
+        "id": "duplicate_n",
+        "pos": "NOUN",
+        "desc": "an exact copy (DOO-plih-kut)",
+        "ipa": [
+          "d",
+          "uː",
+          "p",
+          "l",
+          "ᵻ",
+          "k",
+          "ə",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "duplicate_v",
+        "pos": "VERB",
+        "desc": "to copy (DOO-plih-kayt)",
+        "ipa": [
+          "d",
+          "uː",
+          "p",
+          "l",
+          "ᵻ",
+          "k",
+          "eɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "DOO-pluh-kayt",
+      "DOO-pluh-kuht"
+    ]
+  },
+  "elaborate": {
+    "senses": [
+      {
+        "id": "elaborate_adj",
+        "pos": "ADJ",
+        "desc": "detailed and complex (ih-LAB-ur-ut)",
+        "ipa": [
+          "ᵻ",
+          "l",
+          "æ",
+          "b",
+          "ɚ",
+          "ɹ",
+          "ə",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "elaborate_v",
+        "pos": "VERB",
+        "desc": "to add detail, expand on (ih-LAB-ur-ayt)",
+        "ipa": [
+          "ᵻ",
+          "l",
+          "æ",
+          "b",
+          "ɚ",
+          "ɹ",
+          "eɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "ee-LA-bruht",
+      "ee-LA-buh-rayt",
+      "uh-LA-bruht",
+      "uh-LA-buh-rayt",
+      "ee-LA-buh-ruht",
+      "uh-LA-buh-ruht"
+    ]
+  },
+  "escort": {
+    "senses": [
+      {
+        "id": "escort_n",
+        "pos": "NOUN",
+        "desc": "an accompanying person or vehicle (ES-kort)",
+        "ipa": [
+          "ɛ",
+          "s",
+          "k",
+          "ɔːɹ",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "escort_v",
+        "pos": "VERB",
+        "desc": "to accompany (ih-SKORT)",
+        "ipa": [
+          "ɪ",
+          "s",
+          "k",
+          "ɔːɹ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "eh-SKORT",
+      "ih-SKORT",
+      "EHS-kort"
+    ]
+  },
+  "excuse": {
+    "senses": [
+      {
+        "id": "excuse_n",
+        "pos": "NOUN",
+        "desc": "a justification or pretext (ek-SKYOOS)",
+        "ipa": [
+          "ɛ",
+          "k",
+          "s",
+          "k",
+          "j",
+          "uː",
+          "s"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "excuse_v",
+        "pos": "VERB",
+        "desc": "to pardon or release (ek-SKYOOZ)",
+        "ipa": [
+          "ɛ",
+          "k",
+          "s",
+          "k",
+          "j",
+          "uː",
+          "z"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "ehk-SKYOOZ",
+      "ihk-SKYOOS",
+      "ihk-SKYOOZ",
+      "ehk-SKYOOS"
+    ]
+  },
+  "exploit": {
+    "senses": [
+      {
+        "id": "exploit_n",
+        "pos": "NOUN",
+        "desc": "a notable feat, or a security hole (EKS-ployt)",
+        "ipa": [
+          "ɛ",
+          "k",
+          "s",
+          "p",
+          "l",
+          "ɔɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "exploit_v",
+        "pos": "VERB",
+        "desc": "to take advantage of (ik-SPLOYT)",
+        "ipa": [
+          "ɪ",
+          "k",
+          "s",
+          "p",
+          "l",
+          "ɔɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "ihk-SPLOYT",
+      "ehk-SPLOYT",
+      "EHK-sployt"
+    ]
+  },
+  "export": {
+    "senses": [
+      {
+        "id": "export_n",
+        "pos": "NOUN",
+        "desc": "goods or data sent out (EKS-port)",
+        "ipa": [
+          "ɛ",
+          "k",
+          "s",
+          "p",
+          "ɔːɹ",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "export_v",
+        "pos": "VERB",
+        "desc": "to send out goods or data (ik-SPORT)",
+        "ipa": [
+          "ɪ",
+          "k",
+          "s",
+          "p",
+          "ɔːɹ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "EHK-sport"
+    ]
+  },
+  "extract": {
+    "senses": [
+      {
+        "id": "extract_n",
+        "pos": "NOUN",
+        "desc": "a selected passage or concentrate (EKS-trakt)",
+        "ipa": [
+          "ɛ",
+          "k",
+          "s",
+          "t",
+          "ɹ",
+          "æ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "extract_v",
+        "pos": "VERB",
+        "desc": "to pull out (ik-STRAKT)",
+        "ipa": [
+          "ɪ",
+          "k",
+          "s",
+          "t",
+          "ɹ",
+          "æ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "EHK-strakt",
+      "EHK-strak",
+      "ihk-STRAKT",
+      "ehk-STRAKT"
+    ]
+  },
+  "graduate": {
+    "senses": [
+      {
+        "id": "graduate_n",
+        "pos": "NOUN",
+        "desc": "a person who completed a program (GRAJ-oo-ut)",
+        "ipa": [
+          "ɡ",
+          "ɹ",
+          "æ",
+          "dʒ",
+          "uː",
+          "ə",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "graduate_v",
+        "pos": "VERB",
+        "desc": "to complete a program (GRAJ-oo-ayt)",
+        "ipa": [
+          "ɡ",
+          "ɹ",
+          "æ",
+          "dʒ",
+          "uː",
+          "eɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "GRAJ-wuht",
+      "GRA-juu-ayt",
+      "GRAJ-uh-wuht"
+    ]
+  },
+  "implement": {
+    "senses": [
+      {
+        "id": "implement_n",
+        "pos": "NOUN",
+        "desc": "a tool (IM-pluh-munt)",
+        "ipa": [
+          "ɪ",
+          "m",
+          "p",
+          "l",
+          "ɪ",
+          "m",
+          "ə",
+          "n",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "implement_v",
+        "pos": "VERB",
+        "desc": "to put into effect (IM-pluh-ment)",
+        "ipa": [
+          "ɪ",
+          "m",
+          "p",
+          "l",
+          "ɪ",
+          "m",
+          "ɛ",
+          "n",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "IHM-pluh-muhnt",
+      "IHM-pluh-mehnt"
+    ]
+  },
+  "intimate": {
+    "senses": [
+      {
+        "id": "intimate_adj",
+        "pos": "ADJ",
+        "desc": "close, personal (IN-tih-mut)",
+        "ipa": [
+          "ɪ",
+          "n",
+          "t",
+          "ᵻ",
+          "m",
+          "ə",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "intimate_v",
+        "pos": "VERB",
+        "desc": "to hint or imply (IN-tih-mayt)",
+        "ipa": [
+          "ɪ",
+          "n",
+          "t",
+          "ᵻ",
+          "m",
+          "eɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "IHN-tuh-muht",
+      "IHN-uh-muht",
+      "IHN-tuh-mayt",
+      "IHN-uh-mayt"
+    ]
+  },
+  "invalid": {
+    "senses": [
+      {
+        "id": "invalid_n",
+        "pos": "NOUN",
+        "desc": "a person weakened by illness (IN-vuh-lid)",
+        "ipa": [
+          "ɪ",
+          "n",
+          "v",
+          "ə",
+          "l",
+          "ɪ",
+          "d"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "invalid_adj",
+        "pos": "ADJ",
+        "desc": "not valid, void (in-VAL-id)",
+        "ipa": [
+          "ɪ",
+          "n",
+          "v",
+          "æ",
+          "l",
+          "ɪ",
+          "d"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "IHN-vuh-luhd",
+      "ihn-VA-luhd"
+    ]
+  },
+  "moderate": {
+    "senses": [
+      {
+        "id": "moderate_adj",
+        "pos": "ADJ",
+        "desc": "medium, not extreme (MAH-dur-ut)",
+        "ipa": [
+          "m",
+          "ɑː",
+          "d",
+          "ɚ",
+          "ɹ",
+          "ə",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "moderate_v",
+        "pos": "VERB",
+        "desc": "to chair a discussion; to lessen (MAH-dur-ayt)",
+        "ipa": [
+          "m",
+          "ɑː",
+          "d",
+          "ɚ",
+          "ɹ",
+          "eɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "MAH-duh-ruht",
+      "MAH-druht",
+      "MAH-duh-rayt"
+    ]
+  },
+  "perfect": {
+    "senses": [
+      {
+        "id": "perfect_adj",
+        "pos": "ADJ",
+        "desc": "flawless (PUR-fikt)",
+        "ipa": [
+          "p",
+          "ɜː",
+          "f",
+          "ɪ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "perfect_v",
+        "pos": "VERB",
+        "desc": "to make flawless (pur-FEKT)",
+        "ipa": [
+          "p",
+          "ɚ",
+          "f",
+          "ɛ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "pur-FEHKT",
+      "pur-FEHK",
+      "PUR-fuhkt",
+      "PUR-fuhk"
+    ]
+  },
+  "pervert": {
+    "senses": [
+      {
+        "id": "pervert_n",
+        "pos": "NOUN",
+        "desc": "a corrupted or deviant person (PUR-vurt)",
+        "ipa": [
+          "p",
+          "ɜː",
+          "v",
+          "ɚ",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "pervert_v",
+        "pos": "VERB",
+        "desc": "to distort or corrupt (pur-VURT)",
+        "ipa": [
+          "p",
+          "ɚ",
+          "v",
+          "ɜː",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "PUR-vurt",
+      "pur-VURT"
+    ]
+  },
+  "predicate": {
+    "senses": [
+      {
+        "id": "predicate_n",
+        "pos": "NOUN",
+        "desc": "the verb part of a clause; a logical property (PRED-ih-kut)",
+        "ipa": [
+          "p",
+          "ɹ",
+          "ɛ",
+          "d",
+          "ᵻ",
+          "k",
+          "ə",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "predicate_v",
+        "pos": "VERB",
+        "desc": "to base something on (PRED-ih-kayt)",
+        "ipa": [
+          "p",
+          "ɹ",
+          "ɛ",
+          "d",
+          "ᵻ",
+          "k",
+          "eɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "PREH-duh-kuht",
+      "PREH-duh-kayt"
+    ]
+  },
+  "progress": {
+    "senses": [
+      {
+        "id": "progress_n",
+        "pos": "NOUN",
+        "desc": "forward movement, improvement (PRAH-gres)",
+        "ipa": [
+          "p",
+          "ɹ",
+          "ɑː",
+          "ɡ",
+          "ɹ",
+          "ɛ",
+          "s"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "progress_v",
+        "pos": "VERB",
+        "desc": "to move forward (pruh-GRES)",
+        "ipa": [
+          "p",
+          "ɹ",
+          "ə",
+          "ɡ",
+          "ɹ",
+          "ɛ",
+          "s"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "PRAH-gruhs",
+      "proh-GREHS",
+      "pruh-GREHS"
+    ]
+  },
+  "protest": {
+    "senses": [
+      {
+        "id": "protest_n",
+        "pos": "NOUN",
+        "desc": "a public objection (PROH-test)",
+        "ipa": [
+          "p",
+          "ɹ",
+          "oʊ",
+          "t",
+          "ɛ",
+          "s",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "protest_v",
+        "pos": "VERB",
+        "desc": "to object to (pruh-TEST)",
+        "ipa": [
+          "p",
+          "ɹ",
+          "ə",
+          "t",
+          "ɛ",
+          "s",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "proh-TEHST",
+      "PROH-tehst",
+      "pruh-TEHST"
+    ]
+  },
+  "rebel": {
+    "senses": [
+      {
+        "id": "rebel_n",
+        "pos": "NOUN",
+        "desc": "a person who resists authority (REB-ul)",
+        "ipa": [
+          "ɹ",
+          "ɛ",
+          "b",
+          "əl"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "rebel_v",
+        "pos": "VERB",
+        "desc": "to resist authority (rih-BEL)",
+        "ipa": [
+          "ɹ",
+          "ᵻ",
+          "b",
+          "ɛ",
+          "l"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "ruh-BEHL",
+      "REH-buhl",
+      "REH-bl"
+    ]
+  },
+  "recall": {
+    "senses": [
+      {
+        "id": "recall_n",
+        "pos": "NOUN",
+        "desc": "a product callback, or memory retrieval (REE-kawl)",
+        "ipa": [
+          "ɹ",
+          "iː",
+          "k",
+          "ɔː",
+          "l"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "recall_v",
+        "pos": "VERB",
+        "desc": "to remember, or call back (rih-KAWL)",
+        "ipa": [
+          "ɹ",
+          "ᵻ",
+          "k",
+          "ɔː",
+          "l"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "ree-KAHL",
+      "ree-KAWL",
+      "ruh-KAHL",
+      "REE-kahl",
+      "REE-kawl",
+      "ruh-KAWL"
+    ]
+  },
+  "refund": {
+    "senses": [
+      {
+        "id": "refund_n",
+        "pos": "NOUN",
+        "desc": "money returned (REE-fund)",
+        "ipa": [
+          "ɹ",
+          "iː",
+          "f",
+          "ʌ",
+          "n",
+          "d"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "refund_v",
+        "pos": "VERB",
+        "desc": "to return money (rih-FUND)",
+        "ipa": [
+          "ɹ",
+          "ᵻ",
+          "f",
+          "ʌ",
+          "n",
+          "d"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "ree-FUHND",
+      "ruh-FUHND",
+      "REE-fuhnd"
+    ]
+  },
+  "refuse": {
+    "senses": [
+      {
+        "id": "refuse_v",
+        "pos": "VERB",
+        "desc": "to decline (rih-FYOOZ)",
+        "ipa": [
+          "ɹ",
+          "ᵻ",
+          "f",
+          "j",
+          "uː",
+          "z"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "refuse_n",
+        "pos": "NOUN",
+        "desc": "garbage, waste (REF-yoos)",
+        "ipa": [
+          "ɹ",
+          "ɛ",
+          "f",
+          "j",
+          "uː",
+          "s"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "ree-FYOOZ",
+      "REH-fyooz",
+      "ruh-FYOOZ"
+    ]
+  },
+  "reject": {
+    "senses": [
+      {
+        "id": "reject_n",
+        "pos": "NOUN",
+        "desc": "a discarded item or person (REE-jekt)",
+        "ipa": [
+          "ɹ",
+          "iː",
+          "dʒ",
+          "ɛ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "reject_v",
+        "pos": "VERB",
+        "desc": "to turn down (rih-JEKT)",
+        "ipa": [
+          "ɹ",
+          "ᵻ",
+          "dʒ",
+          "ɛ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "ree-JEHKT",
+      "ree-JEHK",
+      "ruh-JEHKT",
+      "REE-jehk",
+      "REE-jehkt",
+      "ruh-JEHK"
+    ]
+  },
+  "research": {
+    "senses": [
+      {
+        "id": "research_n",
+        "pos": "NOUN",
+        "desc": "systematic investigation (REE-surch)",
+        "ipa": [
+          "ɹ",
+          "iː",
+          "s",
+          "ɜː",
+          "tʃ"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "research_v",
+        "pos": "VERB",
+        "desc": "to investigate (rih-SURCH)",
+        "ipa": [
+          "ɹ",
+          "ᵻ",
+          "s",
+          "ɜː",
+          "tʃ"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "ruh-SURCH",
+      "ree-SURCH",
+      "REE-surch"
+    ]
+  },
+  "separate": {
+    "senses": [
+      {
+        "id": "separate_adj",
+        "pos": "ADJ",
+        "desc": "distinct, apart (SEP-rut)",
+        "ipa": [
+          "s",
+          "ɛ",
+          "p",
+          "ɹ",
+          "ə",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "separate_v",
+        "pos": "VERB",
+        "desc": "to divide or set apart (SEP-ur-ayt)",
+        "ipa": [
+          "s",
+          "ɛ",
+          "p",
+          "ɚ",
+          "ɹ",
+          "eɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "SEH-puh-ruht",
+      "SEH-pruht",
+      "SEH-puh-rayt"
+    ]
+  },
+  "subject": {
+    "senses": [
+      {
+        "id": "subject_n",
+        "pos": "NOUN",
+        "desc": "a topic, or a person under study (SUB-jikt)",
+        "ipa": [
+          "s",
+          "ʌ",
+          "b",
+          "dʒ",
+          "ɛ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "subject_v",
+        "pos": "VERB",
+        "desc": "to force to undergo (sub-JEKT)",
+        "ipa": [
+          "s",
+          "ə",
+          "b",
+          "dʒ",
+          "ɛ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "suhb-JEHKT",
+      "SUHB-juhk",
+      "SUHB-juhkt",
+      "suhb-JEHK"
+    ]
+  },
+  "survey": {
+    "senses": [
+      {
+        "id": "survey_n",
+        "pos": "NOUN",
+        "desc": "a questionnaire or inspection (SUR-vay)",
+        "ipa": [
+          "s",
+          "ɜː",
+          "v",
+          "eɪ"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "survey_v",
+        "pos": "VERB",
+        "desc": "to examine broadly or measure land (sur-VAY)",
+        "ipa": [
+          "s",
+          "ɚ",
+          "v",
+          "eɪ"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "SUR-vay",
+      "sur-VAY"
+    ]
+  },
+  "suspect": {
+    "senses": [
+      {
+        "id": "suspect_n",
+        "pos": "NOUN",
+        "desc": "a person under suspicion (SUS-pekt)",
+        "ipa": [
+          "s",
+          "ʌ",
+          "s",
+          "p",
+          "ɛ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "suspect_v",
+        "pos": "VERB",
+        "desc": "to believe likely (suh-SPEKT)",
+        "ipa": [
+          "s",
+          "ə",
+          "s",
+          "p",
+          "ɛ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "SUHS-pehk",
+      "suh-SPEHK",
+      "suh-SPEHKT",
+      "SUHS-pehkt"
+    ]
+  },
+  "transfer": {
+    "senses": [
+      {
+        "id": "transfer_n",
+        "pos": "NOUN",
+        "desc": "a move of people, money, or data (TRANS-fur)",
+        "ipa": [
+          "t",
+          "ɹ",
+          "æ",
+          "n",
+          "s",
+          "f",
+          "ɚ"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "transfer_v",
+        "pos": "VERB",
+        "desc": "to move something across (trans-FUR)",
+        "ipa": [
+          "t",
+          "ɹ",
+          "æ",
+          "n",
+          "s",
+          "f",
+          "ɜː"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "trans-FUR",
+      "TRANTS-fur",
+      "TRANS-fur",
+      "trants-FUR"
+    ]
+  },
+  "abuse": {
+    "senses": [
+      {
+        "id": "abuse_n",
+        "pos": "NOUN",
+        "desc": "mistreatment (uh-BYOOS)",
+        "ipa": [
+          "ɐ",
+          "b",
+          "j",
+          "uː",
+          "s"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "abuse_v",
+        "pos": "VERB",
+        "desc": "to mistreat (uh-BYOOZ)",
+        "ipa": [
+          "ɐ",
+          "b",
+          "j",
+          "uː",
+          "z"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "uh-BYOOZ",
+      "uh-BYOOS"
+    ]
+  },
+  "combine": {
+    "senses": [
+      {
+        "id": "combine_n",
+        "pos": "NOUN",
+        "desc": "a harvesting machine; a business combination (KAHM-byne)",
+        "ipa": [
+          "k",
+          "ɑː",
+          "m",
+          "b",
+          "aɪ",
+          "n"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "combine_v",
+        "pos": "VERB",
+        "desc": "to merge (kum-BYNE)",
+        "ipa": [
+          "k",
+          "ə",
+          "m",
+          "b",
+          "aɪ",
+          "n"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "kuhm-BYN",
+      "KAHM-byn"
+    ]
+  },
+  "compact": {
+    "senses": [
+      {
+        "id": "compact_n",
+        "pos": "NOUN",
+        "desc": "a small case or car; a formal pact (KAHM-pakt)",
+        "ipa": [
+          "k",
+          "ɑː",
+          "m",
+          "p",
+          "æ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "compact_adj",
+        "pos": "ADJ",
+        "desc": "tightly packed, small (kum-PAKT)",
+        "ipa": [
+          "k",
+          "ə",
+          "m",
+          "p",
+          "æ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "KAHM-pakt",
+      "KAHM-pak",
+      "kahm-PAKT",
+      "kahm-PAK",
+      "kuhm-PAKT",
+      "kuhm-PAK"
+    ]
+  },
+  "conflict": {
+    "senses": [
+      {
+        "id": "conflict_n",
+        "pos": "NOUN",
+        "desc": "a disagreement or clash (KAHN-flikt)",
+        "ipa": [
+          "k",
+          "ɑː",
+          "n",
+          "f",
+          "l",
+          "ɪ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "conflict_v",
+        "pos": "VERB",
+        "desc": "to clash or be incompatible (kun-FLIKT)",
+        "ipa": [
+          "k",
+          "ə",
+          "n",
+          "f",
+          "l",
+          "ɪ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "KAHN-flihk",
+      "kuhn-FLIHKT",
+      "KAHN-flihkt",
+      "kuhn-FLIHK"
+    ]
+  },
+  "consort": {
+    "senses": [
+      {
+        "id": "consort_n",
+        "pos": "NOUN",
+        "desc": "a spouse or companion of a ruler (KAHN-sort)",
+        "ipa": [
+          "k",
+          "ɑː",
+          "n",
+          "s",
+          "ɔːɹ",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "consort_v",
+        "pos": "VERB",
+        "desc": "to keep company with (kun-SORT)",
+        "ipa": [
+          "k",
+          "ə",
+          "n",
+          "s",
+          "ɔːɹ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "kuhn-SORT",
+      "KAHN-sort"
+    ]
+  },
+  "construct": {
+    "senses": [
+      {
+        "id": "construct_n",
+        "pos": "NOUN",
+        "desc": "an idea or built structure (KAHN-strukt)",
+        "ipa": [
+          "k",
+          "ɑː",
+          "n",
+          "s",
+          "t",
+          "ɹ",
+          "ʌ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "construct_v",
+        "pos": "VERB",
+        "desc": "to build (kun-STRUKT)",
+        "ipa": [
+          "k",
+          "ə",
+          "n",
+          "s",
+          "t",
+          "ɹ",
+          "ʌ",
+          "k",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "KAHN-struhkt",
+      "KAHN-struhk",
+      "kuhn-STRUHKT",
+      "kuhn-STRUHK"
+    ]
+  },
+  "converse": {
+    "senses": [
+      {
+        "id": "converse_n",
+        "pos": "NOUN",
+        "desc": "the opposite statement (KAHN-vurs)",
+        "ipa": [
+          "k",
+          "ɑː",
+          "n",
+          "v",
+          "ɜː",
+          "s"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "converse_v",
+        "pos": "VERB",
+        "desc": "to talk with someone (kun-VURS)",
+        "ipa": [
+          "k",
+          "ə",
+          "n",
+          "v",
+          "ɜː",
+          "s"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "kuhn-VURS",
+      "KAHN-vurs"
+    ]
+  },
+  "document": {
+    "senses": [
+      {
+        "id": "document_n",
+        "pos": "NOUN",
+        "desc": "a written file or record (DAHK-yuh-munt)",
+        "ipa": [
+          "d",
+          "ɑː",
+          "k",
+          "j",
+          "uː",
+          "m",
+          "ə",
+          "n",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "document_v",
+        "pos": "VERB",
+        "desc": "to write down, log evidence (DAHK-yuh-ment)",
+        "ipa": [
+          "d",
+          "ɑː",
+          "k",
+          "j",
+          "uː",
+          "m",
+          "ɛ",
+          "n",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "DAH-kyuh-muhnt",
+      "DAH-kyuh-mehnt"
+    ]
+  },
+  "segment": {
+    "senses": [
+      {
+        "id": "segment_n",
+        "pos": "NOUN",
+        "desc": "a section or part (SEG-munt)",
+        "ipa": [
+          "s",
+          "ɛ",
+          "ɡ",
+          "m",
+          "ə",
+          "n",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "segment_v",
+        "pos": "VERB",
+        "desc": "to divide into sections (SEG-ment)",
+        "ipa": [
+          "s",
+          "ɛ",
+          "ɡ",
+          "m",
+          "ɛ",
+          "n",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "SEHG-mehnt",
+      "SEHG-muhnt",
+      "SEHG-MEHNT",
+      "SEHG-mnt"
+    ]
+  },
+  "fragment": {
+    "senses": [
+      {
+        "id": "fragment_n",
+        "pos": "NOUN",
+        "desc": "a broken-off piece (FRAG-munt)",
+        "ipa": [
+          "f",
+          "ɹ",
+          "æ",
+          "ɡ",
+          "m",
+          "ə",
+          "n",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "fragment_v",
+        "pos": "VERB",
+        "desc": "to break into pieces (FRAG-ment)",
+        "ipa": [
+          "f",
+          "ɹ",
+          "æ",
+          "ɡ",
+          "m",
+          "ɛ",
+          "n",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "FRAG-muhnt",
+      "frag-MEHNT",
+      "FRAG-mehnt"
+    ]
+  },
+  "supplement": {
+    "senses": [
+      {
+        "id": "supplement_n",
+        "pos": "NOUN",
+        "desc": "something added, e.g. a vitamin or addendum (SUP-luh-munt)",
+        "ipa": [
+          "s",
+          "ʌ",
+          "p",
+          "l",
+          "ɪ",
+          "m",
+          "ə",
+          "n",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "supplement_v",
+        "pos": "VERB",
+        "desc": "to add to (SUP-luh-ment)",
+        "ipa": [
+          "s",
+          "ʌ",
+          "p",
+          "l",
+          "ɪ",
+          "m",
+          "ɛ",
+          "n",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "SUH-pluh-mehnt",
+      "SUH-pluh-mnt",
+      "SUH-pluh-muhnt"
+    ]
+  },
+  "complement": {
+    "senses": [
+      {
+        "id": "complement_n",
+        "pos": "NOUN",
+        "desc": "something that completes (KAHM-pluh-munt)",
+        "ipa": [
+          "k",
+          "ɑː",
+          "m",
+          "p",
+          "l",
+          "ɪ",
+          "m",
+          "ə",
+          "n",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "complement_v",
+        "pos": "VERB",
+        "desc": "to complete or go well with (KAHM-pluh-ment)",
+        "ipa": [
+          "k",
+          "ɑː",
+          "m",
+          "p",
+          "l",
+          "ɪ",
+          "m",
+          "ɛ",
+          "n",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "KAHM-pluh-muhnt",
+      "KAHM-pluh-mehnt"
+    ]
+  },
+  "compliment": {
+    "senses": [
+      {
+        "id": "compliment_n",
+        "pos": "NOUN",
+        "desc": "praise (KAHM-pluh-munt)",
+        "ipa": [
+          "k",
+          "ɑː",
+          "m",
+          "p",
+          "l",
+          "ɪ",
+          "m",
+          "ə",
+          "n",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "compliment_v",
+        "pos": "VERB",
+        "desc": "to praise (KAHM-pluh-ment)",
+        "ipa": [
+          "k",
+          "ɑː",
+          "m",
+          "p",
+          "l",
+          "ɪ",
+          "m",
+          "ɛ",
+          "n",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "KAHM-pluh-muhnt",
+      "KAHM-pluh-mehnt"
+    ]
+  },
+  "experiment": {
+    "senses": [
+      {
+        "id": "experiment_n",
+        "pos": "NOUN",
+        "desc": "a scientific test (ek-SPERR-ih-munt)",
+        "ipa": [
+          "ɛ",
+          "k",
+          "s",
+          "p",
+          "ɛɹ",
+          "ɪ",
+          "m",
+          "ə",
+          "n",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "experiment_v",
+        "pos": "VERB",
+        "desc": "to try things out (ek-SPERR-ih-ment)",
+        "ipa": [
+          "ɛ",
+          "k",
+          "s",
+          "p",
+          "ɛɹ",
+          "ɪ",
+          "m",
+          "ɛ",
+          "n",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "ehk-SPERR-uh-mehnt",
+      "ihk-SPERR-uh-mehnt",
+      "ehk-SPERR-uh-muhnt",
+      "ihk-SPERR-uh-muhnt"
+    ]
+  },
+  "affiliate": {
+    "senses": [
+      {
+        "id": "affiliate_n",
+        "pos": "NOUN",
+        "desc": "a connected organization or person (uh-FIL-ee-ut)",
+        "ipa": [
+          "ɐ",
+          "f",
+          "ɪ",
+          "l",
+          "ɪ",
+          "ə",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "affiliate_v",
+        "pos": "VERB",
+        "desc": "to formally associate with (uh-FIL-ee-ayt)",
+        "ipa": [
+          "ɐ",
+          "f",
+          "ɪ",
+          "l",
+          "ɪ",
+          "eɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "uh-FIH-lee-ayt",
+      "uh-FIH-lee-uht"
+    ]
+  },
+  "aggregate": {
+    "senses": [
+      {
+        "id": "aggregate_n",
+        "pos": "NOUN",
+        "desc": "a combined total (AG-rih-gut)",
+        "ipa": [
+          "æ",
+          "ɡ",
+          "ɹ",
+          "ɪ",
+          "ɡ",
+          "ə",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "aggregate_v",
+        "pos": "VERB",
+        "desc": "to collect into a total (AG-rih-gayt)",
+        "ipa": [
+          "æ",
+          "ɡ",
+          "ɹ",
+          "ɪ",
+          "ɡ",
+          "eɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "A-gruh-guht",
+      "A-gruh-gayt"
+    ]
+  },
+  "approximate": {
+    "senses": [
+      {
+        "id": "approximate_adj",
+        "pos": "ADJ",
+        "desc": "roughly accurate (uh-PRAHK-sih-mut)",
+        "ipa": [
+          "ɐ",
+          "p",
+          "ɹ",
+          "ɑː",
+          "k",
+          "s",
+          "ɪ",
+          "m",
+          "ə",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "approximate_v",
+        "pos": "VERB",
+        "desc": "to come close to in value (uh-PRAHK-sih-mayt)",
+        "ipa": [
+          "ɐ",
+          "p",
+          "ɹ",
+          "ɑː",
+          "k",
+          "s",
+          "ɪ",
+          "m",
+          "eɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "uh-PRAHK-suh-muht",
+      "uh-PRAHK-suh-mayt"
+    ]
+  },
+  "animate": {
+    "senses": [
+      {
+        "id": "animate_adj",
+        "pos": "ADJ",
+        "desc": "alive, living (AN-ih-mut)",
+        "ipa": [
+          "æ",
+          "n",
+          "ɪ",
+          "m",
+          "ə",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "animate_v",
+        "pos": "VERB",
+        "desc": "to bring to life; to make an animation (AN-ih-mayt)",
+        "ipa": [
+          "æ",
+          "n",
+          "ɪ",
+          "m",
+          "eɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "A-nuh-muht",
+      "A-nuh-mayt"
+    ]
+  },
+  "initiate": {
+    "senses": [
+      {
+        "id": "initiate_n",
+        "pos": "NOUN",
+        "desc": "a newly admitted member (ih-NISH-ee-ut)",
+        "ipa": [
+          "ɪ",
+          "n",
+          "ɪ",
+          "ʃ",
+          "ɪ",
+          "ə",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "initiate_v",
+        "pos": "VERB",
+        "desc": "to begin or induct (ih-NISH-ee-ayt)",
+        "ipa": [
+          "ɪ",
+          "n",
+          "ɪ",
+          "ʃ",
+          "ɪ",
+          "eɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "ih-NIH-shee-uht",
+      "ih-NIH-shee-ayt"
+    ]
+  },
+  "syndicate": {
+    "senses": [
+      {
+        "id": "syndicate_n",
+        "pos": "NOUN",
+        "desc": "a group of businesses acting together (SIN-dih-kut)",
+        "ipa": [
+          "s",
+          "ɪ",
+          "n",
+          "d",
+          "ᵻ",
+          "k",
+          "ə",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "syndicate_v",
+        "pos": "VERB",
+        "desc": "to distribute content widely (SIN-dih-kayt)",
+        "ipa": [
+          "s",
+          "ɪ",
+          "n",
+          "d",
+          "ᵻ",
+          "k",
+          "eɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "SIHN-duh-kuht",
+      "SIHN-duh-kayt"
+    ]
+  },
+  "subordinate": {
+    "senses": [
+      {
+        "id": "subordinate_n",
+        "pos": "NOUN",
+        "desc": "a person lower in rank (suh-BOR-dih-nut)",
+        "ipa": [
+          "s",
+          "ʌ",
+          "b",
+          "ɔːɹ",
+          "d",
+          "ᵻ",
+          "n",
+          "ə",
+          "t"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "subordinate_v",
+        "pos": "VERB",
+        "desc": "to place in a lower rank (suh-BOR-dih-nayt)",
+        "ipa": [
+          "s",
+          "ʌ",
+          "b",
+          "ɔːɹ",
+          "d",
+          "ᵻ",
+          "n",
+          "eɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "suh-BOR-dn-ayt",
+      "suh-BOR-duhn-uht"
+    ]
+  },
+  "diffuse": {
+    "senses": [
+      {
+        "id": "diffuse_adj",
+        "pos": "ADJ",
+        "desc": "spread out, not concentrated (dih-FYOOS)",
+        "ipa": [
+          "d",
+          "ᵻ",
+          "f",
+          "j",
+          "uː",
+          "s"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "diffuse_v",
+        "pos": "VERB",
+        "desc": "to spread, or calm a situation (dih-FYOOZ)",
+        "ipa": [
+          "d",
+          "ᵻ",
+          "f",
+          "j",
+          "uː",
+          "z"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "duh-FYOOZ",
+      "duh-FYOOS"
+    ]
+  },
+  "misuse": {
+    "senses": [
+      {
+        "id": "misuse_n",
+        "pos": "NOUN",
+        "desc": "improper use (mis-YOOS)",
+        "ipa": [
+          "m",
+          "ɪ",
+          "s",
+          "j",
+          "uː",
+          "s"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "misuse_v",
+        "pos": "VERB",
+        "desc": "to use improperly (mis-YOOZ)",
+        "ipa": [
+          "m",
+          "ɪ",
+          "s",
+          "j",
+          "uː",
+          "z"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "MIHS-YOOS",
+      "MIHS-YOOZ"
+    ]
+  },
+  "entrance": {
+    "senses": [
+      {
+        "id": "entrance_n",
+        "pos": "NOUN",
+        "desc": "a doorway, a way in (EN-truns)",
+        "ipa": [
+          "ɛ",
+          "n",
+          "t",
+          "ɹ",
+          "ə",
+          "n",
+          "s"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "entrance_v",
+        "pos": "VERB",
+        "desc": "to enchant, captivate (in-TRANSS)",
+        "ipa": [
+          "ɪ",
+          "n",
+          "t",
+          "ɹ",
+          "æ",
+          "n",
+          "s"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "EHN-truhns",
+      "ehn-TRANS",
+      "ihn-TRANS"
+    ]
+  },
+  "buffet": {
+    "senses": [
+      {
+        "id": "buffet_n",
+        "pos": "NOUN",
+        "desc": "a self-serve meal spread (buh-FAY)",
+        "ipa": [
+          "b",
+          "ə",
+          "f",
+          "eɪ"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "buffet_v",
+        "pos": "VERB",
+        "desc": "to strike repeatedly, batter (BUF-it)",
+        "ipa": [
+          "b",
+          "ʌ",
+          "f",
+          "ɪ",
+          "t"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "BUH-fuht",
+      "buu-FAY"
+    ]
+  },
+  "bass": {
+    "senses": [
+      {
+        "id": "bass_n_music",
+        "pos": "NOUN",
+        "desc": "low-pitched sound or instrument (BAYSS)",
+        "ipa": [
+          "b",
+          "eɪ",
+          "s"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "bass_n_fish",
+        "pos": "NOUN",
+        "desc": "the fish (BASS)",
+        "ipa": [
+          "b",
+          "æ",
+          "s"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "BAYS",
+      "BAS"
+    ]
+  },
+  "bow": {
+    "senses": [
+      {
+        "id": "bow_n",
+        "pos": "NOUN",
+        "desc": "a ribbon knot, or archery weapon (BOH)",
+        "ipa": [
+          "b",
+          "oʊ"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "bow_v",
+        "pos": "VERB",
+        "desc": "to bend forward in respect (BOW, rhymes with cow)",
+        "ipa": [
+          "b",
+          "aʊ"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "BOW",
+      "BOH"
+    ]
+  },
+  "sow": {
+    "senses": [
+      {
+        "id": "sow_v",
+        "pos": "VERB",
+        "desc": "to plant seeds (SOH)",
+        "ipa": [
+          "s",
+          "oʊ"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "sow_n",
+        "pos": "NOUN",
+        "desc": "an adult female pig (SOW, rhymes with cow)",
+        "ipa": [
+          "s",
+          "aʊ"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "SOO",
+      "SOH",
+      "SOW"
+    ]
+  },
+  "dove": {
+    "senses": [
+      {
+        "id": "dove_n",
+        "pos": "NOUN",
+        "desc": "the bird (DUV)",
+        "ipa": [
+          "d",
+          "ʌ",
+          "v"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "dove_v",
+        "pos": "VERB",
+        "desc": "past tense of dive (DOHV)",
+        "ipa": [
+          "d",
+          "oʊ",
+          "v"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "DUHV",
+      "DOHV"
+    ]
+  },
+  "wound": {
+    "senses": [
+      {
+        "id": "wound_n",
+        "pos": "NOUN",
+        "desc": "an injury (WOOND)",
+        "ipa": [
+          "w",
+          "uː",
+          "n",
+          "d"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "wound_v",
+        "pos": "VERB",
+        "desc": "past tense of wind: coiled (WOWND)",
+        "ipa": [
+          "w",
+          "aʊ",
+          "n",
+          "d"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "WOOND",
+      "WOWND"
+    ]
+  },
+  "lives": {
+    "senses": [
+      {
+        "id": "lives_n",
+        "pos": "NOUN",
+        "desc": "plural of life (LYVZ)",
+        "ipa": [
+          "l",
+          "aɪ",
+          "v",
+          "z"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "lives_v",
+        "pos": "VERB",
+        "desc": "third person of to live (LIVZ)",
+        "ipa": [
+          "l",
+          "ɪ",
+          "v",
+          "z"
+        ],
+        "respell": "TODO",
+        "spellings": [
+          "livs"
+        ]
+      }
+    ],
+    "respell_candidates": [
+      "LYVZ",
+      "LIHVZ"
+    ]
+  },
+  "uses": {
+    "senses": [
+      {
+        "id": "uses_n",
+        "pos": "NOUN",
+        "desc": "plural of use: purposes (YOOS-iz)",
+        "ipa": [
+          "j",
+          "uː",
+          "s",
+          "ᵻ",
+          "z"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "uses_v",
+        "pos": "VERB",
+        "desc": "third person of to use (YOOZ-iz)",
+        "ipa": [
+          "j",
+          "uː",
+          "z",
+          "ᵻ",
+          "z"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "YOO-suhz",
+      "YOO-zuhz"
+    ]
+  },
+  "learned": {
+    "senses": [
+      {
+        "id": "learned_adj",
+        "pos": "ADJ",
+        "desc": "scholarly, erudite (LUR-nid)",
+        "ipa": [
+          "l",
+          "ɜː",
+          "n",
+          "ᵻ",
+          "d"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "learned_v",
+        "pos": "VERB",
+        "desc": "past tense of learn (LURND)",
+        "ipa": [
+          "l",
+          "ɜː",
+          "n",
+          "d"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "LUR-nuhd",
+      "LURND"
+    ]
+  },
+  "house": {
+    "senses": [
+      {
+        "id": "house_n",
+        "pos": "NOUN",
+        "desc": "a building to live in (HOWSS)",
+        "ipa": [
+          "h",
+          "aʊ",
+          "s"
+        ],
+        "respell": "TODO"
+      },
+      {
+        "id": "house_v",
+        "pos": "VERB",
+        "desc": "to provide space for (HOWZ)",
+        "ipa": [
+          "h",
+          "aʊ",
+          "z"
+        ],
+        "respell": "TODO"
+      }
+    ],
+    "respell_candidates": [
+      "HOWZ",
+      "HOWS"
+    ]
+  }
+}

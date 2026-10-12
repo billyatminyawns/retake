@@ -1,0 +1,200 @@
+{"id": "s001", "text": "Before the call, record your screen so new hires can replay it.", "word": "record", "char_start": 17, "char_end": 23, "sense_id": "record_v", "difficulty": "easy"}
+{"id": "s002", "text": "The compliance team keeps a record of every certification issued this year.", "word": "record", "char_start": 28, "char_end": 34, "sense_id": "record_n", "difficulty": "easy"}
+{"id": "s003", "text": "Studios record after lunch when the office is quiet.", "word": "record", "char_start": 8, "char_end": 14, "sense_id": "record_v", "difficulty": "ambiguous"}
+{"id": "s004", "text": "Her record for fastest onboarding completion still stands after three years.", "word": "record", "char_start": 4, "char_end": 10, "sense_id": "record_n", "difficulty": "easy"}
+{"id": "s005", "text": "For the record, attendance at the safety briefing is mandatory.", "word": "record", "char_start": 8, "char_end": 14, "sense_id": "record_n", "difficulty": "ambiguous"}
+{"id": "s006", "text": "You will present the quarterly findings to the leadership team on Thursday.", "word": "present", "char_start": 9, "char_end": 16, "sense_id": "present_v", "difficulty": "easy"}
+{"id": "s007", "text": "Each facilitator received a small present at the end of the workshop.", "word": "present", "char_start": 34, "char_end": 41, "sense_id": "present_n", "difficulty": "easy"}
+{"id": "s008", "text": "Trainers often present the same module differently depending on the audience.", "word": "present", "char_start": 15, "char_end": 22, "sense_id": "present_v", "difficulty": "easy"}
+{"id": "s009", "text": "Focus on the present; the legacy migration can wait.", "word": "present", "char_start": 13, "char_end": 20, "sense_id": "present_n", "difficulty": "ambiguous"}
+{"id": "s010", "text": "Senior staff present at orientation whenever a new cohort starts.", "word": "present", "char_start": 13, "char_end": 20, "sense_id": "present_v", "difficulty": "ambiguous"}
+{"id": "s011", "text": "The capstone project takes most learners about six weeks to finish.", "word": "project", "char_start": 13, "char_end": 20, "sense_id": "project_n", "difficulty": "easy"}
+{"id": "s012", "text": "Speakers should project their voice so the back row can hear clearly.", "word": "project", "char_start": 16, "char_end": 23, "sense_id": "project_v", "difficulty": "easy"}
+{"id": "s013", "text": "Funding for the microlearning project was approved in the spring budget.", "word": "project", "char_start": 30, "char_end": 37, "sense_id": "project_n", "difficulty": "easy"}
+{"id": "s014", "text": "We project enrollment to double once the certification goes public.", "word": "project", "char_start": 3, "char_end": 10, "sense_id": "project_v", "difficulty": "ambiguous"}
+{"id": "s015", "text": "Analysts project savings of two million dollars from the new LMS.", "word": "project", "char_start": 9, "char_end": 16, "sense_id": "project_v", "difficulty": "ambiguous"}
+{"id": "s016", "text": "All course content must pass accessibility review before publishing.", "word": "content", "char_start": 11, "char_end": 18, "sense_id": "content_n", "difficulty": "easy"}
+{"id": "s017", "text": "She seemed content with the pilot results and approved the rollout.", "word": "content", "char_start": 11, "char_end": 18, "sense_id": "content_adj", "difficulty": "easy"}
+{"id": "s018", "text": "Outdated content is the top complaint in our learner surveys.", "word": "content", "char_start": 9, "char_end": 16, "sense_id": "content_n", "difficulty": "easy"}
+{"id": "s019", "text": "Most managers are content to let the LMS handle reminders.", "word": "content", "char_start": 18, "char_end": 25, "sense_id": "content_adj", "difficulty": "easy"}
+{"id": "s020", "text": "Teams content with legacy tools resist every migration.", "word": "content", "char_start": 6, "char_end": 13, "sense_id": "content_adj", "difficulty": "ambiguous"}
+{"id": "s021", "text": "The code of conduct is covered in the first compliance module.", "word": "conduct", "char_start": 12, "char_end": 19, "sense_id": "conduct_n", "difficulty": "easy"}
+{"id": "s022", "text": "Facilitators conduct a short debrief after every simulation.", "word": "conduct", "char_start": 13, "char_end": 20, "sense_id": "conduct_v", "difficulty": "easy"}
+{"id": "s023", "text": "We will conduct interviews with graduates to measure long-term outcomes.", "word": "conduct", "char_start": 8, "char_end": 15, "sense_id": "conduct_v", "difficulty": "easy"}
+{"id": "s024", "text": "Unprofessional conduct during training can trigger a formal review.", "word": "conduct", "char_start": 15, "char_end": 22, "sense_id": "conduct_n", "difficulty": "easy"}
+{"id": "s025", "text": "Questions about conduct go to HR, not to the course instructor.", "word": "conduct", "char_start": 16, "char_end": 23, "sense_id": "conduct_n", "difficulty": "ambiguous"}
+{"id": "s026", "text": "The vendor contract includes unlimited seats for the first year.", "word": "contract", "char_start": 11, "char_end": 19, "sense_id": "contract_n", "difficulty": "easy"}
+{"id": "s027", "text": "Budgets contract every winter, so plan the pilot for spring.", "word": "contract", "char_start": 8, "char_end": 16, "sense_id": "contract_v", "difficulty": "easy"}
+{"id": "s028", "text": "Review the contract carefully before signing the renewal.", "word": "contract", "char_start": 11, "char_end": 19, "sense_id": "contract_n", "difficulty": "easy"}
+{"id": "s029", "text": "Muscles contract under stress, which the ergonomics module explains.", "word": "contract", "char_start": 8, "char_end": 16, "sense_id": "contract_v", "difficulty": "ambiguous"}
+{"id": "s030", "text": "They contract with three studios for voiceover work.", "word": "contract", "char_start": 5, "char_end": 13, "sense_id": "contract_v", "difficulty": "ambiguous"}
+{"id": "s031", "text": "The initial estimate for seat licenses came in under budget.", "word": "estimate", "char_start": 12, "char_end": 20, "sense_id": "estimate_n", "difficulty": "easy"}
+{"id": "s032", "text": "Please estimate how many hours each module will take to build.", "word": "estimate", "char_start": 7, "char_end": 15, "sense_id": "estimate_v", "difficulty": "easy"}
+{"id": "s033", "text": "His estimate of thirty production days proved optimistic.", "word": "estimate", "char_start": 4, "char_end": 12, "sense_id": "estimate_n", "difficulty": "easy"}
+{"id": "s034", "text": "We estimate that half the catalog needs re-voicing this quarter.", "word": "estimate", "char_start": 3, "char_end": 11, "sense_id": "estimate_v", "difficulty": "easy"}
+{"id": "s035", "text": "Vendors estimate first, negotiate second.", "word": "estimate", "char_start": 8, "char_end": 16, "sense_id": "estimate_v", "difficulty": "ambiguous"}
+{"id": "s036", "text": "The safety video runs one minute longer than the attention-span guideline.", "word": "minute", "char_start": 26, "char_end": 32, "sense_id": "minute_n", "difficulty": "easy"}
+{"id": "s037", "text": "The difference between the two voices is minute, but reviewers notice it.", "word": "minute", "char_start": 41, "char_end": 47, "sense_id": "minute_adj", "difficulty": "easy"}
+{"id": "s038", "text": "Every minute of seat time costs the company real money.", "word": "minute", "char_start": 6, "char_end": 12, "sense_id": "minute_n", "difficulty": "easy"}
+{"id": "s039", "text": "Even minute errors in captions erode learner trust.", "word": "minute", "char_start": 5, "char_end": 11, "sense_id": "minute_adj", "difficulty": "ambiguous"}
+{"id": "s040", "text": "Wait a minute before replaying the clip so the buffer clears.", "word": "minute", "char_start": 7, "char_end": 13, "sense_id": "minute_n", "difficulty": "ambiguous"}
+{"id": "s041", "text": "Classes resume on Monday after the holiday break.", "word": "resume", "char_start": 8, "char_end": 14, "sense_id": "resume_v", "difficulty": "easy"}
+{"id": "s042", "text": "Attach your resume when applying for the facilitator role.", "word": "resume", "char_start": 12, "char_end": 18, "sense_id": "resume_n", "difficulty": "easy"}
+{"id": "s043", "text": "The module will resume exactly where the learner left off.", "word": "resume", "char_start": 16, "char_end": 22, "sense_id": "resume_v", "difficulty": "easy"}
+{"id": "s044", "text": "A strong resume lists certifications above hobbies.", "word": "resume", "char_start": 9, "char_end": 15, "sense_id": "resume_n", "difficulty": "easy"}
+{"id": "s045", "text": "Paused learners resume at chapter checkpoints, not mid-sentence.", "word": "resume", "char_start": 16, "char_end": 22, "sense_id": "resume_v", "difficulty": "ambiguous"}
+{"id": "s046", "text": "Senior trainers lead the onboarding cohort every quarter.", "word": "lead", "char_start": 16, "char_end": 20, "sense_id": "lead_v", "difficulty": "easy"}
+{"id": "s047", "text": "The safety course covers lead exposure in older buildings.", "word": "lead", "char_start": 25, "char_end": 29, "sense_id": "lead_n", "difficulty": "easy"}
+{"id": "s048", "text": "Great facilitators lead with questions, not answers.", "word": "lead", "char_start": 19, "char_end": 23, "sense_id": "lead_v", "difficulty": "ambiguous"}
+{"id": "s049", "text": "Pipes containing lead must be flagged during the site audit.", "word": "lead", "char_start": 17, "char_end": 21, "sense_id": "lead_n", "difficulty": "easy"}
+{"id": "s050", "text": "Mentors lead by example during the shadowing week.", "word": "lead", "char_start": 8, "char_end": 12, "sense_id": "lead_v", "difficulty": "ambiguous"}
+{"id": "s051", "text": "Please read the facilitation guide before Thursday's session.", "word": "read", "char_start": 7, "char_end": 11, "sense_id": "read_present", "difficulty": "easy"}
+{"id": "s052", "text": "She read the entire policy manual in one sitting last week.", "word": "read", "char_start": 4, "char_end": 8, "sense_id": "read_past", "difficulty": "easy"}
+{"id": "s053", "text": "Learners read the scenario, then choose a response.", "word": "read", "char_start": 9, "char_end": 13, "sense_id": "read_present", "difficulty": "easy"}
+{"id": "s054", "text": "He read the onboarding deck yesterday and flagged two errors.", "word": "read", "char_start": 3, "char_end": 7, "sense_id": "read_past", "difficulty": "easy"}
+{"id": "s055", "text": "The analysts read the report before the metrics changed.", "word": "read", "char_start": 13, "char_end": 17, "sense_id": "read_past", "difficulty": "ambiguous"}
+{"id": "s056", "text": "Most of our contractors live in different time zones.", "word": "live", "char_start": 24, "char_end": 28, "sense_id": "live_v", "difficulty": "easy"}
+{"id": "s057", "text": "The live webinar drew twice the attendance of the recording.", "word": "live", "char_start": 4, "char_end": 8, "sense_id": "live_adj", "difficulty": "easy"}
+{"id": "s058", "text": "Join the live session to ask the instructor questions directly.", "word": "live", "char_start": 9, "char_end": 13, "sense_id": "live_adj", "difficulty": "easy"}
+{"id": "s059", "text": "Remote employees live by their calendars during launch week.", "word": "live", "char_start": 17, "char_end": 21, "sense_id": "live_v", "difficulty": "easy"}
+{"id": "s060", "text": "Demos live or die by their audio quality.", "word": "live", "char_start": 6, "char_end": 10, "sense_id": "live_v", "difficulty": "ambiguous"}
+{"id": "s061", "text": "Please close the feedback form before exporting results.", "word": "close", "char_start": 7, "char_end": 12, "sense_id": "close_v", "difficulty": "easy"}
+{"id": "s062", "text": "The deadline is close, so prioritize the compliance modules.", "word": "close", "char_start": 16, "char_end": 21, "sense_id": "close_adj", "difficulty": "easy"}
+{"id": "s063", "text": "We close enrollment once the cohort reaches forty learners.", "word": "close", "char_start": 3, "char_end": 8, "sense_id": "close_v", "difficulty": "easy"}
+{"id": "s064", "text": "Keep a close eye on completion rates during week one.", "word": "close", "char_start": 7, "char_end": 12, "sense_id": "close_adj", "difficulty": "ambiguous"}
+{"id": "s065", "text": "Sales teams close faster when the product training is current.", "word": "close", "char_start": 12, "char_end": 17, "sense_id": "close_v", "difficulty": "ambiguous"}
+{"id": "s066", "text": "Instructors use breakout rooms to keep large cohorts engaged.", "word": "use", "char_start": 12, "char_end": 15, "sense_id": "use_v", "difficulty": "easy"}
+{"id": "s067", "text": "The use of real customer names in examples is prohibited.", "word": "use", "char_start": 4, "char_end": 7, "sense_id": "use_n", "difficulty": "easy"}
+{"id": "s068", "text": "Please use the approved template for all new lessons.", "word": "use", "char_start": 7, "char_end": 10, "sense_id": "use_v", "difficulty": "easy"}
+{"id": "s069", "text": "Track the use of each module to find dead material.", "word": "use", "char_start": 10, "char_end": 13, "sense_id": "use_n", "difficulty": "easy"}
+{"id": "s070", "text": "What use is a certification nobody can verify?", "word": "use", "char_start": 5, "char_end": 8, "sense_id": "use_n", "difficulty": "ambiguous"}
+{"id": "s071", "text": "Drag each object into the correct safety category.", "word": "object", "char_start": 10, "char_end": 16, "sense_id": "object_n", "difficulty": "easy"}
+{"id": "s072", "text": "Reviewers may object to the pacing of the final chapter.", "word": "object", "char_start": 14, "char_end": 20, "sense_id": "object_v", "difficulty": "easy"}
+{"id": "s073", "text": "The lesson treats every menu object as a clickable hotspot.", "word": "object", "char_start": 29, "char_end": 35, "sense_id": "object_n", "difficulty": "easy"}
+{"id": "s074", "text": "Legal will object if the disclaimer is shortened further.", "word": "object", "char_start": 11, "char_end": 17, "sense_id": "object_v", "difficulty": "easy"}
+{"id": "s075", "text": "Few learners object when modules get shorter.", "word": "object", "char_start": 13, "char_end": 19, "sense_id": "object_v", "difficulty": "ambiguous"}
+{"id": "s076", "text": "A valid work permit is required before the field training begins.", "word": "permit", "char_start": 13, "char_end": 19, "sense_id": "permit_n", "difficulty": "easy"}
+{"id": "s077", "text": "We do not permit recording during confidential briefings.", "word": "permit", "char_start": 10, "char_end": 16, "sense_id": "permit_v", "difficulty": "easy"}
+{"id": "s078", "text": "The hot-work permit module is mandatory for contractors.", "word": "permit", "char_start": 13, "char_end": 19, "sense_id": "permit_n", "difficulty": "easy"}
+{"id": "s079", "text": "Admins can permit extra attempts on the final quiz.", "word": "permit", "char_start": 11, "char_end": 17, "sense_id": "permit_v", "difficulty": "easy"}
+{"id": "s080", "text": "Managers permit exceptions only with written approval.", "word": "permit", "char_start": 9, "char_end": 15, "sense_id": "permit_v", "difficulty": "ambiguous"}
+{"id": "s081", "text": "The studio can produce four narrated modules per week.", "word": "produce", "char_start": 15, "char_end": 22, "sense_id": "produce_v", "difficulty": "easy"}
+{"id": "s082", "text": "The grocery onboarding covers how to stock produce safely.", "word": "produce", "char_start": 43, "char_end": 50, "sense_id": "produce_n", "difficulty": "easy"}
+{"id": "s083", "text": "Writers produce scripts; the voice team handles the rest.", "word": "produce", "char_start": 8, "char_end": 15, "sense_id": "produce_v", "difficulty": "easy"}
+{"id": "s084", "text": "Local produce features in the cafeteria case study.", "word": "produce", "char_start": 6, "char_end": 13, "sense_id": "produce_n", "difficulty": "ambiguous"}
+{"id": "s085", "text": "Teams produce more when feedback loops are short.", "word": "produce", "char_start": 6, "char_end": 13, "sense_id": "produce_v", "difficulty": "ambiguous"}
+{"id": "s086", "text": "Verify the shipping address before mailing the completion certificates.", "word": "address", "char_start": 20, "char_end": 27, "sense_id": "address_n", "difficulty": "easy"}
+{"id": "s087", "text": "The next module will address common objections from customers.", "word": "address", "char_start": 21, "char_end": 28, "sense_id": "address_v", "difficulty": "easy"}
+{"id": "s088", "text": "Send the invite to each learner's work address, not personal email.", "word": "address", "char_start": 39, "char_end": 46, "sense_id": "address_n", "difficulty": "easy"}
+{"id": "s089", "text": "We must address the audio drift before the November launch.", "word": "address", "char_start": 8, "char_end": 15, "sense_id": "address_v", "difficulty": "easy"}
+{"id": "s090", "text": "Trainers address questions at the end, never mid-demo.", "word": "address", "char_start": 9, "char_end": 16, "sense_id": "address_v", "difficulty": "ambiguous"}
+{"id": "s091", "text": "Pick an alternate date in case the trainer is unavailable.", "word": "alternate", "char_start": 8, "char_end": 17, "sense_id": "alternate_adj", "difficulty": "easy"}
+{"id": "s092", "text": "Facilitators alternate between lecture and hands-on practice.", "word": "alternate", "char_start": 13, "char_end": 22, "sense_id": "alternate_v", "difficulty": "easy"}
+{"id": "s093", "text": "The alternate assessment is available for learners using screen readers.", "word": "alternate", "char_start": 4, "char_end": 13, "sense_id": "alternate_adj", "difficulty": "easy"}
+{"id": "s094", "text": "We alternate narrators every chapter to keep attention high.", "word": "alternate", "char_start": 3, "char_end": 12, "sense_id": "alternate_v", "difficulty": "easy"}
+{"id": "s095", "text": "An alternate path unlocks if the learner fails twice.", "word": "alternate", "char_start": 3, "char_end": 12, "sense_id": "alternate_adj", "difficulty": "ambiguous"}
+{"id": "s096", "text": "Every retail associate completes the register simulation first.", "word": "associate", "char_start": 13, "char_end": 22, "sense_id": "associate_n", "difficulty": "easy"}
+{"id": "s097", "text": "Learners associate the jingle with the brand within three lessons.", "word": "associate", "char_start": 9, "char_end": 18, "sense_id": "associate_v", "difficulty": "easy"}
+{"id": "s098", "text": "The associate handbook now links directly to the LMS.", "word": "associate", "char_start": 4, "char_end": 13, "sense_id": "associate_n", "difficulty": "easy"}
+{"id": "s099", "text": "Customers associate long holds with poor service, so the script trains brevity.", "word": "associate", "char_start": 10, "char_end": 19, "sense_id": "associate_v", "difficulty": "easy"}
+{"id": "s100", "text": "Each associate badge doubles as a library card for the portal.", "word": "associate", "char_start": 5, "char_end": 14, "sense_id": "associate_n", "difficulty": "ambiguous"}
+{"id": "s101", "text": "Patience is the attribute mentors mention most in reviews.", "word": "attribute", "char_start": 16, "char_end": 25, "sense_id": "attribute_n", "difficulty": "easy"}
+{"id": "s102", "text": "Analysts attribute the completion spike to shorter modules.", "word": "attribute", "char_start": 9, "char_end": 18, "sense_id": "attribute_v", "difficulty": "easy"}
+{"id": "s103", "text": "Each voice has a tone attribute you can filter by.", "word": "attribute", "char_start": 22, "char_end": 31, "sense_id": "attribute_n", "difficulty": "easy"}
+{"id": "s104", "text": "Please attribute all customer quotes to their consenting source.", "word": "attribute", "char_start": 7, "char_end": 16, "sense_id": "attribute_v", "difficulty": "easy"}
+{"id": "s105", "text": "Auditors attribute most errors to stale documentation.", "word": "attribute", "char_start": 9, "char_end": 18, "sense_id": "attribute_v", "difficulty": "ambiguous"}
+{"id": "s106", "text": "An internal advocate makes every software rollout smoother.", "word": "advocate", "char_start": 12, "char_end": 20, "sense_id": "advocate_n", "difficulty": "easy"}
+{"id": "s107", "text": "We advocate recording a pilot before committing budget.", "word": "advocate", "char_start": 3, "char_end": 11, "sense_id": "advocate_v", "difficulty": "easy"}
+{"id": "s108", "text": "The learner advocate reviews all accessibility complaints.", "word": "advocate", "char_start": 12, "char_end": 20, "sense_id": "advocate_n", "difficulty": "easy"}
+{"id": "s109", "text": "Coaches advocate for protected study time during work hours.", "word": "advocate", "char_start": 8, "char_end": 16, "sense_id": "advocate_v", "difficulty": "easy"}
+{"id": "s110", "text": "Find one advocate per region before the global launch.", "word": "advocate", "char_start": 9, "char_end": 17, "sense_id": "advocate_n", "difficulty": "ambiguous"}
+{"id": "s111", "text": "The quarterly sales contest now includes a product-knowledge quiz.", "word": "contest", "char_start": 20, "char_end": 27, "sense_id": "contest_n", "difficulty": "easy"}
+{"id": "s112", "text": "Employees may contest a failing score within five business days.", "word": "contest", "char_start": 14, "char_end": 21, "sense_id": "contest_v", "difficulty": "easy"}
+{"id": "s113", "text": "Winners of the demo contest speak at the all-hands.", "word": "contest", "char_start": 20, "char_end": 27, "sense_id": "contest_n", "difficulty": "easy"}
+{"id": "s114", "text": "Vendors rarely contest the audit findings in writing.", "word": "contest", "char_start": 15, "char_end": 22, "sense_id": "contest_v", "difficulty": "easy"}
+{"id": "s115", "text": "Learners contest grades more when rubrics are vague.", "word": "contest", "char_start": 9, "char_end": 16, "sense_id": "contest_v", "difficulty": "ambiguous"}
+{"id": "s116", "text": "The tool can convert slide decks into narrated videos overnight.", "word": "convert", "char_start": 13, "char_end": 20, "sense_id": "convert_v", "difficulty": "easy"}
+{"id": "s117", "text": "After one pilot, the skeptical director became a convert.", "word": "convert", "char_start": 49, "char_end": 56, "sense_id": "convert_n", "difficulty": "easy"}
+{"id": "s118", "text": "Please convert all legacy audio to the new sample rate.", "word": "convert", "char_start": 7, "char_end": 14, "sense_id": "convert_v", "difficulty": "easy"}
+{"id": "s119", "text": "Every convert to the new workflow saves hours weekly.", "word": "convert", "char_start": 6, "char_end": 13, "sense_id": "convert_n", "difficulty": "ambiguous"}
+{"id": "s120", "text": "Trials convert best when onboarding is under ten minutes.", "word": "convert", "char_start": 7, "char_end": 14, "sense_id": "convert_v", "difficulty": "ambiguous"}
+{"id": "s121", "text": "Producers coordinate recording slots across three time zones.", "word": "coordinate", "char_start": 10, "char_end": 20, "sense_id": "coordinate_v", "difficulty": "easy"}
+{"id": "s122", "text": "Each map pin stores a coordinate pair for the facility.", "word": "coordinate", "char_start": 22, "char_end": 32, "sense_id": "coordinate_n", "difficulty": "easy"}
+{"id": "s123", "text": "We coordinate with IT before pushing LMS updates.", "word": "coordinate", "char_start": 3, "char_end": 13, "sense_id": "coordinate_v", "difficulty": "easy"}
+{"id": "s124", "text": "Enter the coordinate values exactly as the surveyor logged them.", "word": "coordinate", "char_start": 10, "char_end": 20, "sense_id": "coordinate_n", "difficulty": "easy"}
+{"id": "s125", "text": "Regional leads coordinate venue, catering, and AV for workshops.", "word": "coordinate", "char_start": 15, "char_end": 25, "sense_id": "coordinate_v", "difficulty": "ambiguous"}
+{"id": "s126", "text": "The decrease in support tickets followed the new tutorial series.", "word": "decrease", "char_start": 4, "char_end": 12, "sense_id": "decrease_n", "difficulty": "easy"}
+{"id": "s127", "text": "Refresher courses decrease error rates within one quarter.", "word": "decrease", "char_start": 18, "char_end": 26, "sense_id": "decrease_v", "difficulty": "easy"}
+{"id": "s128", "text": "A decrease of ten points in satisfaction triggers a curriculum review.", "word": "decrease", "char_start": 2, "char_end": 10, "sense_id": "decrease_n", "difficulty": "easy"}
+{"id": "s129", "text": "Costs decrease sharply once narration is automated.", "word": "decrease", "char_start": 6, "char_end": 14, "sense_id": "decrease_v", "difficulty": "easy"}
+{"id": "s130", "text": "Any decrease below baseline pauses the pilot.", "word": "decrease", "char_start": 4, "char_end": 12, "sense_id": "decrease_n", "difficulty": "ambiguous"}
+{"id": "s131", "text": "Each delegate receives the summit agenda a week early.", "word": "delegate", "char_start": 5, "char_end": 13, "sense_id": "delegate_n", "difficulty": "easy"}
+{"id": "s132", "text": "Managers who delegate review tasks finish launches faster.", "word": "delegate", "char_start": 13, "char_end": 21, "sense_id": "delegate_v", "difficulty": "easy"}
+{"id": "s133", "text": "One delegate from every region joins the curriculum board.", "word": "delegate", "char_start": 4, "char_end": 12, "sense_id": "delegate_n", "difficulty": "easy"}
+{"id": "s134", "text": "You can delegate grading to certified facilitators.", "word": "delegate", "char_start": 8, "char_end": 16, "sense_id": "delegate_v", "difficulty": "easy"}
+{"id": "s135", "text": "Leads delegate first drafts but own the final cut.", "word": "delegate", "char_start": 6, "char_end": 14, "sense_id": "delegate_v", "difficulty": "ambiguous"}
+{"id": "s136", "text": "Store the signed document in the compliance folder.", "word": "document", "char_start": 17, "char_end": 25, "sense_id": "document_n", "difficulty": "easy"}
+{"id": "s137", "text": "Technicians document each repair step with photos.", "word": "document", "char_start": 12, "char_end": 20, "sense_id": "document_v", "difficulty": "easy"}
+{"id": "s138", "text": "The requirements document runs forty pages and nobody reads it.", "word": "document", "char_start": 17, "char_end": 25, "sense_id": "document_n", "difficulty": "easy"}
+{"id": "s139", "text": "Please document the workaround before the engineer rotates off.", "word": "document", "char_start": 7, "char_end": 15, "sense_id": "document_v", "difficulty": "easy"}
+{"id": "s140", "text": "Auditors document everything, so should trainers.", "word": "document", "char_start": 9, "char_end": 17, "sense_id": "document_v", "difficulty": "ambiguous"}
+{"id": "s141", "text": "Delete the duplicate before syncing the course catalog.", "word": "duplicate", "char_start": 11, "char_end": 20, "sense_id": "duplicate_n", "difficulty": "easy"}
+{"id": "s142", "text": "The script will duplicate the master file for each locale.", "word": "duplicate", "char_start": 16, "char_end": 25, "sense_id": "duplicate_v", "difficulty": "easy"}
+{"id": "s143", "text": "A duplicate of every certificate sits in the vault.", "word": "duplicate", "char_start": 2, "char_end": 11, "sense_id": "duplicate_n", "difficulty": "easy"}
+{"id": "s144", "text": "Admins duplicate last year's course and forget to update dates.", "word": "duplicate", "char_start": 7, "char_end": 16, "sense_id": "duplicate_v", "difficulty": "easy"}
+{"id": "s145", "text": "Flag any duplicate entries the importer creates.", "word": "duplicate", "char_start": 9, "char_end": 18, "sense_id": "duplicate_n", "difficulty": "ambiguous"}
+{"id": "s146", "text": "Travel is no longer an excuse for missing compliance training.", "word": "excuse", "char_start": 23, "char_end": 29, "sense_id": "excuse_n", "difficulty": "easy"}
+{"id": "s147", "text": "Please excuse the temporary watermark on the draft video.", "word": "excuse", "char_start": 7, "char_end": 13, "sense_id": "excuse_v", "difficulty": "easy"}
+{"id": "s148", "text": "The most common excuse for incomplete modules is meeting overload.", "word": "excuse", "char_start": 16, "char_end": 22, "sense_id": "excuse_n", "difficulty": "easy"}
+{"id": "s149", "text": "We can excuse the absence if the makeup quiz is passed.", "word": "excuse", "char_start": 7, "char_end": 13, "sense_id": "excuse_v", "difficulty": "easy"}
+{"id": "s150", "text": "Managers excuse missed sessions too easily.", "word": "excuse", "char_start": 9, "char_end": 15, "sense_id": "excuse_v", "difficulty": "ambiguous"}
+{"id": "s151", "text": "You can export completion data as a spreadsheet.", "word": "export", "char_start": 8, "char_end": 14, "sense_id": "export_v", "difficulty": "easy"}
+{"id": "s152", "text": "The SCORM export includes captions and transcripts.", "word": "export", "char_start": 10, "char_end": 16, "sense_id": "export_n", "difficulty": "easy"}
+{"id": "s153", "text": "Please export the final mix at the higher sample rate.", "word": "export", "char_start": 7, "char_end": 13, "sense_id": "export_v", "difficulty": "easy"}
+{"id": "s154", "text": "Each export lands in the shared drive automatically.", "word": "export", "char_start": 5, "char_end": 11, "sense_id": "export_n", "difficulty": "easy"}
+{"id": "s155", "text": "The nightly export failed twice last week.", "word": "export", "char_start": 12, "char_end": 18, "sense_id": "export_n", "difficulty": "ambiguous"}
+{"id": "s156", "text": "Every graduate of the academy earns a verified badge.", "word": "graduate", "char_start": 6, "char_end": 14, "sense_id": "graduate_n", "difficulty": "easy"}
+{"id": "s157", "text": "Cohorts graduate together at the end of the fiscal quarter.", "word": "graduate", "char_start": 8, "char_end": 16, "sense_id": "graduate_v", "difficulty": "easy"}
+{"id": "s158", "text": "A recent graduate now runs the entire mentor program.", "word": "graduate", "char_start": 9, "char_end": 17, "sense_id": "graduate_n", "difficulty": "easy"}
+{"id": "s159", "text": "Learners graduate once all six assessments are passed.", "word": "graduate", "char_start": 9, "char_end": 17, "sense_id": "graduate_v", "difficulty": "easy"}
+{"id": "s160", "text": "Interns graduate to client work after the simulation.", "word": "graduate", "char_start": 8, "char_end": 16, "sense_id": "graduate_v", "difficulty": "ambiguous"}
+{"id": "s161", "text": "We will implement single sign-on before the next cohort starts.", "word": "implement", "char_start": 8, "char_end": 17, "sense_id": "implement_v", "difficulty": "easy"}
+{"id": "s162", "text": "Each farm implement in the catalog has its own safety video.", "word": "implement", "char_start": 10, "char_end": 19, "sense_id": "implement_n", "difficulty": "easy"}
+{"id": "s163", "text": "Teams implement feedback faster when it arrives within a day.", "word": "implement", "char_start": 6, "char_end": 15, "sense_id": "implement_v", "difficulty": "easy"}
+{"id": "s164", "text": "Store every sharp implement in the locked demo cabinet.", "word": "implement", "char_start": 18, "char_end": 27, "sense_id": "implement_n", "difficulty": "easy"}
+{"id": "s165", "text": "Admins implement policy; trainers explain it.", "word": "implement", "char_start": 7, "char_end": 16, "sense_id": "implement_v", "difficulty": "ambiguous"}
+{"id": "s166", "text": "Expect moderate turnout for the optional lunch session.", "word": "moderate", "char_start": 7, "char_end": 15, "sense_id": "moderate_adj", "difficulty": "easy"}
+{"id": "s167", "text": "A senior trainer will moderate the panel discussion.", "word": "moderate", "char_start": 22, "char_end": 30, "sense_id": "moderate_v", "difficulty": "easy"}
+{"id": "s168", "text": "The course assumes moderate familiarity with spreadsheets.", "word": "moderate", "char_start": 19, "char_end": 27, "sense_id": "moderate_adj", "difficulty": "easy"}
+{"id": "s169", "text": "Volunteers moderate the forum on weekends.", "word": "moderate", "char_start": 11, "char_end": 19, "sense_id": "moderate_v", "difficulty": "easy"}
+{"id": "s170", "text": "Hosts moderate chat while the speaker presents.", "word": "moderate", "char_start": 6, "char_end": 14, "sense_id": "moderate_v", "difficulty": "ambiguous"}
+{"id": "s171", "text": "She earned a perfect score on the certification exam.", "word": "perfect", "char_start": 13, "char_end": 20, "sense_id": "perfect_adj", "difficulty": "easy"}
+{"id": "s172", "text": "Rehearse daily to perfect your delivery before the keynote.", "word": "perfect", "char_start": 18, "char_end": 25, "sense_id": "perfect_v", "difficulty": "easy"}
+{"id": "s173", "text": "There is no perfect time to migrate the LMS.", "word": "perfect", "char_start": 12, "char_end": 19, "sense_id": "perfect_adj", "difficulty": "easy"}
+{"id": "s174", "text": "Narrators perfect their pacing through retake drills.", "word": "perfect", "char_start": 10, "char_end": 17, "sense_id": "perfect_v", "difficulty": "easy"}
+{"id": "s175", "text": "Pilots exist to perfect the rollout, not to prove it.", "word": "perfect", "char_start": 16, "char_end": 23, "sense_id": "perfect_v", "difficulty": "ambiguous"}
+{"id": "s176", "text": "The dashboard shows each learner's progress in real time.", "word": "progress", "char_start": 35, "char_end": 43, "sense_id": "progress_n", "difficulty": "easy"}
+{"id": "s177", "text": "Cohorts progress to advanced modules after the midterm.", "word": "progress", "char_start": 8, "char_end": 16, "sense_id": "progress_v", "difficulty": "easy"}
+{"id": "s178", "text": "Weekly progress reports go to every department head.", "word": "progress", "char_start": 7, "char_end": 15, "sense_id": "progress_n", "difficulty": "easy"}
+{"id": "s179", "text": "Learners progress faster with spaced repetition.", "word": "progress", "char_start": 9, "char_end": 17, "sense_id": "progress_v", "difficulty": "ambiguous"}
+{"id": "s180", "text": "Real progress rarely shows up in week one.", "word": "progress", "char_start": 5, "char_end": 13, "sense_id": "progress_n", "difficulty": "ambiguous"}
+{"id": "s181", "text": "The sudden fee change sparked a protest from channel partners.", "word": "protest", "char_start": 32, "char_end": 39, "sense_id": "protest_n", "difficulty": "easy"}
+{"id": "s182", "text": "Several facilitators protest the new grading curve.", "word": "protest", "char_start": 21, "char_end": 28, "sense_id": "protest_v", "difficulty": "easy"}
+{"id": "s183", "text": "A formal protest must be filed within ten days.", "word": "protest", "char_start": 9, "char_end": 16, "sense_id": "protest_n", "difficulty": "easy"}
+{"id": "s184", "text": "Teams protest loudest when tools change without notice.", "word": "protest", "char_start": 6, "char_end": 13, "sense_id": "protest_v", "difficulty": "easy"}
+{"id": "s185", "text": "Vendors protest, then comply, then renew.", "word": "protest", "char_start": 8, "char_end": 15, "sense_id": "protest_v", "difficulty": "ambiguous"}
+{"id": "s186", "text": "A full refund is available within thirty days of enrollment.", "word": "refund", "char_start": 7, "char_end": 13, "sense_id": "refund_n", "difficulty": "easy"}
+{"id": "s187", "text": "We refund workshop fees if the session is cancelled.", "word": "refund", "char_start": 3, "char_end": 9, "sense_id": "refund_v", "difficulty": "easy"}
+{"id": "s188", "text": "Processing a refund takes two billing cycles.", "word": "refund", "char_start": 13, "char_end": 19, "sense_id": "refund_n", "difficulty": "easy"}
+{"id": "s189", "text": "The bursar will refund doubled charges automatically.", "word": "refund", "char_start": 16, "char_end": 22, "sense_id": "refund_v", "difficulty": "easy"}
+{"id": "s190", "text": "Each refund request triggers a quality review.", "word": "refund", "char_start": 5, "char_end": 11, "sense_id": "refund_n", "difficulty": "ambiguous"}
+{"id": "s191", "text": "Keep a separate budget line for voice licensing.", "word": "separate", "char_start": 7, "char_end": 15, "sense_id": "separate_adj", "difficulty": "easy"}
+{"id": "s192", "text": "Please separate the quiz data from the feedback data.", "word": "separate", "char_start": 7, "char_end": 15, "sense_id": "separate_v", "difficulty": "easy"}
+{"id": "s193", "text": "Contractors complete a separate security module.", "word": "separate", "char_start": 23, "char_end": 31, "sense_id": "separate_adj", "difficulty": "easy"}
+{"id": "s194", "text": "We separate narration and music into different tracks.", "word": "separate", "char_start": 3, "char_end": 11, "sense_id": "separate_v", "difficulty": "easy"}
+{"id": "s195", "text": "Editors separate signal from noise in review notes.", "word": "separate", "char_start": 8, "char_end": 16, "sense_id": "separate_v", "difficulty": "ambiguous"}
+{"id": "s196", "text": "Pick one subject per microlearning video to avoid overload.", "word": "subject", "char_start": 9, "char_end": 16, "sense_id": "subject_n", "difficulty": "easy"}
+{"id": "s197", "text": "Do not subject new hires to five hours of lecture on day one.", "word": "subject", "char_start": 7, "char_end": 14, "sense_id": "subject_v", "difficulty": "easy"}
+{"id": "s198", "text": "The subject line determines whether training emails get opened.", "word": "subject", "char_start": 4, "char_end": 11, "sense_id": "subject_n", "difficulty": "easy"}
+{"id": "s199", "text": "Auditors subject every claim to a source check.", "word": "subject", "char_start": 9, "char_end": 16, "sense_id": "subject_v", "difficulty": "easy"}
+{"id": "s200", "text": "Each subject matter expert reviews their own chapter.", "word": "subject", "char_start": 5, "char_end": 12, "sense_id": "subject_n", "difficulty": "ambiguous"}

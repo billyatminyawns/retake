@@ -1,0 +1,15 @@
+# Build-context ignore list for `docker build -f deploy/Dockerfile .`
+# (BuildKit reads <Dockerfile>.dockerignore next to the Dockerfile; Docker 23+ / compose v2 default).
+# Keeps the multi-GB venv, job data and git history out of the context the daemon has to upload.
+.venv
+.git
+var
+cache
+out
+docs
+tests
+**/__pycache__
+**/*.pyc
+**/.DS_Store
+deploy/.env
+deploy/.tunnel-url

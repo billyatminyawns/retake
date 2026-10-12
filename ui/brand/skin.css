@@ -1,0 +1,222 @@
+/* WellSaid Studio skin for vendor dashboards.
+   Injected LAST in <head>, after the dashboard's own (already re-colored) stylesheet,
+   so equal-specificity selectors here win. Values are the live Studio tokens
+   (studio.wellsaidlabs.com): dark is Studio's default, light is Studio's light theme. */
+:root,:root[data-theme="dark"]{
+  color-scheme:dark;
+  --ws-page:#000000; --ws-panel:#111111; --ws-surface:#1e1e1e; --ws-raised:#232323;
+  --ws-hover:#2c2c2c; --ws-active:#333333; --ws-line:#2c2c2c; --ws-line-2:#333333; --ws-line-input:#646464;
+  --ws-text:#fcfcfc; --ws-text-2:#c7c7c7; --ws-text-3:#999999;
+  --ws-accent:#7fed9b; --ws-accent-hover:#a0f2b6; --ws-on-accent:#1e1e1e; --ws-accent-text:#7fed9b;
+  --ws-secondary:#444444; --ws-secondary-hover:#646464; --ws-on-secondary:#fcfcfc; --ws-secondary-border:0;
+  --ws-focus:#ceffdc; --ws-link:#7ab6ff;
+  --ws-tag-bg:#4a3310; --ws-tag-fg:#ffbf5f; --ws-chip:#1e1e1e; --ws-tooltip:#3a3a3a; --ws-rail-sep:rgba(255,255,255,.12);
+  --ws-avatar:#75467d; --ws-highlight:#ff6188;
+}
+:root[data-theme="light"]{
+  color-scheme:light;
+  --ws-page:#fcfcfc; --ws-panel:#f8f8f8; --ws-surface:#ffffff; --ws-raised:#f8f8f8;
+  --ws-hover:#f0f0f0; --ws-active:#dbdbdb; --ws-line:#dbdbdb; --ws-line-2:#c7c7c7; --ws-line-input:#999999;
+  --ws-text:#1e1e1e; --ws-text-2:#444444; --ws-text-3:#646464;
+  --ws-accent:#2c2c2c; --ws-accent-hover:#565656; --ws-on-accent:#fcfcfc; --ws-accent-text:#3c8455;
+  --ws-secondary:#f8f8f8; --ws-secondary-hover:#f0f0f0; --ws-on-secondary:#2c2c2c; --ws-secondary-border:1px solid #646464;
+  --ws-focus:#2c2c2c; --ws-link:#264974;
+  --ws-tag-bg:#fbe0b7; --ws-tag-fg:#7d561b; --ws-chip:#f0f0f0; --ws-tooltip:#2c2c2c; --ws-rail-sep:rgba(0,0,0,.12);
+  --ws-avatar:#75467d; --ws-highlight:#cb1240;
+}
+:root{
+  --ws-font-ui:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ws-font-body:"Assistant","DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ws-rail-w:64px; --ws-top-h:40px;
+  /* the dashboard's own radius scale, flattened to Studio's crisp corners */
+  --radius-sm:4px; --radius-md:4px; --radius-lg:4px; --radius-xl:8px;
+}
+
+/* ── Base ─────────────────────────────────────────────────────────────── */
+html,body{background:var(--ws-page) !important;color:var(--ws-text);font-family:var(--ws-font-body)}
+body{padding-left:var(--ws-rail-w);padding-top:var(--ws-top-h)}
+::selection{background:rgba(127,237,155,.28)}
+:focus-visible{outline:2px solid var(--ws-focus);outline-offset:2px}
+h1,h2,h3,h4,.k-num,.trend-headline,.empty-title,.detail-title{font-family:var(--ws-font-ui)}
+button,input,select,textarea{font-family:inherit}
+
+/* ── Studio rail ──────────────────────────────────────────────────────── */
+.ws-rail{position:fixed;left:0;top:0;bottom:0;width:var(--ws-rail-w);z-index:60;background:var(--ws-panel);
+  border-right:1px solid var(--ws-line);display:flex;flex-direction:column;align-items:center;gap:8px;padding:6px 12px 16px}
+.ws-rail-logo{display:flex;align-items:center;justify-content:center;width:40px;height:28px;margin-bottom:6px;border-radius:4px}
+.ws-rail-logo svg{width:24px;height:24px;display:block}
+.ws-rail a.ws-rail-btn{display:flex;align-items:center;justify-content:center;width:40px;height:34px;border-radius:4px;
+  color:var(--ws-text);text-decoration:none;position:relative;transition:background .15s ease}
+.ws-rail a.ws-rail-btn svg{width:16px;height:16px;display:block}
+.ws-rail a.ws-rail-btn:hover{background:var(--ws-hover)}
+.ws-rail a.ws-rail-btn[aria-current="page"]{background:var(--ws-active)}
+.ws-rail a.ws-rail-new{background:var(--ws-accent);color:var(--ws-on-accent);height:32px}
+.ws-rail a.ws-rail-new:hover{background:var(--ws-accent-hover)}
+.ws-rail hr{width:40px;border:0;border-top:1px solid var(--ws-rail-sep);margin:6px 0}
+.ws-rail .ws-rail-spacer{flex:1}
+.ws-rail .ws-rail-avatar{width:32px;height:32px;border-radius:50%;background:var(--ws-avatar);color:#fff;display:flex;align-items:center;
+  justify-content:center;font:700 12px/1 var(--ws-font-ui);overflow:hidden}
+.ws-rail .ws-rail-avatar img{width:100%;height:100%;object-fit:contain;background:#fff;padding:3px}
+.ws-rail [data-tip]:hover::after{content:attr(data-tip);position:absolute;left:calc(100% + 10px);top:50%;transform:translateY(-50%);
+  background:var(--ws-tooltip);color:#fcfcfc;font:400 12px/1.3 var(--ws-font-body);padding:6px 8px;border-radius:4px;white-space:nowrap;
+  pointer-events:none;z-index:80}
+
+/* ── Studio top bar ───────────────────────────────────────────────────── */
+.ws-topbar{position:fixed;top:0;left:var(--ws-rail-w);right:0;height:var(--ws-top-h);z-index:55;background:var(--ws-panel);
+  border-bottom:1px solid var(--ws-line);display:flex;align-items:center;gap:12px;padding:0 8px}
+.ws-top-logo{display:none;align-items:center}.ws-top-logo svg{width:22px;height:22px}
+.ws-icon-btn{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:4px;
+  background:var(--ws-raised);border:1px solid var(--ws-line-2);color:var(--ws-text);cursor:pointer;padding:0}
+.ws-icon-btn:hover{background:var(--ws-hover)}
+.ws-icon-btn svg{width:14px;height:14px}
+.ws-crumbs{display:flex;align-items:center;gap:8px;min-width:0;font:400 14px/21px var(--ws-font-body);color:var(--ws-text-2);white-space:nowrap;overflow:hidden}
+.ws-crumbs svg{width:16px;height:16px;flex:0 0 auto}
+.ws-crumbs a{color:var(--ws-text-2);text-decoration:none}
+.ws-crumbs a:hover{color:var(--ws-text)}
+.ws-crumbs .ws-crumb-sep{color:var(--ws-text-3)}
+.ws-crumbs .ws-crumb-here{color:var(--ws-text);overflow:hidden;text-overflow:ellipsis}
+.ws-topbar-right{margin-left:auto;display:flex;align-items:center;gap:8px}
+.ws-theme-toggle .ws-i-sun{display:none}
+:root[data-theme="light"] .ws-theme-toggle .ws-i-sun{display:block}
+:root[data-theme="light"] .ws-theme-toggle .ws-i-moon{display:none}
+
+/* ── Secondary panel (the dashboard's own navigation) ─────────────────── */
+.app{min-height:calc(100vh - var(--ws-top-h))}
+.sidebar{width:208px !important;flex:0 0 208px !important;background:var(--ws-panel) !important;border-right:1px solid var(--ws-line) !important;top:var(--ws-top-h) !important;
+  height:calc(100vh - var(--ws-top-h)) !important;padding:16px 12px !important;color:var(--ws-text)}
+:root.ws-nav-hidden .sidebar{display:none !important}
+.ws-module{display:flex;align-items:center;gap:10px;padding:4px 8px 16px;margin-bottom:12px;border-bottom:1px solid var(--ws-line);color:var(--ws-text);text-decoration:none}
+.ws-module-icon{width:28px;height:28px;border-radius:4px;background:var(--ws-active);color:var(--ws-accent-text);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.ws-module-icon svg{width:16px;height:16px}
+.ws-module-name{font:700 14px/18px var(--ws-font-ui);color:var(--ws-text)}
+.ws-module-sub{font:400 12px/16px var(--ws-font-body);color:var(--ws-text-2);margin-top:1px}
+.sidebar nav{gap:2px !important}
+.sidebar .nav-item{font:400 14px/18px var(--ws-font-ui) !important;color:var(--ws-text-2) !important;border-radius:4px !important;padding:8px 8px 8px 12px !important;background:transparent}
+.sidebar .nav-item .icon{width:16px;height:16px}
+.sidebar .nav-item .icon svg{width:16px;height:16px;stroke-width:2}
+.sidebar .nav-item:hover{background:var(--ws-hover) !important;color:var(--ws-text) !important}
+.sidebar .nav-item.active{background:var(--ws-active) !important;color:var(--ws-text) !important;font-weight:500 !important}
+.sidebar .nav-item .badge{background:var(--ws-tag-bg) !important;color:var(--ws-tag-fg) !important;border-radius:4px !important;
+  font:700 11px/16px var(--ws-font-body) !important;padding:0 6px !important;min-width:0 !important}
+.sidebar .user{background:var(--ws-chip) !important;border:0 !important;border-radius:12px !important;padding:10px 12px !important;margin-top:12px !important}
+.sidebar a.sidebar-user:hover{background:var(--ws-hover) !important}
+.sidebar .user .avatar{width:24px !important;height:24px !important;border-radius:4px !important;background:#fff !important;border:0 !important}
+.sidebar .user .u-name{font:500 14px/18px var(--ws-font-ui) !important;color:var(--ws-text) !important}
+.sidebar .user .u-meta{font:400 12px/16px var(--ws-font-body) !important;color:var(--ws-text-2) !important}
+.sidebar .advisory{border-top:0 !important;color:var(--ws-text-3) !important;font-size:12px !important;line-height:16px !important;padding:10px 8px 0 !important}
+
+/* ── Page header ──────────────────────────────────────────────────────── */
+.content{background:var(--ws-page) !important;padding:28px 24px 48px !important}
+/* the rail costs 64px: tighten table gutters so the vendor's grids still fit a 1366px laptop */
+.alerts-head,.alert-row,.library-head,.library-row,.history-head,.history-row{column-gap:12px !important;padding-left:16px !important;padding-right:16px !important}
+.topbar{margin-bottom:24px}
+.topbar h1{font:700 24px/31px var(--ws-font-ui) !important;letter-spacing:normal !important;color:var(--ws-text) !important}
+.topbar .eyebrow,.eyebrow{font:400 14px/18px var(--ws-font-ui) !important;letter-spacing:normal !important;text-transform:none !important;color:var(--ws-text-2) !important;margin-bottom:6px}
+
+/* ── Surfaces: Studio cards are flat, 4px, no shadow ─────────────────── */
+.card,.kpi,.alerts,.alerts-empty,.filter-bar,.correction-block,.feedback-controls,.library-card,.history-card,.intg-card,.fix-actions-panel,.fix-panel,.sec-row,.sot-hero,.intg-hero{
+  box-shadow:none !important;border-radius:4px}
+@media screen{:root[data-theme="dark"] .card,:root[data-theme="dark"] .kpi,:root[data-theme="dark"] .alerts,:root[data-theme="dark"] .filter-bar,:root[data-theme="dark"] .alerts-empty,
+:root[data-theme="dark"] .library-card,:root[data-theme="dark"] .history-card,:root[data-theme="dark"] .intg-card{border-color:transparent !important}}
+/* wide tables scroll inside their card instead of clipping their action buttons */
+.alerts,.library-card,.history-card{overflow-x:auto !important}
+.sot-hero,.intg-hero{background:var(--ws-surface) !important;border:0 !important}
+.sot-section-count{background:transparent !important;border:1px solid var(--ws-line-input) !important;color:var(--ws-text-2) !important;border-radius:4px !important}
+.card-title,.k-label,.fb-label,.cb-label,.evidence-label,.meta-key,.shot-label,.filter-label,.alerts-group-label,.result-count,.fix-actions-eyebrow,.fix-eyebrow,.sec-pager-state,.intg-group h3{
+  font-family:var(--ws-font-ui) !important;letter-spacing:normal !important;text-transform:none !important}
+/* Studio's smallest text is 12px: labels that lost their capitals get it back in size */
+.alerts-head,.library-head,.history-head{font:600 12px/16px var(--ws-font-ui) !important;color:var(--ws-text-2) !important;letter-spacing:normal !important;text-transform:none !important}
+.shot-label,.cb-label,.evidence-label,.meta-key,.fb-label,.fix-actions-eyebrow,.fix-eyebrow,.vsum-eyebrow,.filter-label,.meta-chip,.result-count,
+.sec-trend,.sec-pager-state,.act-when,.qr-sub,.sys-kind,.card-sub,.sec-meta,.c-when,.asset-sub,.bbox-caption,.confidence,.fb-status,
+.new-badge,.resolved-badge,.stat-pill .trend,.ap-count,.c-id,.opt-count,.meta-frag,.sot-section-count,.intg-card .avail{font-size:12px !important}
+.sot-hero .h-eyebrow{font:400 14px/18px var(--ws-font-ui) !important;color:var(--ws-text-2) !important;letter-spacing:normal !important;text-transform:none !important}
+[id^="sot-kpi-"]{font-family:var(--ws-font-ui) !important}
+.status-pill{border:0 !important}
+/* small metadata chips: neutral Studio chips, not the vendor's amber */
+.detail-meta .meta-frag,.ap-count{background:var(--ws-chip) !important;color:var(--ws-text-2) !important}
+.bbox-highlight,#lightbox-bbox{border:2px dashed var(--ws-highlight) !important}
+.sot-row .status-active,.fix-action[data-state="done"] button{background:var(--ws-accent) !important;color:var(--ws-on-accent) !important}
+.sev-pill,.kind-chip,.status-pill,.new-pill,.hero-pill,.alerts-group-count,.h-latest{font:600 12px/16px var(--ws-font-body) !important;letter-spacing:normal !important;text-transform:none !important;padding:2px 8px !important;border-radius:4px !important}
+.c-id{font-family:var(--ws-font-ui) !important;font-variant-numeric:tabular-nums;letter-spacing:normal !important}
+.intg-group h3{font-size:14px !important;font-weight:400 !important;color:var(--ws-text-2) !important}
+.card-title{font-size:14px !important;font-weight:400 !important;color:var(--ws-text-2) !important}
+.k-label{font-size:12px !important;font-weight:400 !important;color:var(--ws-text-2) !important}
+.k-num{font-weight:700 !important;letter-spacing:-.01em !important}
+a.kpi:hover{transform:none !important;box-shadow:none !important;background:var(--ws-raised) !important}
+
+/* ── Buttons: Studio primary (mint on dark), secondary (gray) ─────────── */
+.btn-primary,.review-btn,.fix-actions-cta,.fb-btn.save-comment,.h-btn.primary,.sot-add-btn.primary,.apply-bar button.apply{background:var(--ws-accent) !important;color:var(--ws-on-accent) !important;
+  border:0 !important;border-radius:4px !important;box-shadow:none !important;font:700 12px/18px var(--ws-font-ui) !important;padding:7px 16px !important;letter-spacing:normal !important}
+.btn-primary:hover,.review-btn:hover,.fix-actions-cta:hover,.fb-btn.save-comment:hover,.h-btn.primary:hover,.sot-add-btn.primary:hover,.apply-bar button.apply:hover:not([disabled]){background:var(--ws-accent-hover) !important;filter:none !important}
+.apply-bar button.apply[disabled]{background:var(--ws-secondary) !important;color:var(--ws-text-3) !important}
+.apply-bar .progress{background:var(--ws-active) !important}.apply-bar .progress .bar{background:var(--ws-accent) !important}
+.review-btn{white-space:nowrap}.review-btn .arr{overflow:visible !important;min-width:10px;flex:0 0 auto}
+.btn-secondary,.h-btn:not(.primary),.sot-add-btn:not(.primary){background:var(--ws-secondary) !important;color:var(--ws-on-secondary) !important;border:var(--ws-secondary-border) !important;
+  border-radius:4px !important;box-shadow:none !important;font:700 12px/18px var(--ws-font-ui) !important;padding:7px 16px !important}
+.btn-secondary:hover,.h-btn:not(.primary):hover,.sot-add-btn:not(.primary):hover{background:var(--ws-secondary-hover) !important}
+.h-latest{background:var(--ws-tag-bg) !important;color:var(--ws-tag-fg) !important;border:0 !important}
+/* "New" reads as one Studio accent everywhere */
+.new-pill,.alerts-group.new-this-week .hero-pill,.alerts-group.new-this-week .alerts-group-count{background:var(--ws-accent) !important;color:var(--ws-on-accent) !important;border:0 !important}
+.alerts-group.new-this-week .alerts-group-head{background:var(--ws-raised) !important;border-top:2px solid var(--ws-accent-text) !important}
+/* filters: neutral Studio states, not the vendor's amber/blue */
+.filter-btn.narrowed{background:var(--ws-active) !important;border-color:var(--ws-text-2) !important;color:var(--ws-text) !important}
+.filter-btn[aria-expanded="true"]{border-color:var(--ws-text-2) !important;background:var(--ws-hover) !important}
+.filter-opt .opt-check{color:var(--ws-accent-text) !important}
+.filter-opt.active{background:var(--ws-hover) !important}
+/* fix panels sit on Studio surfaces */
+.fix-panel,.fix-actions-panel{background:var(--ws-surface) !important;border:1px solid var(--ws-line-2) !important}
+.fix-eyebrow,.fix-actions-eyebrow{color:var(--ws-accent-text) !important}
+/* review verdicts: Studio secondary buttons, the chosen one in the primary color */
+.feedback-controls .fb-btn:not(.save-comment){background:var(--ws-secondary) !important;color:var(--ws-on-secondary) !important;border:var(--ws-secondary-border) !important}
+.feedback-controls .fb-btn:not(.save-comment):hover{background:var(--ws-secondary-hover) !important}
+.feedback-controls .fb-btn.active,.alert[data-fb-status="approve"] .fb-btn.approve,.alert[data-fb-status="reject"] .fb-btn.reject,
+.alert[data-fb-status="false_positive"] .fb-btn.fp,.alert[data-fb-status="defer"] .fb-btn.defer{background:var(--ws-accent) !important;color:var(--ws-on-accent) !important}
+.feedback-controls .fb-btn.active:not(.save-comment),.feedback-controls .fb-btn.active:not(.save-comment):hover{background:var(--ws-accent) !important;color:var(--ws-on-accent) !important}
+a[aria-disabled="true"],button[aria-disabled="true"]{background:var(--ws-secondary) !important;color:var(--ws-text-3) !important;opacity:.6;pointer-events:none !important;cursor:default !important}
+.filter-btn.narrowed .filter-label{color:var(--ws-text-2) !important}
+.sec-pager-btn:hover:not([disabled]){border-color:var(--ws-line-input) !important;background:var(--ws-hover) !important}
+/* the vendor's trend chart draws Text and Image in similar blues: dash Image and dot Video so they read without color */
+.trend-svg-host path[style*="7b68ee"],.trend-svg-host line[style*="7b68ee"]{stroke-dasharray:6 4}
+.trend-svg-host path[style*="e15b5b"],.trend-svg-host line[style*="e15b5b"]{stroke-dasharray:2 3}
+.fb-comment textarea{background:transparent !important;border:1px solid var(--ws-line-input) !important;color:var(--ws-text) !important;border-radius:4px !important}
+.fb-comment textarea:focus{outline:2px solid var(--ws-focus) !important;border-color:var(--ws-focus) !important}
+/* rows: visible Studio hover / open states */
+.alert-row:hover,.library-row:hover,.history-row:hover{background:var(--ws-hover) !important}
+.alert-row[aria-expanded="true"],.library-row[aria-expanded="true"]{background:var(--ws-raised) !important;box-shadow:inset 2px 0 0 var(--ws-accent-text)}
+.sec-row:hover{border-color:var(--ws-line-2) !important;background:var(--ws-raised) !important;box-shadow:none !important}
+.sec-ext:hover{background:var(--ws-hover) !important;color:var(--ws-text) !important}
+.autofix-wrap[data-tooltip]::after{background:var(--ws-tooltip) !important;color:#fcfcfc !important;border-radius:4px !important;box-shadow:none !important}
+.autofix-wrap[data-tooltip]::before{border-top-color:var(--ws-tooltip) !important}
+[role="button"]:focus-visible,[role="link"]:focus-visible,.finding-summary:focus-visible,.tab-btn:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid var(--ws-focus) !important;outline-offset:-2px}
+/* the Studio top bar already shows the breadcrumb */
+.demo-wrap>.breadcrumb,.content>.breadcrumb{display:none !important}
+.icon-btn,.open-btn-mini,.ac-btn,.sec-pager-btn,.filter-btn,.fb-btn{border-radius:4px !important;box-shadow:none !important}
+.filter-btn,.fb-btn{font-family:var(--ws-font-ui) !important}
+
+/* ── Inputs: Studio search is an outlined pill ────────────────────────── */
+.search,.alert-search{background:transparent !important;border:1px solid var(--ws-line-input) !important;border-radius:100px !important;box-shadow:none !important}
+.search:focus-within,.alert-search:focus-within{border-color:var(--ws-text-2) !important;box-shadow:none !important}
+input::placeholder,textarea::placeholder{color:var(--ws-text-3)}
+
+/* ── Links that are calls to action read as the accent ────────────────── */
+.card-link,.sec-cta,.filter-clear-all{color:var(--ws-accent-text) !important}
+
+/* ── Small screens: rail tucks away, panel stacks ─────────────────────── */
+@media (max-width:704px){
+  body{padding-left:0}
+  .ws-rail{display:none}
+  .ws-topbar{left:0}
+  .sidebar{top:0 !important;height:auto !important;width:100% !important;flex:0 0 auto !important;border-right:0 !important;border-bottom:1px solid var(--ws-line) !important}
+  .ws-top-logo{display:flex !important}
+  .sidebar .nav-item{white-space:nowrap}
+  .content{padding:20px 16px 32px !important}
+  #sot-uploaded-rows .sot-row{display:flex !important;flex-wrap:wrap;gap:8px 12px}
+  #sot-uploaded-rows .sot-row>span:nth-child(3){flex:1 1 calc(100% - 120px);min-width:0}
+}
+
+/* ── Print: light, no chrome ─────────────────────────────────────────── */
+@media print{
+  .ws-rail,.ws-topbar,.sidebar{display:none !important}
+  body{padding:0 !important}
+  html,body,.content{background:#fff !important}
+}

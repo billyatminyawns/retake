@@ -1,0 +1,5 @@
+DM Sans (Colophon Foundry / Google Fonts) and Assistant (Ben Nathan / Google Fonts)
+are licensed under the SIL Open Font License 1.1 — https://openfontlicense.org
+*.woff2: latin + latin-ext variable (400–700) subsets, used by the pages.
+static/*.ttf: static weights, used by the PDF reports so text embeds as real fonts.
+Bundled so pages and reports render the same offline.

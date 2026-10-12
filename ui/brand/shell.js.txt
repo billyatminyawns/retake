@@ -1,0 +1,63 @@
+/* Drift Monitor shell: theme toggle, panel toggle, report links, and a safety net that
+   moves var()-colored SVG attributes into style (some browsers ignore var() there). */
+(function () {
+  if (window.__wsShell) return;
+  window.__wsShell = 1;
+  var root = document.documentElement;
+  function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest && e.target.closest('[data-ws-action]');
+    if (!t) return;
+    var act = t.getAttribute('data-ws-action');
+    if (act === 'theme') {
+      var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      root.setAttribute('data-theme', next); store('ws-theme', next);
+      t.setAttribute('aria-label', next === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
+    } else if (act === 'nav') {
+      var hidden = root.classList.toggle('ws-nav-hidden');
+      store('ws-nav-hidden', hidden ? '1' : '0');
+      t.setAttribute('aria-expanded', hidden ? 'false' : 'true');
+      try { window.dispatchEvent(new Event('resize')); } catch (err) {}
+    } else if (act === 'print') {
+      e.preventDefault();
+      window.print();
+    }
+  });
+  if (store('ws-nav-hidden') === '1') root.classList.add('ws-nav-hidden');
+  function syncButtons() {
+    var nb = document.querySelector('[data-ws-action="nav"]');
+    if (nb) nb.setAttribute('aria-expanded', root.classList.contains('ws-nav-hidden') ? 'false' : 'true');
+    var tb = document.querySelector('[data-ws-action="theme"]');
+    if (tb) tb.setAttribute('aria-label', root.getAttribute('data-theme') === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
+  }
+
+  var ATTRS = ['fill', 'stroke', 'stop-color'];
+  function fix(el) {
+    for (var i = 0; i < ATTRS.length; i++) {
+      var a = ATTRS[i], v = el.getAttribute(a);
+      if (v && v.indexOf('var(') === 0) { el.style.setProperty(a, v); el.removeAttribute(a); }
+    }
+  }
+  function sweep(node) {
+    if (!node.querySelectorAll) return;
+    if (node.matches && node.matches('[fill^="var("],[stroke^="var("],[stop-color^="var("]')) fix(node);
+    var list = node.querySelectorAll('[fill^="var("],[stroke^="var("],[stop-color^="var("]');
+    for (var i = 0; i < list.length; i++) fix(list[i]);
+  }
+  function start() {
+    syncButtons();
+    var active = document.querySelector('.sidebar .nav-item.active');
+    if (active && window.innerWidth <= 704 && active.scrollIntoView) active.scrollIntoView({ inline: 'center', block: 'nearest' });
+    sweep(document);
+    if (window.MutationObserver) {
+      new MutationObserver(function (ms) {
+        for (var i = 0; i < ms.length; i++) {
+          if (ms[i].type === 'attributes') { fix(ms[i].target); continue; }
+          for (var j = 0; j < ms[i].addedNodes.length; j++) sweep(ms[i].addedNodes[j]);
+        }
+      }).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ATTRS });
+    }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+})();

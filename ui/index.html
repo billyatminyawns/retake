@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WellSaid – Retake</title>
+<meta name="description" content="Retake listens to AI voiceover, finds every heteronym, scores what the voice actually said, and fixes flagged lines through WellSaid.">
+<meta name="theme-color" content="#111111">
+<link rel="icon" type="image/png" href="brand/favicon.png">
+<script>(function(){var d=document.documentElement,t='dark';try{t=localStorage.getItem('ws-theme')||t;if(localStorage.getItem('ws-nav-hidden')==='1')d.classList.add('ws-nav-hidden')}catch(e){}d.setAttribute('data-theme',t==='light'?'light':'dark')})()</script>
+<link rel="stylesheet" href="brand/colors.css">
+<link rel="stylesheet" href="brand/skin.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============ WellSaid Studio rail ============ -->
+<nav class="ws-rail" aria-label="WellSaid">
+  <a class="ws-rail-logo" href="https://studio.wellsaidlabs.com/dashboard/workspaces" aria-label="WellSaid Studio"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M21.0572 7.95701C19.8484 6.72301 17.7368 6.72301 16.5281 7.95701L15.3973 9.11299L14.2645 7.95701C13.9703 7.65349 13.618 7.41232 13.2286 7.24791C12.8392 7.08349 12.4207 6.99918 11.998 7.00001C11.5757 6.99956 11.1576 7.08404 10.7686 7.24844C10.3795 7.41285 10.0275 7.65382 9.73347 7.95701L8.59871 9.11299L7.46594 7.95701C7.17164 7.65358 6.81932 7.41246 6.42993 7.24805C6.04054 7.08364 5.62206 6.99929 5.1994 7.00001C4.77708 6.99956 4.35897 7.08404 3.96995 7.24844C3.58093 7.41285 3.22892 7.65382 2.93486 7.95701C2.33103 8.57408 1.99509 9.40457 2.00005 10.268C1.99616 11.132 2.33357 11.9626 2.93886 12.579L6.33817 16.044C6.63232 16.3459 6.98381 16.586 7.372 16.7501C7.76018 16.9143 8.17725 16.9993 8.59871 17C9.02085 16.9999 9.43871 16.9153 9.82764 16.7511C10.2166 16.5869 10.5687 16.3465 10.8632 16.044L11.998 14.889L13.1308 16.044C13.4256 16.3467 13.7781 16.5872 14.1673 16.7514C14.5566 16.9156 14.9748 17.0001 15.3973 17C15.8194 16.9998 16.2373 16.9151 16.6262 16.7509C17.0151 16.5867 17.3672 16.3464 17.6619 16.044L21.0612 12.579C21.6665 11.9626 22.0039 11.132 22 10.268C22.0028 9.40343 21.6639 8.57279 21.0572 7.95701ZM3.59973 10.268C3.5974 9.83617 3.76597 9.42095 4.06863 9.11299C4.21546 8.96151 4.3912 8.84107 4.58544 8.75879C4.77968 8.67651 4.98846 8.63409 5.1994 8.63401C5.41054 8.63372 5.61958 8.67598 5.81403 8.75828C6.00848 8.84058 6.18436 8.96121 6.33117 9.11299L7.46494 10.268L6.33117 11.423C6.10707 11.6422 5.82417 11.7917 5.51679 11.8533C5.20941 11.9149 4.89077 11.886 4.59952 11.77C4.57653 11.761 4.55553 11.746 4.53354 11.736C4.46053 11.7047 4.39001 11.668 4.32258 11.626C4.28604 11.5996 4.25099 11.5712 4.2176 11.541C4.1677 11.5045 4.11997 11.4651 4.07463 11.423C3.76995 11.1159 3.59921 10.7006 3.59973 10.268ZM9.73147 14.889C9.58411 15.0402 9.40796 15.1605 9.21341 15.2425C9.01886 15.3246 8.80985 15.3669 8.59871 15.3669C8.38756 15.3669 8.17855 15.3246 7.984 15.2425C7.78945 15.1605 7.6133 15.0402 7.46594 14.889L6.03123 13.425C6.16769 13.3891 6.30135 13.3433 6.43115 13.288C6.60126 13.2138 6.76452 13.1248 6.91905 13.022C6.95804 12.997 6.99603 12.971 7.03403 12.943C7.18931 12.8346 7.33484 12.7128 7.46894 12.579L9.73447 10.268L10.8662 9.11299C11.1685 8.81605 11.5753 8.64969 11.999 8.64969C12.4227 8.64969 12.8295 8.81605 13.1318 9.11299L14.2645 10.268L10.8652 13.734L9.73147 14.889ZM16.5301 14.889C16.3827 15.0402 16.2066 15.1605 16.012 15.2425C15.8175 15.3246 15.6085 15.3669 15.3973 15.3669C15.1862 15.3669 14.9772 15.3246 14.7826 15.2425C14.5881 15.1605 14.4119 15.0402 14.2645 14.889L13.1328 13.734L14.6425 12.193L15.3973 11.423L16.5301 12.579C16.6642 12.7128 16.8097 12.8346 16.965 12.943C17.003 12.971 17.041 12.997 17.08 13.022C17.2345 13.1248 17.3978 13.2138 17.5679 13.288C17.6977 13.3433 17.8313 13.3891 17.9678 13.425L16.5301 14.889ZM17.6629 11.423L16.5301 10.268L17.6629 9.11299C17.9649 8.81588 18.3715 8.64937 18.7951 8.64937C19.2187 8.64937 19.6254 8.81588 19.9274 9.11299C20.2301 9.42095 20.3986 9.83617 20.3963 10.268C20.3984 10.6998 20.2299 11.1149 19.9274 11.423C19.625 11.7202 19.2181 11.8868 18.7941 11.8868C18.3702 11.8868 17.9632 11.7202 17.6609 11.423H17.6629Z" fill="#6DED97"/></svg></a>
+  <a class="ws-rail-btn ws-rail-new" href="https://studio.wellsaidlabs.com/dashboard/workspaces" data-tip="New project in Studio" aria-label="New project in Studio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5V19M5 12H19"/></svg></a>
+  <a class="ws-rail-btn" href="https://studio.wellsaidlabs.com/dashboard/workspaces" data-tip="Projects" aria-label="Projects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 7L11.88 4.77C11.56 4.13 11.4 3.81 11.16 3.57C10.95 3.36 10.7 3.21 10.42 3.11C10.1 3 9.74 3 9.02 3H5.2C4.08 3 3.52 3 3.09 3.22C2.72 3.41 2.41 3.72 2.22 4.09C2 4.52 2 5.08 2 6.2V7M2 7H17.2C18.88 7 19.72 7 20.36 7.33C20.93 7.61 21.39 8.07 21.67 8.64C22 9.28 22 10.12 22 11.8V16.2C22 17.88 22 18.72 21.67 19.36C21.39 19.93 20.93 20.39 20.36 20.67C19.72 21 18.88 21 17.2 21H6.8C5.12 21 4.28 21 3.64 20.67C3.07 20.39 2.61 19.93 2.33 19.36C2 18.72 2 17.88 2 16.2V7Z"/></svg></a>
+  <a class="ws-rail-btn" href="https://studio.wellsaidlabs.com/dashboard/studio" data-tip="Studio" aria-label="Studio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10L3 14M7.5 6L7.5 18M12 3V21M16.5 6V18M21 10V14"/></svg></a>
+  <a class="ws-rail-btn" href="https://studio.wellsaidlabs.com/dashboard/avatars" data-tip="Voices" aria-label="Voices"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 10V12C19 15.87 15.87 19 12 19M5 10V12C5 15.87 8.13 19 12 19M12 19V22M8 22H16M12 15C10.34 15 9 13.66 9 12V5C9 3.34 10.34 2 12 2C13.66 2 15 3.34 15 5V12C15 13.66 13.66 15 12 15Z"/></svg></a>
+  <a class="ws-rail-btn" href="https://studio.wellsaidlabs.com/dashboard/phonetic" data-tip="Libraries" aria-label="Libraries"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21L11.9 20.85C11.21 19.81 10.86 19.29 10.4 18.91C9.99 18.58 9.52 18.33 9.02 18.17C8.45 18 7.83 18 6.57 18H5.2C4.08 18 3.52 18 3.09 17.78C2.72 17.59 2.41 17.28 2.22 16.91C2 16.48 2 15.92 2 14.8V6.2C2 5.08 2 4.52 2.22 4.09C2.41 3.72 2.72 3.41 3.09 3.22C3.52 3 4.08 3 5.2 3H5.6C7.84 3 8.96 3 9.82 3.44C10.57 3.82 11.18 4.43 11.56 5.18C12 6.04 12 7.16 12 9.4M12 21V9.4M12 21L12.1 20.85C12.79 19.81 13.14 19.29 13.6 18.91C14.01 18.58 14.48 18.33 14.98 18.17C15.55 18 16.17 18 17.43 18H18.8C19.92 18 20.48 18 20.91 17.78C21.28 17.59 21.59 17.28 21.78 16.91C22 16.48 22 15.92 22 14.8V6.2C22 5.08 22 4.52 21.78 4.09C21.59 3.72 21.28 3.41 20.91 3.22C20.48 3 19.92 3 18.8 3H18.4C16.16 3 15.04 3 14.18 3.44C13.43 3.82 12.82 4.43 12.44 5.18C12 6.04 12 7.16 12 9.4"/></svg></a>
+  <a class="ws-rail-btn" href="https://studio.wellsaidlabs.com/dashboard/api" data-tip="API" aria-label="API"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 15L17.5 12L14.5 9M9.5 9L6.5 12L9.5 15M7.8 21H16.2C17.88 21 18.72 21 19.36 20.67C19.93 20.39 20.39 19.93 20.67 19.36C21 18.72 21 17.88 21 16.2V7.8C21 6.12 21 5.28 20.67 4.64C20.39 4.07 19.93 3.61 19.36 3.33C18.72 3 17.88 3 16.2 3H7.8C6.12 3 5.28 3 4.64 3.33C4.07 3.61 3.61 4.07 3.33 4.64C3 5.28 3 6.12 3 7.8V16.2C3 17.88 3 18.72 3.33 19.36C3.61 19.93 4.07 20.39 4.64 20.67C5.28 21 6.12 21 7.8 21Z"/></svg></a>
+  <a class="ws-rail-btn" href="https://studio.wellsaidlabs.com/dashboard/integrations" data-tip="Integrations" aria-label="Integrations"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 4.5C7.5 3.12 8.62 2 10 2C11.38 2 12.5 3.12 12.5 4.5V6H13.5C14.9 6 15.6 6 16.15 6.23C16.88 6.53 17.47 7.12 17.77 7.85C18 8.4 18 9.1 18 10.5H19.5C20.88 10.5 22 11.62 22 13C22 14.38 20.88 15.5 19.5 15.5H18V17.2C18 18.88 18 19.72 17.67 20.36C17.39 20.93 16.93 21.39 16.36 21.67C15.72 22 14.88 22 13.2 22H12.5V20.25C12.5 19.01 11.49 18 10.25 18C9.01 18 8 19.01 8 20.25V22H6.8C5.12 22 4.28 22 3.64 21.67C3.07 21.39 2.61 20.93 2.33 20.36C2 19.72 2 18.88 2 17.2V15.5H3.5C4.88 15.5 6 14.38 6 13C6 11.62 4.88 10.5 3.5 10.5H2C2 9.1 2 8.4 2.23 7.85C2.53 7.12 3.12 6.53 3.85 6.23C4.4 6 5.1 6 6.5 6H7.5V4.5Z"/></svg></a>
+  <hr>
+  <a class="ws-rail-btn" href="#/" aria-current="page" data-tip="Retake · Pronunciation QA" aria-label="Retake · Pronunciation QA"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2M7 7v10M11 4v16M15 8v8M19 10v4"/><path d="M22 22l-3-3M14.5 22.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg></a>
+  <hr>
+  <a class="ws-rail-btn" href="https://help.wellsaid.io/" data-tip="Help center" aria-label="Help center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 8.9C9.22 8.27 9.66 7.73 10.24 7.39C10.82 7.05 11.51 6.93 12.17 7.04C12.83 7.15 13.43 7.5 13.87 8.01C14.3 8.53 14.53 9.18 14.53 9.85C14.53 11.75 11.69 12.7 11.69 12.7M11.72 16.5H11.74"/></svg></a>
+  <div class="ws-rail-spacer"></div>
+  <div class="ws-rail-avatar" title="WellSaid Labs">WS</div>
+</nav>
+
+<!-- ============ WellSaid Studio top bar ============ -->
+<header class="ws-topbar">
+  <a class="ws-top-logo" href="https://studio.wellsaidlabs.com/dashboard/workspaces" aria-label="WellSaid Studio"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M21.0572 7.95701C19.8484 6.72301 17.7368 6.72301 16.5281 7.95701L15.3973 9.11299L14.2645 7.95701C13.9703 7.65349 13.618 7.41232 13.2286 7.24791C12.8392 7.08349 12.4207 6.99918 11.998 7.00001C11.5757 6.99956 11.1576 7.08404 10.7686 7.24844C10.3795 7.41285 10.0275 7.65382 9.73347 7.95701L8.59871 9.11299L7.46594 7.95701C7.17164 7.65358 6.81932 7.41246 6.42993 7.24805C6.04054 7.08364 5.62206 6.99929 5.1994 7.00001C4.77708 6.99956 4.35897 7.08404 3.96995 7.24844C3.58093 7.41285 3.22892 7.65382 2.93486 7.95701C2.33103 8.57408 1.99509 9.40457 2.00005 10.268C1.99616 11.132 2.33357 11.9626 2.93886 12.579L6.33817 16.044C6.63232 16.3459 6.98381 16.586 7.372 16.7501C7.76018 16.9143 8.17725 16.9993 8.59871 17C9.02085 16.9999 9.43871 16.9153 9.82764 16.7511C10.2166 16.5869 10.5687 16.3465 10.8632 16.044L11.998 14.889L13.1308 16.044C13.4256 16.3467 13.7781 16.5872 14.1673 16.7514C14.5566 16.9156 14.9748 17.0001 15.3973 17C15.8194 16.9998 16.2373 16.9151 16.6262 16.7509C17.0151 16.5867 17.3672 16.3464 17.6619 16.044L21.0612 12.579C21.6665 11.9626 22.0039 11.132 22 10.268C22.0028 9.40343 21.6639 8.57279 21.0572 7.95701ZM3.59973 10.268C3.5974 9.83617 3.76597 9.42095 4.06863 9.11299C4.21546 8.96151 4.3912 8.84107 4.58544 8.75879C4.77968 8.67651 4.98846 8.63409 5.1994 8.63401C5.41054 8.63372 5.61958 8.67598 5.81403 8.75828C6.00848 8.84058 6.18436 8.96121 6.33117 9.11299L7.46494 10.268L6.33117 11.423C6.10707 11.6422 5.82417 11.7917 5.51679 11.8533C5.20941 11.9149 4.89077 11.886 4.59952 11.77C4.57653 11.761 4.55553 11.746 4.53354 11.736C4.46053 11.7047 4.39001 11.668 4.32258 11.626C4.28604 11.5996 4.25099 11.5712 4.2176 11.541C4.1677 11.5045 4.11997 11.4651 4.07463 11.423C3.76995 11.1159 3.59921 10.7006 3.59973 10.268ZM9.73147 14.889C9.58411 15.0402 9.40796 15.1605 9.21341 15.2425C9.01886 15.3246 8.80985 15.3669 8.59871 15.3669C8.38756 15.3669 8.17855 15.3246 7.984 15.2425C7.78945 15.1605 7.6133 15.0402 7.46594 14.889L6.03123 13.425C6.16769 13.3891 6.30135 13.3433 6.43115 13.288C6.60126 13.2138 6.76452 13.1248 6.91905 13.022C6.95804 12.997 6.99603 12.971 7.03403 12.943C7.18931 12.8346 7.33484 12.7128 7.46894 12.579L9.73447 10.268L10.8662 9.11299C11.1685 8.81605 11.5753 8.64969 11.999 8.64969C12.4227 8.64969 12.8295 8.81605 13.1318 9.11299L14.2645 10.268L10.8652 13.734L9.73147 14.889ZM16.5301 14.889C16.3827 15.0402 16.2066 15.1605 16.012 15.2425C15.8175 15.3246 15.6085 15.3669 15.3973 15.3669C15.1862 15.3669 14.9772 15.3246 14.7826 15.2425C14.5881 15.1605 14.4119 15.0402 14.2645 14.889L13.1328 13.734L14.6425 12.193L15.3973 11.423L16.5301 12.579C16.6642 12.7128 16.8097 12.8346 16.965 12.943C17.003 12.971 17.041 12.997 17.08 13.022C17.2345 13.1248 17.3978 13.2138 17.5679 13.288C17.6977 13.3433 17.8313 13.3891 17.9678 13.425L16.5301 14.889ZM17.6629 11.423L16.5301 10.268L17.6629 9.11299C17.9649 8.81588 18.3715 8.64937 18.7951 8.64937C19.2187 8.64937 19.6254 8.81588 19.9274 9.11299C20.2301 9.42095 20.3986 9.83617 20.3963 10.268C20.3984 10.6998 20.2299 11.1149 19.9274 11.423C19.625 11.7202 19.2181 11.8868 18.7941 11.8868C18.3702 11.8868 17.9632 11.7202 17.6609 11.423H17.6629Z" fill="#6DED97"/></svg></a>
+  <button type="button" class="ws-icon-btn" data-ws-action="nav" aria-label="Toggle navigation" aria-expanded="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12H21M3 6H21M3 18H21"/></svg></button>
+  <nav class="ws-crumbs" aria-label="Breadcrumb">
+    <svg class="ws-crumb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2M7 7v10M11 4v16M15 8v8M19 10v4"/></svg>
+    <a href="#/">Retake</a><span class="ws-crumb-sep">/</span><span class="ws-crumb-here" id="ws-crumb-here">Check</span>
+  </nav>
+  <div class="ws-topbar-right">
+    <span id="mock-chip" class="mock-chip hidden" title="Bundled sample job, no API calls">Sample data</span>
+    <button id="api-status" class="api-status" type="button" title="API status · open settings">
+      <span class="dot" id="api-dot"></span><span id="api-status-text">connecting</span>
+    </button>
+    <button type="button" class="ws-icon-btn ws-theme-toggle" data-ws-action="theme" aria-label="Switch theme"><svg class="ws-i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg><svg class="ws-i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></button>
+    <button id="btn-settings" class="ws-icon-btn icon-btn" type="button" aria-label="Settings" title="Settings">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.5A3.5 3.5 0 1 0 12 8.5a3.5 3.5 0 0 0 0 7Zm8.4-3.5a6.6 6.6 0 0 0-.1-1.1l2-1.6-2-3.4-2.4 1a7.5 7.5 0 0 0-1.9-1.1l-.4-2.6H9.4L9 5.8a7.5 7.5 0 0 0-1.9 1.1l-2.4-1-2 3.4 2 1.6a6.6 6.6 0 0 0 0 2.2l-2 1.6 2 3.4 2.4-1a7.5 7.5 0 0 0 1.9 1.1l.4 2.6h4.2l.4-2.6a7.5 7.5 0 0 0 1.9-1.1l2.4 1 2-3.4-2-1.6c.1-.4.1-.7.1-1.1Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="app">
+
+<!-- ============ module panel (Retake's own navigation) ============ -->
+<aside class="sidebar">
+  <a class="ws-module" href="#/">
+    <span class="ws-module-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2M7 7v10M11 4v16M15 8v8M19 10v4"/></svg></span>
+    <span><span class="ws-module-name" style="display:block">Retake</span><span class="ws-module-sub" style="display:block">Pronunciation QA</span></span>
+  </a>
+  <nav class="nav" aria-label="Retake">
+    <a class="nav-item" href="#/" data-nav="home"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Check</span></a>
+    <a class="nav-item" href="#/api" data-nav="api"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 15L17.5 12L14.5 9M9.5 9L6.5 12L9.5 15M7.8 21H16.2C17.88 21 18.72 21 19.36 20.67C19.93 20.39 20.39 19.93 20.67 19.36C21 18.72 21 17.88 21 16.2V7.8C21 6.12 21 5.28 20.67 4.64C20.39 4.07 19.93 3.61 19.36 3.33C18.72 3 17.88 3 16.2 3H7.8C6.12 3 5.28 3 4.64 3.33C4.07 3.61 3.61 4.07 3.33 4.64C3 5.28 3 6.12 3 7.8V16.2C3 17.88 3 18.72 3.33 19.36C3.61 19.93 4.07 20.39 4.64 20.67C5.28 21 6.12 21 7.8 21Z"/></svg></span><span>API</span></a>
+  </nav>
+  <div class="advisory">Retake listens for heteronyms only. Review every flagged line before you re-render.</div>
+</aside>
+
+<main id="main">
+
+  <!-- ============ view 1 · home ============ -->
+  <section id="view-home" class="view hidden">
+    <header class="topbar page-head">
+      <div>
+        <div class="eyebrow">Pronunciation QA</div>
+        <h1>Catch the wrong <em>REcord</em> before your learners do.</h1>
+        <p class="lede">Drop any voiceover. Retake transcribes it, finds every heteronym, decides from context which pronunciation you meant, listens at the phoneme level, and re-renders the misses through WellSaid.</p>
+      </div>
+    </header>
+
+    <div class="card intake-card">
+      <div class="tabs" id="intake-tabs" role="tablist">
+        <button class="tab active" data-tab="upload" type="button" role="tab" aria-selected="true">Upload audio or video</button>
+        <button class="tab" data-tab="script" type="button" role="tab" aria-selected="false">Paste a script</button>
+      </div>
+
+      <div id="tab-upload" class="tab-panel" role="tabpanel">
+        <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Drop a voiceover here, or click to browse">
+          <svg class="dz-icon" viewBox="0 0 64 32" aria-hidden="true"><g fill="currentColor">
+            <rect x="2" y="12" width="4" height="8" rx="2"/><rect x="10" y="8" width="4" height="16" rx="2"/>
+            <rect x="18" y="4" width="4" height="24" rx="2"/><rect x="26" y="10" width="4" height="12" rx="2"/>
+            <rect x="34" y="2" width="4" height="28" rx="2"/><rect x="42" y="9" width="4" height="14" rx="2"/>
+            <rect x="50" y="6" width="4" height="20" rx="2"/><rect x="58" y="13" width="4" height="6" rx="2"/>
+          </g></svg>
+          <div class="dz-title">Drop a voiceover here</div>
+          <div class="dz-sub">mp3 · wav · m4a · mp4 · mov · up to 500 MB · or click to browse</div>
+          <div id="dz-file" class="dz-file hidden"></div>
+        </div>
+        <input type="file" id="file-input" accept="audio/*,video/*,.mp3,.wav,.m4a,.mp4,.mov,.webm,.ogg,.flac,.aac" hidden>
+
+        <details class="opt" id="upload-opts">
+          <summary>Optional: the script this was read from</summary>
+          <textarea id="upload-script" rows="4" placeholder="Paste the script if you have it — Retake aligns it to the transcript so intent is judged on what you wrote, not what Whisper heard."></textarea>
+        </details>
+
+        <div class="intake-foot">
+          <div class="field-row">
+            <label for="engine-select">Intent engine</label>
+            <select id="engine-select">
+              <option value="both">Auto (Claude, spaCy fallback)</option>
+              <option value="claude">Claude only</option>
+              <option value="spacy">spaCy only</option>
+            </select>
+          </div>
+          <button id="btn-check-upload" class="btn btn-primary" type="button" disabled>Check pronunciation</button>
+        </div>
+      </div>
+
+      <div id="tab-script" class="tab-panel hidden" role="tabpanel">
+        <textarea id="script-text" rows="7" placeholder="Paste your script — Retake renders it with WellSaid, then listens for every heteronym it got wrong."></textarea>
+        <div class="script-meta"><span id="script-count">0 words</span><span id="script-hets" class="script-hets"></span></div>
+        <div class="intake-foot">
+          <div class="field-row wrap">
+            <label for="voice-script">Voice</label>
+            <select id="voice-script" class="voice-select"><option value="">loading voices…</option></select>
+            <label for="model-script">Model</label>
+            <select id="model-script" class="model-select">
+              <option value="preview">Preview (13.3)</option>
+              <option value="caruso">Caruso</option>
+            </select>
+          </div>
+          <button id="btn-render-check" class="btn btn-primary" type="button">Render &amp; check</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="card recent-card">
+      <div class="sec-title-row">
+        <h2>Recent jobs</h2>
+        <div class="row-actions">
+          <a href="?mock=1" class="link-btn" id="demo-link">Open sample job →</a>
+          <button id="btn-refresh-jobs" class="btn btn-mini" type="button">Refresh</button>
+        </div>
+      </div>
+      <div id="jobs-list" class="jobs-list"><div class="empty">Loading…</div></div>
+    </section>
+  </section>
+
+  <!-- ============ view 2 · job progress ============ -->
+  <section id="view-job" class="view hidden">
+    <div class="card progress-card">
+      <div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <div id="job-title" class="job-title">Working…</div>
+      <div id="job-sub" class="job-sub"></div>
+      <ol id="stages" class="stages" aria-label="Pipeline stages"></ol>
+      <div class="progress"><div id="job-bar" class="progress-fill" style="width:0%"></div></div>
+      <div id="job-pct" class="job-pct"></div>
+      <div id="job-error" class="job-error hidden"></div>
+      <div class="progress-actions">
+        <button id="job-back" class="btn btn-ghost" type="button">← New check</button>
+        <button id="job-cancel" class="btn btn-ghost hidden" type="button">Delete job</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ view 3 · results ============ -->
+  <section id="view-results" class="view hidden">
+    <div id="results-head" class="card head-card"></div>
+    <div class="card transcript-card">
+      <div class="sec-title-row">
+        <h2>Transcript</h2>
+        <div class="legend"><span class="lg lg-flag">flagged</span><span class="lg lg-clean">clean</span></div>
+      </div>
+      <p id="transcript" class="transcript"></p>
+    </div>
+
+    <div class="sec-title-row occ-title-row">
+      <h2>Heteronyms <span id="occ-count" class="count"></span></h2>
+      <div class="filters" role="group" aria-label="Filter occurrences">
+        <button class="filter active" data-filter="all" type="button">All</button>
+        <button class="filter" data-filter="flagged" type="button">Flagged</button>
+      </div>
+    </div>
+    <div id="occurrences" class="occ-list"></div>
+
+    <div id="fix-panel" class="card fix-panel hidden"></div>
+  </section>
+
+  <!-- ============ view 4 · API ============ -->
+  <section id="view-api" class="view hidden">
+    <div class="card">
+      <div class="sec-title-row"><h2>API</h2><span id="api-base-label" class="mono muted"></span></div>
+      <div id="health-grid" class="health-grid"></div>
+      <div class="key-row">
+        <span class="lbl">Your key</span>
+        <code id="key-masked" class="mono">not set</code>
+        <button id="btn-key-reveal" class="btn btn-mini" type="button">Reveal</button>
+        <button id="btn-key-edit" class="btn btn-mini" type="button">Change</button>
+      </div>
+      <p class="muted small">Every request carries <code>X-Api-Key</code>. The examples below use <code>$RETAKE_API_KEY</code> so nothing secret ends up in your shell history. Interactive docs: <a id="docs-link" href="/docs" target="_blank" rel="noopener">/docs</a> · <a id="redoc-link" href="/redoc" target="_blank" rel="noopener">/redoc</a>.</p>
+    </div>
+    <div id="api-examples"></div>
+  </section>
+
+</main>
+</div>
+
+<!-- ============ settings drawer ============ -->
+<div id="drawer-backdrop" class="drawer-backdrop hidden"></div>
+<aside id="settings" class="settings hidden" aria-label="Settings" aria-hidden="true">
+  <div class="settings-head">
+    <h2>Settings</h2>
+    <button id="btn-settings-close" class="icon-btn" type="button" aria-label="Close settings">×</button>
+  </div>
+  <label class="field">
+    <span>API base URL</span>
+    <input type="text" id="set-base" placeholder="same origin" autocomplete="off" spellcheck="false">
+    <small>Leave blank to use the page's origin. Pages builds point here via <code>config.js</code>.</small>
+  </label>
+  <label class="field">
+    <span>API key</span>
+    <input type="password" id="set-key" placeholder="X-Api-Key" autocomplete="off" spellcheck="false">
+    <small>Stored only in this browser's localStorage and sent as <code>X-Api-Key</code>.</small>
+  </label>
+  <div class="settings-actions">
+    <button id="btn-set-test" class="btn btn-ghost" type="button">Test connection</button>
+    <button id="btn-set-save" class="btn btn-teal" type="button">Save</button>
+  </div>
+  <div id="set-result" class="set-result"></div>
+  <div class="settings-foot muted small">Retake · Pronunciation QA for WellSaid voiceover · <a href="#/api" id="settings-api-link">API page</a></div>
+</aside>
+
+<div id="toasts" aria-live="polite" aria-atomic="false"></div>
+
+<script src="config.js"></script>
+<script src="shell.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

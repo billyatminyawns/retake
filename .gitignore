@@ -1,0 +1,17 @@
+.env
+.venv/
+data/runtime/
+__pycache__/
+*.pyc
+.DS_Store
+models/
+*.log
+var/
+node_modules/
+cache/
+out/
+deploy/.env
+deploy/.tunnel-url
+*.part
+*.part.wav
+.pytest_cache/

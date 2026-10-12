@@ -1,0 +1,22 @@
+{
+  "name": "retake-mcp",
+  "version": "1.0.0",
+  "description": "Retake pronunciation QA (heteronym check + WellSaid fix) as an MCP server over the Retake API.",
+  "type": "module",
+  "private": true,
+  "bin": { "retake-mcp": "src/index.js" },
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start:http": "node src/index.js --http",
+    "doctor": "node src/index.js --doctor",
+    "test": "node test/mock-api.test.js && node test/stdio.smoke.js",
+    "inspect": "npx @modelcontextprotocol/inspector node src/index.js"
+  },
+  "engines": { "node": ">=18.17" },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.25.0"
+  },
+  "license": "MIT"
+}

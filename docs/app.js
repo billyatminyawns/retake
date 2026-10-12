@@ -1137,6 +1137,7 @@
       var key = $('#set-key').value.trim();
       if (MOCK) { out.className = 'set-result ok'; out.textContent = 'Mock mode: no network calls. The sample API reports ok · auth key · models loaded.'; return; }
       var hd = {}; if (key) hd['X-Api-Key'] = key;
+      hd['Bypass-Tunnel-Reminder'] = 'true';  // same bypass as authHeaders()
       fetch((base || apiBase()) + '/v1/health', { headers: hd }).then(function (r) { return r.json().then(function (b) { return { ok: r.ok, status: r.status, body: b }; }); }).then(function (x) {
         if (!x.ok) { out.className = 'set-result bad'; out.textContent = 'HTTP ' + x.status + ': ' + ((x.body.error && x.body.error.message) || JSON.stringify(x.body)); return; }
         var b = x.body;

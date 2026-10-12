@@ -643,6 +643,15 @@
     renderTranscript(job);
     renderOccurrences(job);
     renderFixPanel(job);
+    // Reopening a job: show the fix that was already run (latest), so the Final take card persists.
+    if (!state.fix && !MOCK && job.fixes && job.fixes.length) {
+      var lastFix = job.fixes[job.fixes.length - 1];
+      api('GET', '/v1/jobs/' + job.id + '/fixes/' + lastFix).then(function (f) {
+        if (state.job !== job || !f) return;
+        state.fixId = f.fix_id || lastFix; state.fix = f;
+        renderHead(job); renderOccurrences(job); renderFixPanel(job); applyFilter();
+      }).catch(function () { /* earlier fix unavailable: leave the panel fresh */ });
+    }
     $all('.filter').forEach(function (f) {
       f.classList.toggle('active', f.dataset.filter === state.filter);
       f.onclick = function () { state.filter = f.dataset.filter; $all('.filter').forEach(function (x) { x.classList.toggle('active', x === f); }); applyFilter(); };
